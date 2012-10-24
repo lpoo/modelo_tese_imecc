@@ -1,0 +1,46 @@
+\chapter{T\'itulo 3}
+Esse \'e o terceiro cap\'itulo da sua tese.
+
+\section{Se\c c\~ao 3.1}
+Para facilitar a leitura, é bom incluir o algoritmo de forma adequada e não
+como uma lista.
+\begin{algorithmic}[2]
+    \STATE $i \leftarrow 0$
+    \STATE $y \leftarrow 0$
+    \FOR{$i \leq 10$}
+        \STATE $y \leftarrow y + i$
+        \STATE $i \leftarrow i + 1$
+    \ENDFOR
+\end{algorithmic}
+
+É possível nomear os algoritmos.
+\begin{algorithm}
+    \caption{Loop infinito.}
+    \label{alg:loop_inf}
+    \begin{algorithmic}
+        \REQUIRE $n \geq 0$
+        \ENSURE $y = 1 + 2 + \ldots + n$
+        \STATE $y \leftarrow 0$
+        \STATE $i \leftarrow 0$
+        \IF{$n < 0$}
+            \PRINT Entrada inadequada.
+        \ELSE
+            \WHILE{$i \neq n$}
+                \STATE $y \leftarrow y + i$
+            \ENDWHILE
+        \ENDIF
+    \end{algorithmic}
+\end{algorithm}
+
+Para algoritmos, recomenda-se utilizar o pacote \emph{algorithmic} pois este
+permite a tradução dos ``comandos''.
+
+Em alguns casos, recomenda-se incluir um trecho de código.
+\lstinputlisting[firstline=5, lastline=5, nolol=false]{src/exem.c}
+
+Assim como os algoritmos também é possível nomear os códigos.
+\lstinputlisting[firstline=10, lastline=12, caption=Loop em C,
+language=C,  frame=single]{src/exem.c}
+
+Para trecho de códigos,  recomenda-se utilizar o pacote \emph{listings} pois
+este possue várias opções.

@@ -1,0 +1,141 @@
+%%TODO Qual tamanho de fonte utilizar? 10pt, 11pt ou 12pt?
+\documentclass[11pt, letterpaper, twoside]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: básicos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% FIXME Selecione a codificação adequada.
+\usepackage[utf8]{inputenc}
+% \usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%%TODO Usar fullpage ou geometry?
+\usepackage[cm]{fullpage}
+%\usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
+\usepackage[brazilian]{babel}
+%%TODO Usar espaço na primeira linha?
+\usepackage{indentfirst}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{breakurl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: tabelas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{csvsimple}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{wrapfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{algorithmic}
+\usepackage{algorithm}
+%\renewcommand{\ALG@name}{Algoritmo}
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{textcomp}
+\usepackage{listings}
+\renewcommand\lstlistingname{C\'{o}digo}
+\renewcommand\lstlistlistingname{Lista de C\'{o}digos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{makeidx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% FIXME Substituir 'Nome completo do aluno' pelo seu nome.
+\newcommand{\autor}{Nome completo do aluno}
+% FIXME Substituir 'Título da dissertação' pelo título da sua disertação.
+\newcommand{\titulo}{T\'{i}tulo da diserta\c{c}\~{a}o}
+% FIXME Substituir 'Nome do orientador' pelo nome do seu orientador.
+\newcommand{\orientador}{Nome do orientador}
+\newcommand{\coorientador}{Nome do co-orientador}
+\newcommand{\ano}{Ano}
+%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%% 
+\numberwithin{equation}{section}
+\numberwithin{section}{chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\theoremstyle{definition}
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{con}{Conjectura}
+\newtheorem{cor}[thm]{Corol\'ario}
+\newtheorem{dfn}[thm]{Defini\c c\~ao}
+\newtheorem{exm}[thm]{Exemplo}
+\newtheorem{lem}[thm]{Lema}
+\newtheorem{obs}[thm]{Observa\c c\~ao}
+\newtheorem{pps}[thm]{Proposi\c c\~ao}
+% TODO Inserir configurações adicionais aqui.
+
+\makeindex  % Necessário para gerar o index.
+
+\begin{document}
+\frontmatter
+\include{capa}
+% FIXME Inserir página em branco se for frente-e-verso.
+% \newpage\mbox{}\newpage
+% FIXME Essa folha precisa ser assinada pelos orientadores e por este motivo
+% deve ser substituída por uma cópia escaneada.
+\include{folha-de-rosto}
+% \includepdf{folha-de-rosto.pdf}
+% FIXME Essa folha deve ser adquirida com a biblioteca e, opcionalmente, pode
+% ser substituída por uma cópia escaneada.
+\include{ficha-catalografica}
+% \includepdf{ficha-catalografica.pdf}
+% FIXME Inserir página em branco se for frente-e-verso.
+% \newpage\mbox{}\newpage
+% FIXME Essa folha precisa ser assinada pelos orientadores e por este motivo
+% deve ser substituída por uma cópia escaneada.
+\include{folha-de-aprovacao}
+% \includepdf{folha-de-aprovacao.pdf}
+% FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
+\include{dedicatoria}
+% FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
+\include{agradecimentos}
+\include{resumo}
+
+\tableofcontents
+% FIXME Comentar a linha abaixo de não for apresentar as
+% abreviações utilizadas.
+\include{abreviacoes}
+% FIXME Comentar a linha abaixo de não desejar listar as figuras
+% apresentadas.
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+% FIXME Comentar a linha abaixo de não desejar listar as tabelas
+% apresentadas.
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+% FIXME Comentar a linha abaixo de não desejar listar os
+% algoritmos apresentados.
+\listofalgorithms
+\addcontentsline{toc}{chapter}{Lista de Algoritmos}
+% FIXME Comentar a linha abaixo de não desejar listar os trechos de código
+% apresentados.
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Lista de C\'{o}digos}
+
+\mainmatter
+% FIXME Opcionalmente, remover as 3 linhas abaixo.
+\input{cap1}
+\input{cap2}
+\input{cap3}
+% TODO Inserir os arquivos referentes ao corpo da tese.
+
+%\appendix
+%\input{ape1}
+
+% FIXME Remover a linha abaixo.
+\nocite{*}
+% FIXME Mudar o estilo para o de sua preferência.
+\bibliographystyle{amsplain}
+% FIXME Adicionar os arquivos .bib que for utilizar.
+\bibliography{tese}
+\addcontentsline{toc}{chapter}{Referência Bibliográfica}
+
+\newpage
+
+\printindex
+\addcontentsline{toc}{chapter}{Índice}
+\end{document}

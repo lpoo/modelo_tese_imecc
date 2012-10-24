@@ -1,0 +1,56 @@
+\chapter{T\'itulo 2}
+Esse \'e o segundo cap\'itulo da sua ...
+
+\section{Se\c c\~ao 2.1}
+Essa é uma seção da sua tese.
+
+É possível inserir figuras na sua tese. \\
+\includegraphics{figuras/unicamp-simbolo.jpg}
+
+É recomendado deixar as figuras como objetos flutuantes.
+\begin{figure}[!htb]
+    \center
+    \includegraphics[width=4cm]{figuras/unicamp-simbolo.jpg}
+    \caption{Logo da UNICAMP.}
+    \label{fig:log_unicamp}
+\end{figure}
+
+Além de inserir figuras é possível ``desenhar'' figuras utilizando o pacote
+TikZ, como na Figura~\ref{fig:exem_tikz}.
+\begin{figure}[!htb]
+\centering
+\begin{tikzpicture}
+\draw (0,0) -- (0,2) -- (2,2) -- (2,0) -- (0,0);
+\end{tikzpicture}
+\caption{Exemplo do uso do TikZ.}
+\label{fig:exem_tikz}
+\end{figure}
+
+\section{Seção 2.2}
+Além de figuras também é possível inserir tabelas. \\
+\begin{tabular}{|c|c|}
+\hline
+Tabela & Tabela \\ \hline
+Tabela & Tabela \\ \hline
+\end{tabular}
+
+Assim como as figuras, é recomendado que as tabelas sejam incluidas como
+objetos flutuantes.
+\begin{table}[!htb]
+\caption{Exemplo de Tabela.}
+\label{tab:exem}
+\centering
+\begin{tabular}{c|c}
+Tabela & Tabela \\ \hline
+Tabela & Tabela \\
+\end{tabular}
+\end{table}
+
+Além de inserir tabelas manualmente, como na Tabela~\ref{tab:exem}, também é possível utilizar arquivos
+\emph{.csv} para criar tabelas.
+\begin{table}[!htb]
+\caption{Exemplo de Tabela em csv.}
+\label{tab:exem_csv}
+\centering
+\csvautotabular{tabelas/exem.csv}
+\end{table}
