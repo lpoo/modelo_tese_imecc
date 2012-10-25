@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: básicos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% FIXME Selecione a codificação adequada.
+\usepackage[utf8]{inputenc}
+% \usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%%TODO Usar fullpage ou geometry?
+\usepackage[cm]{fullpage}
+%\usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
+\usepackage[brazilian]{babel}
+%%TODO Usar espaço na primeira linha?
+\usepackage{indentfirst}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{breakurl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: tabelas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{csvsimple}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{wrapfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{algorithmic}
+\usepackage[chapter]{algorithm}
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{textcomp}
+\usepackage{listings}
+\renewcommand\lstlistingname{C\'{o}digo}
+\renewcommand\lstlistlistingname{Lista de C\'{o}digos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{makeidx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%% 
+\numberwithin{equation}{section}
+\numberwithin{section}{chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\theoremstyle{definition}
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{con}{Conjectura}
+\newtheorem{cor}[thm]{Corol\'ario}
+\newtheorem{dfn}[thm]{Defini\c c\~ao}
+\newtheorem{exm}[thm]{Exemplo}
+\newtheorem{lem}[thm]{Lema}
+\newtheorem{obs}[thm]{Observa\c c\~ao}
+\newtheorem{pps}[thm]{Proposi\c c\~ao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\makeindex  % Necessário para gerar o index.
+% TODO Inserir configurações adicionais aqui.

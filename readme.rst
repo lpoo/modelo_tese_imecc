@@ -26,7 +26,13 @@ Para a construção deste modelo utilizou-se das seguintes teses:
   social para ação coletiva : forrageamento de formigas. Disponível em
   http://www.bibliotecadigital.unicamp.br/document/?code=000866056.
 
-e as informações presentes na página da secretaria de pós-graduação.
+e as informações presentes na página da secretaria de pós-graduação:
+
+* Regulamentação referente ao formato e impressão:
+  http://www.ime.unicamp.br/~posgrad/formulario/regulamento_formato.pdf
+* Modelo de capa: http://www.ime.unicamp.br/posgrad/modelos-de-capa
+* Modelo de folha de rosto:
+  http://www.ime.unicamp.br/posgrad/p%C3%A1gina-de-rosto
 
 Orientações
 ===========

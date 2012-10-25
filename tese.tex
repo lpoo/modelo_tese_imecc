@@ -1,49 +1,8 @@
-%%TODO Qual tamanho de fonte utilizar? 10pt, 11pt ou 12pt?
-\documentclass[11pt, letterpaper, twoside]{book}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: básicos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% FIXME Selecione a codificação adequada.
-\usepackage[utf8]{inputenc}
-% \usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
-%%TODO Usar fullpage ou geometry?
-\usepackage[cm]{fullpage}
-%\usepackage[top=3cm, bottom=3cm, left=2cm, right=2cm]{geometry}
-\usepackage[brazilian]{babel}
-%%TODO Usar espaço na primeira linha?
-\usepackage{indentfirst}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[hyphens]{url}
-\usepackage{hyperref}
-\usepackage{breakurl}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsthm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: tabelas %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{csvsimple}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{pdfpages}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{wrapfig}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{algorithmic}
-\usepackage[chapter]{algorithm}
-\floatname{algorithm}{Algoritmo}
-\renewcommand{\listalgorithmname}{Lista de Algoritmos}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{textcomp}
-\usepackage{listings}
-\renewcommand\lstlistingname{C\'{o}digo}
-\renewcommand\lstlistlistingname{Lista de C\'{o}digos}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{makeidx}
-
+% Não mude o tamanho da fonte pois isso irá afetar partes do modelo que não
+% deveriam ser modificadas.
+\documentclass[12pt, letterpaper, twoside]{book}
+% Arquivo com os pacotes.
+\include{pacotes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % FIXME Substituir 'Nome completo do aluno' pelo seu nome.
 \newcommand{\autor}{Nome completo do aluno}
@@ -53,24 +12,11 @@
 \newcommand{\orientador}{Nome do orientador}
 \newcommand{\coorientador}{Nome do co-orientador}
 \newcommand{\ano}{Ano}
-%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%% 
-\numberwithin{equation}{section}
-\numberwithin{section}{chapter}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\theoremstyle{definition}
-\newtheorem{thm}{Teorema}[section]
-\newtheorem{con}{Conjectura}
-\newtheorem{cor}[thm]{Corol\'ario}
-\newtheorem{dfn}[thm]{Defini\c c\~ao}
-\newtheorem{exm}[thm]{Exemplo}
-\newtheorem{lem}[thm]{Lema}
-\newtheorem{obs}[thm]{Observa\c c\~ao}
-\newtheorem{pps}[thm]{Proposi\c c\~ao}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\makeindex  % Necessário para gerar o index.
-% TODO Inserir configurações adicionais aqui.
 
 \begin{document}
+% WARNING Todas as páginas deverão ser numeradas.
+% As páginas iniciais são numeradas com algorimos romanos em sua forma
+% minúscula.
 \frontmatter
 \include{capa}
 % FIXME Inserir página em branco se for frente-e-verso.
@@ -79,6 +25,7 @@
 % deve ser substituída por uma cópia escaneada.
 \include{folha-de-rosto}
 % \includepdf{folha-de-rosto.pdf}
+% A ficha catalografica deve estar no verso da folha de rosto.
 % FIXME Essa folha deve ser adquirida com a biblioteca e, opcionalmente, pode
 % ser substituída por uma cópia escaneada.
 \include{ficha-catalografica}
@@ -93,12 +40,11 @@
 \include{dedicatoria}
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \include{agradecimentos}
+% FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
+\include{epigrafe}
 \include{resumo}
 
 \tableofcontents
-% FIXME Comentar a linha abaixo de não for apresentar as
-% abreviações utilizadas.
-\include{abreviacoes}
 % FIXME Comentar a linha abaixo de não desejar listar as figuras
 % apresentadas.
 \listoffigures
@@ -115,7 +61,17 @@
 % apresentados.
 \lstlistoflistings
 \addcontentsline{toc}{chapter}{Lista de C\'{o}digos}
+% FIXME Comentar a linha abaixo de não for apresentar as
+% abreviações utilizadas.
+\include{abreviacoes}
+% FIXME Comentar a linha abaixo de não for apresentar os
+% símbolos utilizados.
+\include{simbolos}
+% FIXME Comentar a linha abaixo de não for apresentar o
+% glossario.
+\include{glossario}
 
+% WARNING Todas as páginas deverão ser numeradas.
 \mainmatter
 % FIXME Opcionalmente, remover as 3 linhas abaixo.
 \input{cap1}
@@ -125,6 +81,7 @@
 
 \appendix
 \input{ape1}
+\input{anexos}
 
 % FIXME Remover a linha abaixo.
 \nocite{*}
@@ -134,8 +91,7 @@
 \bibliography{tese}
 \addcontentsline{toc}{chapter}{Refer\^{e}ncia Bibliogr\'{a}fica}
 
-\newpage
-
+\clearpage
+\addcontentsline{toc}{chapter}{\'{I}ndice Remissivo}
 \printindex
-\addcontentsline{toc}{chapter}{Índice}
 \end{document}
