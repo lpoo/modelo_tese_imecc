@@ -33,8 +33,8 @@
 \usepackage{wrapfig}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \usepackage{algorithmic}
-\usepackage{algorithm}
-%\renewcommand{\ALG@name}{Algoritmo}
+\usepackage[chapter]{algorithm}
+\floatname{algorithm}{Algoritmo}
 \renewcommand{\listalgorithmname}{Lista de Algoritmos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \usepackage{textcomp}
@@ -66,9 +66,9 @@
 \newtheorem{lem}[thm]{Lema}
 \newtheorem{obs}[thm]{Observa\c c\~ao}
 \newtheorem{pps}[thm]{Proposi\c c\~ao}
-% TODO Inserir configurações adicionais aqui.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \makeindex  % Necessário para gerar o index.
+% TODO Inserir configurações adicionais aqui.
 
 \begin{document}
 \frontmatter
@@ -123,8 +123,8 @@
 \input{cap3}
 % TODO Inserir os arquivos referentes ao corpo da tese.
 
-%\appendix
-%\input{ape1}
+\appendix
+\input{ape1}
 
 % FIXME Remover a linha abaixo.
 \nocite{*}
@@ -132,7 +132,7 @@
 \bibliographystyle{amsplain}
 % FIXME Adicionar os arquivos .bib que for utilizar.
 \bibliography{tese}
-\addcontentsline{toc}{chapter}{Referência Bibliográfica}
+\addcontentsline{toc}{chapter}{Refer\^{e}ncia Bibliogr\'{a}fica}
 
 \newpage
 
