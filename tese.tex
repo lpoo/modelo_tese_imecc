@@ -1,92 +1,125 @@
-% Não mude o tamanho da fonte pois isso irá afetar partes do modelo que não
-% deveriam ser modificadas.
-\documentclass[12pt, letterpaper, twoside]{book}
-% Arquivo com os pacotes.
-\include{pacotes}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\documentclass[12pt, letterpaper, twoside]{book}  % Nao modifique essa linha.
+
+
+\include{pacotes}  % Arquivo com os pacotes.
+
+
+\include{configuracao}  % Arquivo com algumas configuracoes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracao: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % FIXME Substituir 'Nome completo do aluno' pelo seu nome.
 \newcommand{\autor}{Nome completo do aluno}
-% FIXME Substituir 'Título da dissertação' pelo título da sua disertação.
+
+% FIXME Substituir 'Titulo da defesa' pelo título da defesa.
 \newcommand{\titulo}{T\'{i}tulo da defesa}
-% FIXME Substituir 'Nome do orientador' pelo nome do seu orientador.
+
+% FIXME Substituir 'Nome completo do orientador' pelo nome completo do seu
+% orientador.
 \newcommand{\orientador}{Nome completo do orientador}
+
+% FIXME Substituir 'Nome completo do coorientador' pelo nome completo do seu
+% coorientador.
 \newcommand{\coorientador}{Nome completo do coorientador}
+
+% FIXME Substituir 'Ano' pelo ano em que ocorreu sua defesa.
 \newcommand{\ano}{Ano}
 
 \begin{document}
-% WARNING Todas as páginas deverão ser numeradas.
-% As páginas iniciais são numeradas com algorimos romanos em sua forma
-% minúscula.
+% WARNING Todas as paginas deverao ser numeradas.
+%
+% As paginas iniciais sao numeradas com algorimos romanos em sua forma
+% minuscula.
 \frontmatter
-\include{capa}
-% A ficha catalografica deve estar no verso da folha de rosto.
+%
+\include{capa}  % Nao edite esse arquivo.
+%
+% WARNING A ficha catalografica deve estar no verso da folha de rosto.
 % FIXME O arquivo ficha-catalografica.pdf deve ser sobrescrito com uma cópia
 % do arquivo pdf que a bibliotaca lhe enviar.
 \includepdf{ficha-catalografica}
-% FIXME Essa folha precisa ser assinada pelos orientadores e por este motivo
-% deve ser substituída por uma cópia escaneada.
+%
+% WARNING A folha de rosto precisa ser assinada pelos orientadores.
+% FIXME Substitua arquivo folha-de-rosto.pdf por uma copia escaneada, comente
+% esta linha e descomente a proxima.
 \include{folha-de-rosto}
 % \includepdf{folha-de-rosto.pdf}
-\newpage\mbox{}\newpage
-% FIXME O arquivo folha-de-aprovacao.pdf deve ser sobrescrito com uma cópia
-% escaneada da folha de aprovação, assinada pelos membros da banca,
-% adquirida após a defesa.
+\newpage\mbox{}\newpage  % Pagina em branco.
+%
+% WARNING A folha de aprovacao deve ser assinada pelos membros da banca apos a
+% defesa.
+% FIXME Substitua o arquivo folha-de-aprovacao.pdf por uma copia escaneada.
 \includepdf{folha-de-aprovacao}
+%
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \include{dedicatoria}
+%
 % FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
 \include{epigrafe}
+%
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \include{agradecimentos}
+%
 \include{resumo}
-
+%
 \tableofcontents
-% FIXME Comentar a linha abaixo de não desejar listar as figuras
+% FIXME Comentar as linhas abaixo de não desejar listar as figuras
 % apresentadas.
 \listoffigures
 \addcontentsline{toc}{chapter}{Lista de Figuras}
-% FIXME Comentar a linha abaixo de não desejar listar as tabelas
+%
+% FIXME Comentar as linhas abaixo de não desejar listar as tabelas
 % apresentadas.
 \listoftables
 \addcontentsline{toc}{chapter}{Lista de Tabelas}
-% FIXME Comentar a linha abaixo de não desejar listar os
+%
+% FIXME Comentar as linhas abaixo de não desejar listar os
 % algoritmos apresentados.
 \listofalgorithms
 \addcontentsline{toc}{chapter}{Lista de Algoritmos}
-% FIXME Comentar a linha abaixo de não desejar listar os trechos de código
+%
+% FIXME Comentar as linhas abaixo de não desejar listar os trechos de código
 % apresentados.
 \lstlistoflistings
 \addcontentsline{toc}{chapter}{Lista de C\'{o}digos}
+%
 % FIXME Comentar a linha abaixo de não for apresentar as
 % abreviações utilizadas.
 \include{abreviacoes}
+%
 % FIXME Comentar a linha abaixo de não for apresentar os
 % símbolos utilizados.
 \include{simbolos}
+%
 % FIXME Comentar a linha abaixo de não for apresentar o
 % glossario.
 \include{glossario}
-
-% WARNING Todas as páginas deverão ser numeradas.
+%
+% As paginas com o conteudo da tese sao numeradas com algorimos arabicos.
 \mainmatter
-% FIXME Opcionalmente, remover as 3 linhas abaixo.
+%
+% FIXME Remover as 3 linhas abaixo.
 \input{cap1}
 \input{cap2}
 \input{cap3}
 % TODO Inserir os arquivos referentes ao corpo da tese.
-
+%
+% FIXME Se nao for utilizar apendices ou anexos, comentar a linha abaixo.
 \appendix
+% FIXME Remover as 2 linhas abaixo.
 \input{ape1}
 \input{anexos}
-
+% TODO Inserir os arquivos referentes aos apendices e anexos.
+%
 % FIXME Remover a linha abaixo.
 \nocite{*}
-% FIXME Mudar o estilo para o de sua preferência.
+% FIXME Mudar o estilo para o de sua preferencia.
 \bibliographystyle{amsplain}
-% FIXME Adicionar os arquivos .bib que for utilizar.
+% FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
+% tese.bib.
 \bibliography{tese}
 \addcontentsline{toc}{chapter}{Refer\^{e}ncia Bibliogr\'{a}fica}
-
+%
 \clearpage
 \addcontentsline{toc}{chapter}{\'{I}ndice Remissivo}
 \printindex

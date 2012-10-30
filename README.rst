@@ -5,7 +5,7 @@
 Licença
 =======
 
-É garantida a permissão, livre de cobrança, a qualquer pessoa que obter cópia
+É garantida a permissão, livre de cobrança, a qualquer pessoa que obtver cópia
 deste modelo para utilizá-lo sem qualquer restrição.
 
 Este modelo é distribuído na expectativa de que seja útil, porém, SEM NENHUMA
@@ -37,10 +37,9 @@ e as informações presentes na página da secretaria de pós-graduação:
 Orientações
 ===========
 
-#. Todos os arquivos produzidos utilizam a codificação UTF8. Se for utilizar
-   este modelo recomenda-se que utilize essa codificação, i.e., altere o seu
-   editor para ler os arquivos utilizando essa codificação. (Isso é importante
-   para usuários do Windows.)
+#. Todos os arquivos produzidos utilizam a codificação UTF8. Usuários do
+   sistema operacional Windows devem configurar o editor que estiverem
+   utilizando para abrir os arquivos nessa codificação.
 #. O arquivo principal chama-se ``tese.tex``. Recomenda-se marcá-lo como o
    arquivo mestre seguindo as instruções do editor que for utilizar.
 #. Por questão de organização, as figuras encontram-se na pasta ``figuras``, as
@@ -52,18 +51,17 @@ Orientações
    * ``cap3.tex``
    * ``ape1.tex``
 
-   foram escrito apenas para fins ilustrativos e devem ser removidos ou
-   modificados.
+   foram escrito apenas para fins ilustrativos e devem ser substituídos pelos
+   arquivos referentes aos capítulos e apêndices do sua defesa.
 #. Ao utilizar os arquivos irá ocorrer vários comentários da forma ::
 
-       % FIXME algo
+       % FIXME ...
 
    ou ::
 
-       % TODO algo
+       % TODO ...
 
-   que corresponde a alguma instrução que deve ser seguida para corrigir alguma
-   coisa na tese.
+   que corresponde a alguma instrução para corrigir ou adicionar algum dado.
 
    Ao seguir as orientações dos comentários, recomenda-se removê-los de tal
    forma que quando concluir sua tese não existirá nenhum destes comentários.
