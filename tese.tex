@@ -1,10 +1,13 @@
-\documentclass[12pt, letterpaper, twoside]{book}  % Nao modifique essa linha.
+% FIXME Ao final, deixe descomentada a linha correspondente ao numero de paginas
+% que a sua defesa possue.
+\documentclass[12pt, letterpaper]{book}  % Para menos de 100 paginas.
+% \documentclass[12pt, letterpaper, twoside]{book}  % Para mais de 100 paginas.
 
 
-\include{pacotes}  % Arquivo com os pacotes.
+\input{pacotes}  % Arquivo com os pacotes.
 
 
-\include{configuracao}  % Arquivo com algumas configuracoes.
+\input{configuracao}  % Arquivo com algumas configuracoes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracao: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -32,19 +35,19 @@
 % minuscula.
 \frontmatter
 %
-\include{capa}  % Nao edite esse arquivo.
+\input{capa}  % Nao edite esse arquivo.
+\newpage\mbox{}\newpage  % Pagina em branco.
+%
+% WARNING A folha de rosto precisa ser assinada pelos orientadores.
+% FIXME Substitua arquivo folha-de-rosto.pdf por uma copia escaneada, comente
+% esta linha e descomente a proxima.
+\input{folha-de-rosto}
+% \includepdf{folha-de-rosto.pdf}
 %
 % WARNING A ficha catalografica deve estar no verso da folha de rosto.
 % FIXME O arquivo ficha-catalografica.pdf deve ser sobrescrito com uma cópia
 % do arquivo pdf que a bibliotaca lhe enviar.
 \includepdf{ficha-catalografica}
-%
-% WARNING A folha de rosto precisa ser assinada pelos orientadores.
-% FIXME Substitua arquivo folha-de-rosto.pdf por uma copia escaneada, comente
-% esta linha e descomente a proxima.
-\include{folha-de-rosto}
-% \includepdf{folha-de-rosto.pdf}
-\newpage\mbox{}\newpage  % Pagina em branco.
 %
 % WARNING A folha de aprovacao deve ser assinada pelos membros da banca apos a
 % defesa.
@@ -52,15 +55,15 @@
 \includepdf{folha-de-aprovacao}
 %
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
-\include{dedicatoria}
+\input{dedicatoria}
 %
 % FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
-\include{epigrafe}
+\input{epigrafe}
 %
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
-\include{agradecimentos}
+\input{agradecimentos}
 %
-\include{resumo}
+\input{resumo}
 %
 \tableofcontents
 % FIXME Comentar as linhas abaixo de não desejar listar as figuras
@@ -85,15 +88,15 @@
 %
 % FIXME Comentar a linha abaixo de não for apresentar as
 % abreviações utilizadas.
-\include{abreviacoes}
+\input{abreviacoes}
 %
 % FIXME Comentar a linha abaixo de não for apresentar os
 % símbolos utilizados.
-\include{simbolos}
+\input{simbolos}
 %
 % FIXME Comentar a linha abaixo de não for apresentar o
 % glossario.
-\include{glossario}
+\input{glossario}
 %
 % As paginas com o conteudo da tese sao numeradas com algorimos arabicos.
 \mainmatter
