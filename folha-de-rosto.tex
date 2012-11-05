@@ -1,5 +1,6 @@
+% WARNING Nao modifique este arquivo.
 \includegraphics[width=.94in, height=1in,
-keepaspectratio=true]{figuras/unicamp-logo.eps}
+keepaspectratio=true]{figuras/unicamp-logo.jpg}
 \begin{center}
     {\large \scshape \bfseries Universidade Estadual de Campinas
     \vspace{.5cm}
@@ -18,31 +19,58 @@ keepaspectratio=true]{figuras/unicamp-logo.eps}
 \vspace{.8cm}
 {\bfseries
 \noindent
-Orientador: Prof. Dr. \orientador
+Orientador\ifx\femaleOrientador\undefined
+\else
+a\fi: Prof. Dr. \orientador
 \vspace{.25cm}
 
+\ifx\coorientador\undefined
+\else
 \noindent
-Coorientador: Prof. Dr. \coorientador
+Coorientador\ifx\femaleCoorientador\undefined
+\else
+a\fi: Prof. Dr. \coorientador
+\fi
 }
 
 \vspace{.5cm}
 \begin{flushright}
     \begin{minipage}[c]{.8\textwidth}
         \begin{flushright}
-            % FIXME Adeque dependendo do nível.
-            % Disserta\c{c}\~{a}o de mestrado \\% descomente de for mestrado.
-            Tese de doutorado % descomente de for doutorado.
+            \ifx\mestrado\undefined
+            Disserta\c{c}\~{a}o de mestrado
+            \else
+            Tese de doutorado
+            \fi
             apresentada do Instituto de \\ Matem\'atica,
             Estat\'istica e Computa\c c\~ao Cient\'ifica
             da Unicamp para \\ obten\c c\~ao do t\'itulo de
-            % FIXME Adeque dependendo do nível e do sexo.
-            % mestre(a) % descomente de for mestrado.
-            doutor(a) % descomente de for doutorado.
+            \ifx\mestrado\undefined
+                \ifx\femaleAuthor\undefined
+                Mestre
+                \else
+                Mestra
+                \fi
+            \else
+                \ifx\femaleAuthor\undefined
+                Doutor
+                \else
+                Doutora
+                \fi
+            \fi
             em
-            % FIXME Adeque dependendo da área.
-            % matem\'atica.
-            matem\'atica aplicada.
-            % estat\'istica.
+            \ifx\matematica\undefined
+            \else
+            matem\'{a}tica.
+            \fi
+            \ifx\aplicada\undefined
+            \else
+            matem\'{a}tica aplicada.
+            \fi
+            \ifx\estatistica\undefined
+            \else
+            estat\'{i}stica.
+            \fi
         \end{flushright}
     \end{minipage}
 \end{flushright}
@@ -50,18 +78,31 @@ Coorientador: Prof. Dr. \coorientador
 \noindent
 {\footnotesize \scshape
 Este exemplar corresponde \`a vers\~ao final da 
-% FIXME Adeque dependendo do nível.
-% disserta\c{c}\~{a}o \\% descomente se for mestrado.
-tese \\  % descomente se for doutorado.
-defendida pelo aluno \autor,\\
-e orientada pelo Prof. Dr. \orientador
+\ifx\mestrado\undefined
+disserta\c{c}\~{a}o
+\else
+tese
+\fi \\
+defendida 
+\ifx\femaleAuthor\undefined
+pelo aluno
+\else
+pela aluna
+\fi
+\autor,\\
+e orientada pelo Prof. Dr. \orientador.
 }
 \vspace{1cm}
 
 \noindent
 {\small \bfseries
 \noindent
-Assinatura do Orientador
+Assinatura
+\ifx\femaleOrientador\undefined
+do Orientador
+\else
+da Orientadora
+\fi
 
 \vspace{.7cm}
 \noindent
@@ -70,14 +111,22 @@ Assinatura do Orientador
 \vspace{.5cm}
 
 
+\ifx\coorientador\undefined
+\else
 {\small \bfseries
 \noindent
-Assinatura do Coorientador
+Assinatura
+\ifx\femaleCoorientador\undefined
+do Coorientador
+\else
+da Coorientadora
+\fi
 
 \vspace{.7cm}
 \noindent
 \rule[1pt]{7cm}{.5pt}  % Liha para assinatura do coorientador
 }
+\fi
 \vfill
 \begin{center}
     {\small \scshape \bfseries Campinas \\ \ano}

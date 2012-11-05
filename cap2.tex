@@ -47,10 +47,6 @@ Tabela & Tabela \\
 \end{table}
 
 Além de inserir tabelas manualmente, como na Tabela~\ref{tab:exem}, também é possível utilizar arquivos
-\emph{.csv} para criar tabelas.
-\begin{table}[!htb]
-\caption{Exemplo de Tabela em csv.}
-\label{tab:exem_csv}
-\centering
-\csvautotabular{tabelas/exem.csv}
-\end{table}
+\emph{.csv} para criar tabelas. Neste caso, é necessário incluir o pacote
+\texttt{csvsimple} que não foi incluído por questão de compatibilidade com
+distribuições do \LaTeX \ anteriores a 2009.
