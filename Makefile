@@ -38,7 +38,8 @@ clean:
 	- rm *.nav
 	- rm *.nlo
 	- rm *.out
-	- rm *.pdf
+	# Is unsafety remove all the pdf files.
+	# - rm *.pdf
 	- rm *.pdfsync
 	- rm *.ps
 	- rm *.snm
