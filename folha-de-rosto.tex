@@ -21,7 +21,11 @@ keepaspectratio=true]{figuras/unicamp-logo.jpg}
 \noindent
 Orientador\ifx\femaleOrientador\undefined
 \else
-a\fi: Prof. Dr. \orientador
+a\fi: Prof\ifx\femaleOrientador\undefined
+\else
+a\fi. Dr\ifx\femaleOrientador\undefined
+\else
+a\fi. \orientador
 \vspace{.25cm}
 
 \ifx\coorientador\undefined
@@ -29,7 +33,11 @@ a\fi: Prof. Dr. \orientador
 \noindent
 Coorientador\ifx\femaleCoorientador\undefined
 \else
-a\fi: Prof. Dr. \coorientador
+a\fi: Prof\ifx\femaleCoorientador\undefined
+\else
+a\fi. Dr\ifx\femaleCoorientador\undefined
+\else
+a\fi. \coorientador
 \fi
 }
 
@@ -90,7 +98,13 @@ pelo aluno
 pela aluna
 \fi
 \autor,\\
-e orientada pelo Prof. Dr. \orientador.
+e orientada pel\ifx\femaleOrientador\undefined
+o\else
+a\fi Prof\ifx\femaleOrientador\undefined
+\else
+a\fi. Dr\ifx\femaleOrientador\undefined
+\else
+a\fi. \orientador.
 }
 \vspace{1cm}
 
