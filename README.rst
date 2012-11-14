@@ -71,3 +71,9 @@ Orientações
 
        $ grep -r '% FIXME' ./
        $ grep -r '% TODO' ./
+
+Outras fontes de informação relevante
+=====================================
+
+Um ótimo artigo sobre o uso do LaTeX para dissertações/teses encontra-se em
+http://tug.org/pracjourn/2008-1/mori/mori.pdf.
