@@ -1,9 +1,21 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracoes: links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+% TODO Por padrao os links, no pdf, para equacoes, figuras, referencias,
+% tabelas, urls sao identificados por uma caixa colorida em volta do link. Essa
+% caixa colorida nao eh impressa mas pode atrapalhar a leitura para alguns. Se
+% desejar remove-las descomente a linha abaixo.
+% hidelinks,
+pdftitle={\titulo},  % Nao modifique esta linha.
+pdfauthor={\autor}  % Nao modifique esta linha.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracoes: numeracao %%%%%%%%%%%%%%%%%%%%%%%%%% 
 \numberwithin{equation}{section}
 \numberwithin{section}{chapter}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracoes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \theoremstyle{definition}
 \newtheorem{thm}{Teorema}[section]
 \newtheorem{con}[thm]{Conjectura}
