@@ -1,15 +1,5 @@
-all: pdf bibtex index
-	pdflatex -interaction=nonstopmode tese
-	pdflatex -interaction=nonstopmode tese
-
-pdf:
-	pdflatex -interaction=nonstopmode tese
-
-bibtex:
-	bibtex tese
-
-index:
-	makeindex tese
+all:
+	latexmk -pdf tese
 
 clean:
 	- rm *.acn
