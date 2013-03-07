@@ -41,10 +41,12 @@ TikZ\index{figura!TikZ}, como na Figura~\ref{fig:exem_tikz}.
 
 \section{Seção 2.2}
 Além de figuras também é possível inserir tabelas. \\
-\begin{tabular}{|c|c|}
-\hline
-Tabela & Tabela \\ \hline
-Tabela & Tabela \\ \hline
+\begin{tabular}{cc}
+\toprule
+Tabela & Tabela \\
+\midrule
+Tabela & Tabela \\
+\bottomrule
 \end{tabular}
 
 Assim como as figuras, é recomendado que as tabelas sejam incluidas como
@@ -53,9 +55,12 @@ objetos flutuantes.
 \caption{Exemplo de Tabela.}
 \label{tab:exem}
 \centering
-\begin{tabular}{c|c}
-Tabela & Tabela \\ \hline
+\begin{tabular}{cc}
+\toprule
 Tabela & Tabela \\
+\midrule
+Tabela & Tabela \\
+\bottomrule
 \end{tabular}
 \end{table}
 
