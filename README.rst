@@ -1,6 +1,6 @@
 | Copyright (c) 2012 Tiago Macedo <ra025318@ime.unicamp.br>
 | Copyright (c) 2012 Júnior Soares <juniorcasoares@hotmail.com>
-| Copyright (c) 2012 Raniere Silva <r.gaia.cs@gmail.com>
+| Copyright (c) 2012 Raniere Silva <ra092767@ime.unicamp.br>
 
 Licença
 =======
@@ -34,46 +34,57 @@ e as informações presentes na página da secretaria de pós-graduação:
 * Modelo de folha de rosto:
   http://www.ime.unicamp.br/posgrad/p%C3%A1gina-de-rosto
 
-Orientações
-===========
+Orientações para usuários
+=========================
 
-#. Todos os arquivos produzidos utilizam a codificação UTF8. Usuários do
-   sistema operacional Windows devem configurar o editor que estiverem
-   utilizando para abrir os arquivos nessa codificação.
-#. O arquivo principal chama-se ``tese.tex``. Recomenda-se marcá-lo como o
-   arquivo mestre seguindo as instruções do editor que for utilizar.
-#. Por questão de organização, as figuras encontram-se na pasta ``figuras``, as
-   tabelas na pasta ``tabelas`` e os códigos na pasta ``src``.
-#. Os arquivos
+A documentação do modelo encontra-se na pasta ``doc``.
 
-   * ``cap1.tex``
-   * ``cap2.tex``
-   * ``cap3.tex``
-   * ``ape1.tex``
+Orientações para desenvolvedores
+================================
 
-   foram escrito apenas para fins ilustrativos e devem ser substituídos pelos
-   arquivos referentes aos capítulos e apêndices do sua defesa.
-#. Ao utilizar os arquivos irá ocorrer vários comentários da forma ::
+O modelo oficial (em português) corresponde ao branch ``master`` e o
+desenvolvimento do mesmo ocorre no branch ``dev``.
 
-       % FIXME ...
+Personalizações do modelo oficial devem corresponder a algum branch da forma
+``xx-yyy``, onde ``xx`` é uma das respectivas siglas:
 
-   ou ::
+* ``ma``: quando relacionadas ao departamento de matemática,
+* ``me``: quando relacionadas ao departamento de estatísitica,
+* ``ms``: quando relacionadas ao departamento de matemática aplicada,
 
-       % TODO ...
+e ``yyy`` é uma sigla relacionada ao grupo de pesquisa, e.g.,
 
-   que corresponde a alguma instrução para corrigir ou adicionar algum dado.
+* ``geo``: Geofísica Computacional,
+* ``poo``: Pesquisa Operacional.
 
-   Ao seguir as orientações dos comentários, recomenda-se removê-los de tal
-   forma que quando concluir sua tese não existirá nenhum destes comentários.
+O desenvolvimento das personalizações correspondente ao branch ``xx-yyy`` devem
+ocorrer no branch ``xx-yyy-dev``.
 
-   Para procurar por estes comentários sugere-se utilizar (se estiver utilizando
-   alguma distribuição GNU/LINUX) ::
+Existe uma versão do modelo oficial em inglês que corresponde ao branch
+``master-en`` e o desenvolvimento do mesmo ocorre no branch ``dev-en``. Para o
+caso da versão em outro idioma de uma personalização do modelo, essa versão deve
+corresponder ao branch ``xx-yyy-zz``, onde ``zz`` representa o idioma utilizado,
+e o desenvolvimento dessa versão deve ocorrer no branch ``xx-yyy-zz-dev``.
 
-       $ grep -r '% FIXME' ./
-       $ grep -r '% TODO' ./
+As mensagens de commit deve ser em português, exceto o caso dos commits de
+versões em outro idioma que podem ser feitos neste outro idioma.
 
-Outras fontes de informação relevante
-=====================================
+Estilo
+------
 
-Um ótimo artigo sobre o uso do LaTeX para dissertações/teses encontra-se em
-http://tug.org/pracjourn/2008-1/mori/mori.pdf.
+O seguinte estilo deve ser utilizado:
+
+* Arquivos devem ter nomes minúsculos, sem caracteres especiais e com ``_`` no
+  lugar de espaço. O nome deve ser sempre em português.
+* Todos os arquivos de texto devem respeitar o limite de 80 caracteres por linha.
+* A identação deve ser de 4 espaços.
+* Para o caso de comentários na mesma linha, deve existir pelo menos dois
+  espaços antes do ``%``.
+* Deve-se limitar-se aos caracteres presentes no padrão ASCII.
+
+Para o caso da documentação:
+
+* Nome dos arquivos podem ser em inglês.
+* Existirem linhas com mais de 80 caracteres.
+* A identação deve ser de 2 espaços.
+* Utilizar caracteres no padrão UTF-8.
