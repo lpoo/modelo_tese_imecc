@@ -1,0 +1,36 @@
+Esta é a documentação do Modelo de dissertação/tese do Instituto de Matemática,
+Esatística e Computação Científica (IMECC) da Universidade Estadual de Campinas
+(UNICAMP).
+
+Organização
+===========
+
+A documentação encontram-se em arquivos html, o primeiro é o ``index.html``.
+
+Desenvolvimento
+===============
+
+Para saber como contribuir com a documentação entre em contato com um dos
+mantenedores do modelo.
+
+Instalação
+==========
+
+O propósito desta seção é auxiliar o "Web manager" da Secretaria de
+Pós-Graduação do IMECC em "instalar" esta documentação.
+
+Por meio de engenharia reversa, tentou-se deixar os arquivos da documentação
+compatíveis com o CSS utilizado pela página da Secretaria de Pós-Graduação
+seguindo a estrutura abaixo ::
+
+    <body>
+      <div id='content'>
+        <h1 id='page-title' class='title'>...</h1>
+        <div class='content'>
+          ...
+        </div>
+      </div>
+    </body>
+
+Se existir alguma forma de facilitar a "instalação" desta documentação, entre em
+contato com um dos mantenedores.
