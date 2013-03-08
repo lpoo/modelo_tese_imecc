@@ -1,6 +1,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <style>
+      td.textCenter {
+        text-align:center;
+      }
+    </style>
   </head>
   <body>
     <div id='content'>
@@ -69,11 +74,12 @@
         pesquisa entre os alunos de pós-graduação vinculados ao IMECC para saber
         qual editor utilizavam para trabalhar com o LaTeX e o resultado desta
         pesquisa encontra-se na tabela abaixo.</p>
-        <table>
+        <table border="2">
           <thead>
             <tr>
               <th>Editor</th>
               <th>Número de usuários (dentre 107 entrevistados)</th>
+              <th>Software Livre</th>
               <th>Licença do editor</th>
               <th>Site</th>
               <th>Instruções para configuração</th>
@@ -81,34 +87,40 @@
           </thead>
           <tfoot>
             <tr>
-              <td colspan="5"><a id="TeXnicCenter1">(*)</a> <strong>A versão 1 não suporta a codificação
+              <td colspan="6"><a id="TeXnicCenter1">(*)</a> <strong>A versão 1 não suporta a codificação
                   UTF-8.</strong></td>
             </tr>
           </tfoot>
           <tbody>
             <tr>
               <td>TeXnicCenter 2 (<a href="#TeXnicCenter1">*</a>)</td>
-              <td>30</td>
+              <td class="textCenter">30</td>
             </tr>
             <tr>
               <td>WinEdit</td>
-              <td>26</td>
+              <td class="textCenter">26</td>
             </tr>
             <tr>
               <td>Texmaker</td>
-              <td>18</td>
+              <td class="textCenter">18</td>
             </tr>
             <tr>
               <td>TeXworks</td>
-              <td>7</td>
+              <td class="textCenter">7</td>
+              <td class="textCenter">Sim</td>
+              <td class="textCenter">GPL</td>
+              <td><a
+                      href="http://www.tug.org/texworks/">http://www.tug.org/texworks/</a></td>
+              <td class="textCenter"><a href="texworks-conf.html"><img src="img/gear.png"
+                      alt="gear" width='24em'></a></td>
             </tr>
             <tr>
               <td>Kile</td>
-              <td>6</td>
+              <td class="textCenter">6</td>
             </tr>
             <tr>
               <td>Outros</td>
-              <td>20</td>
+              <td class="textCenter">20</td>
             </tr>
           </tbody>
         </table>
