@@ -4,50 +4,192 @@ Esse \'e o primeiro cap\'itulo da sua tese.
 \section{Se\c c\~ao 1.1}
 Essa \'{e} uma se\c{c}\~{a}o da sua tese.
 
+\subsection{Subse\c{c}\~{a}o 1.1.1}
+
+Essa \'{e} uma subse\c{c}\~{a}o da sua tese.
+
+\subsection{Subse\c{c}\~{a}o 1.1.2}
+
+Essa \'{e} outra subse\c{c}\~{a}o da sua tese.
+
+\section{Equa\c{c}\~{o}es matem\'{a}ticas}
+Para equa\c{c}\~{o}es matem\'{a}ticas est\'{a} sendo utilizado os seguintes
+pacotes:
+\begin{itemize}
+  \item amsmath,
+  \item amsfonts,
+  \item amssymb,
+  \item amsthm,
+  \item breqn.
+\end{itemize}
+
 Um exemplo de equa\c{c}\~{a}o na mesma linha: 
 $ 1 + 1 + 1 + 1 + 1 + 1 = 6$, 
 que \'{e} trivial\index{trivial} de ser verificada.
 
-Um exemplo de equa\c{c}\~{a}o em destaque:
-\begin{align*}
-1 + 1 + 1 + 1 + 1 + 1 &= 6,
-\end{align*}
-n\~{a}o esque\c{c}a da pontua\c{c}\~{a}o nas equa\c{c}\~{o}es.
+Equa\c{c}\~{o}es na mesma linha s\~{a}o quebradas automaticamente:
+$ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 12$. 
 
-Mais exemplos de equa\c{c}\~{o}es em destaque:
-\begin{align*}
-1 + 1 + 1 + 1 + 1 + 1 &= 6, \\
-2 + 1 + 1 + 1 + 1 &= 6, \\
-3 + 1 + 1 + 1 &= 6.
-\end{align*}
-Novamente n\~{a}o esque\c{c}a da pontua\c{c}\~{a}o.
+Ao utilizar equa\c{c}\~{o}es na mesma linha deve-se tomar o cuidado de manter a
+legibilidade da equa\c{c}\~{a}o e n\~{a}o modificar a altura da linha. \'{E}
+errado utilizar $\frac{1}{2} + \frac{1}{2} = 1$ ou $\frac{\partial}{\partial x}
+(y^2 + 2xy + x^2) = 2y + 2x$, devendo ser utilizado $(1/2) + (1/2) = 1$ ou
+$\partial (y^2 + 2 x y + x^2) / \partial x = 2 y + 2 x$.
 
-Para simplifica\c{c}\~{o}es de uma express\~{a}o, voc\^{e} pode utilizar:
-\begin{align*}
-    f(x) &= 1 + 1 + 1 + 1 + 1 + 1 \\
-    &= 2 + 2 + 2 \\
-    &= 6.
-\end{align*}
-Muito cuidado com a pontua\c{c}\~{a}o.
+Al\'{e}m de equa\c{c}\~{o}es na mesma linha, tamb\'{e}m \'{e} poss\'{i}vel
+utilizar equa\c{c}\~{o}es em destaque:
+\begin{equation}
+1 + 1 + 1 + 1 + 1 + 1 = 6
+\end{equation}
+ou
+\begin{equation*}
+1 + 1 + 1 + 1 + 1 + 1 = 6.
+\end{equation*}
+Ao utilizar equa\c{c}\~{o}es matem\'{a}ticas em destaque, n\~{a}o esque\c{c}a da pontua\c{c}\~{a}o nas equa\c{c}\~{o}es.
 
-\subsection{Subse\c c\~ao 1.1.1}
-Essa \'{e} uma subse\c{c}\~{a}o da sua tese.
+Recomenda-se utilizar os ambientes
+\begin{itemize}
+  \item dmath(*) e
+  \item dgroup(*)
+\end{itemize}
+disponibilizados pelo pacote breqn ao inv\'{e}s dos ambientes
+\begin{itemize}
+  \item equation(*,)
+  \item align(*),
+  \item multiline(*) e
+  \item split
+\end{itemize}
+pois os primeiros quebram e alinham automaticamente as equa\c{c}\~{o}es em destaque.
+Veja a seguir a ``equival\^{e}ncia'' entre os ambientes:
+\begin{description}
+  \item[dmath]
+    \begin{dmath}
+      1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+      + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30
+    \end{dmath}
+  \item[equation] 
+    \begin{equation}
+      1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+      + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30
+    \end{equation}
+  \item[equation com split] 
+    \begin{equation}
+      \begin{split}
+        1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30 
+      \end{split}
+    \end{equation}
+  \item[align] 
+    \begin{align}
+      1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+      + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30 
+    \end{align}
+  \item[align com quebra de linha] 
+    \begin{align}
+      1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+      + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30 
+    \end{align}
+\end{description}
 
-Para equa\c{c}\~{o}es muito longas, voc\^{e} terá que dividí-la em várias linhas:
-\begin{align*}
-    f(x) &= 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
-    &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
-    &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1.
-\end{align*}
-Existe outras conven\c{c}\~{o}es para dividir equa\c{c}\~{o}es muito longas mas gosto da
-mostrada logo acima.
+No caso do desenvolvimento/simplifica\c{c}\~{a}o de uma express\~{a}o
+matem\'{a}tica tamb\'{e}m \'{e} recomendado utilizar os ambientes
+disponibilizados pelo pacote breqn.
+\begin{description}
+  \item[dmath]
+    \begin{dmath}
+      f(x) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+      + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+      = 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2
+      = 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2
+      = 8 + 8 + 8 + 6
+      = 16 + 14
+      = 30
+    \end{dmath}
+  \item[equation com split] 
+    \begin{equation}
+      \begin{split}
+        f(x) &= 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &= 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 \\
+        &= 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2 \\
+        &= 8 + 8 + 8 + 6 \\
+        &= 16 + 14 \\
+        &= 30
+      \end{split}
+    \end{equation}
+  \item[align com quebra de linha] 
+    \begin{align}
+        f(x) &= 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &= 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 \\
+        &= 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2 \\
+        &= 8 + 8 + 8 + 6 \\
+        &= 16 + 14 \\
+        &= 30
+    \end{align}
+\end{description}
 
-Tamb\'{e}m \'{e} possível numerar equa\c{c}\~{o}es:
-\begin{align}
-    f(x) &= 1.
-    \label{eq:exem_unidade}
-\end{align}
+Para o caso de equa\c{c}\~{o}es relacionadas e que devem ser agrupadas,
+temos
+\begin{description}
+  \item[dgroup com dmath]
+    \begin{dgroup}
+      \begin{dmath}
+        f(x) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+        + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+        = 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2
+        = 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2
+        = 8 + 8 + 8 + 6
+        = 16 + 14
+        = 30
+      \end{dmath}
+      \begin{dmath}
+        g(x) = 2 + 2 + 2 + 2
+        = 4 + 4
+        = 8
+      \end{dmath}
+    \end{dgroup}
+  \item[subequations com equation com split] 
+    \begin{subequations}
+      \begin{equation}
+        \begin{split}
+          f(x) &= 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+          &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+          &= 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 \\
+          &= 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2 \\
+          &= 8 + 8 + 8 + 6 \\
+          &= 16 + 14 \\
+          &= 30
+        \end{split}
+      \end{equation}
+      \begin{equation}
+        \begin{split}
+          g(x) &= 2 + 2 + 2 + 2 \\
+          &= 4 + 4 \\
+          &= 8
+        \end{split}
+      \end{equation}
+    \end{subequations}
+  \item[align com split] 
+    \begin{align}
+      \begin{split}
+        f(x) &= 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &\quad {}+ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 \\
+        &= 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 \\
+        &= 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2 \\
+        &= 8 + 8 + 8 + 6 \\
+        &= 16 + 14 \\
+        &= 30
+      \end{split} \\
+      \begin{split}
+        g(x) &= 2 + 2 + 2 + 2 \\
+        &= 4 + 4 \\
+        &= 8
+      \end{split}
+    \end{align}
+\end{description}
 
+\subsection{Refer\^{e}ncia cruzada}
 Al\'{e}m de numerar equa\c{c}\~{o}es, e.g., \eqref{eq:exem_unidade}, tamb\'{e}m \'{e}
 possível nomea-las:
 \begin{align}
@@ -59,8 +201,7 @@ possível nomea-las:
 Muito cuidado com o uso da refer\^{e}ncia cruzada, e.g.,
 \eqref{eq:exem_unidade} e \eqref{eq:exem_zero}.
 
-\section{Título 1.2}
-Essa \'{e} outra se\c{c}\~{a}o da sua tese.
+\section{Defini\c{c}\~{o}es}
 
 Vários ambientes já est\~{a}o definidos como: Teorema, Conjectura, Corolário,
 Defini\c{c}\~{a}o, \ldots
