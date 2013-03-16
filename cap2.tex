@@ -7,61 +7,61 @@ Essa é uma seção da sua defesa.
 É possível inserir figuras na sua defesa. \\
 \includegraphics{figuras/unicamp-logo.jpg}
 
-\'E recomendado deixar as figuras\index{figura} como objetos flutuantes.
+É recomendado deixar as figuras\index{figura} como objetos flutuantes.
 \begin{figure}[!htb]
-    \center
-    \includegraphics[width=4cm]{figuras/unicamp-logo.jpg}
-    \caption{Logo da UNICAMP.}
-    \label{fig:log_unicamp}
+  \center
+  \includegraphics[width=4cm]{figuras/unicamp-logo.jpg}
+  \caption{Logo da UNICAMP.}
+  \label{fig:log_unicamp}
 \end{figure}
 
-Figuras tamb\'em podem ter subfiguras, usando o pacote \texttt{subcaption}, que 
-podem ser citadas individualmente: figura~\ref{fig:caption1}.
+Figuras também podem ter subfiguras, usando o pacote \texttt{subcaption}, que 
+podem ser citadas individualmente: Figura~\ref{fig:caption1}.
 \begin{figure}[!htb]
-    \centering
-    \subcaptionbox{\emph{Caption} 1.\label{fig:caption1}}
-        {\includegraphics[width=0.45\textwidth]{figuras/unicamp-logo.jpg}}
-    \qquad
-    \subcaptionbox{\emph{Caption} 1.\label{fig:caption2}}
-        {\includegraphics[width=0.45\textwidth]{figuras/unicamp-logo.jpg}}
-    \caption{Figura com subfiguras.}
-    \label{fig:subfig}
+  \centering
+  \subcaptionbox{\emph{Caption} 1.\label{fig:caption1}}
+  {\includegraphics[width=0.45\textwidth]{figuras/unicamp-logo.jpg}}
+  \qquad
+  \subcaptionbox{\emph{Caption} 1.\label{fig:caption2}}
+  {\includegraphics[width=0.45\textwidth]{figuras/unicamp-logo.jpg}}
+  \caption{Figura com subfiguras.}
+  \label{fig:subfig}
 \end{figure}
 
 Além de inserir figuras é possível ``desenhar''\index{figura!desenhar} figuras
 utilizando o pacote TikZ\index{figura!TikZ}, como na Figura~\ref{fig:exem_tikz}.
 \begin{figure}[!htb]
-\centering
-\begin{tikzpicture}
-\draw (0,0) -- (0,2) -- (2,2) -- (2,0) -- (0,0);
-\end{tikzpicture}
-\caption{Exemplo do uso do TikZ.}
-\label{fig:exem_tikz}
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) -- (0,2) -- (2,2) -- (2,0) -- (0,0);
+  \end{tikzpicture}
+  \caption{Exemplo do uso do TikZ.}
+  \label{fig:exem_tikz}
 \end{figure}
 
-\section{Se\c{c}\~ao 2.2}
-Al\'em de figuras tamb\'em \'e poss\'ivel inserir tabelas. \\
+\section{Seção 2.2}
+Além de figuras também é possível inserir tabelas. \\
 \begin{tabular}{cc}
-\toprule
-Tabela & Tabela \\
-\midrule
-Tabela & Tabela \\
-\bottomrule
+  \toprule
+  Tabela & Tabela \\
+  \midrule
+  Tabela & Tabela \\
+  \bottomrule
 \end{tabular}
 
 Assim como as figuras, é recomendado que as tabelas sejam incluídas como
 objetos flutuantes.
 \begin{table}[!htb]
-\caption{Exemplo de Tabela.}
-\label{tab:exem}
-\centering
-\begin{tabular}{cc}
-\toprule
-Tabela & Tabela \\
-\midrule
-Tabela & Tabela \\
-\bottomrule
-\end{tabular}
+  \caption{Exemplo de Tabela.}
+  \label{tab:exem}
+  \centering
+  \begin{tabular}{cc}
+    \toprule
+    Tabela & Tabela \\
+    \midrule
+    Tabela & Tabela \\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
 Além de inserir tabelas manualmente, como na Tabela~\ref{tab:exem}, também é
