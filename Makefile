@@ -1,5 +1,43 @@
-all:
-	latexmk -pdf tese
+MASTER_FILE = tese.tex
+TEX_FILES = abreviacoes.tex agradecimentos.tex anexos.tex ape1.tex cap1.tex \
+cap2.tex cap3.tex capa.tex configuracao.tex dedicatoria.tex epigrafe.tex \
+ficha-catalografica.tex folha-de-aprovacao.tex folha-de-rosto.tex glossario.tex \
+introducao.tex pacotes.tex resumo.tex simbolos.tex
+DEV_FILES = AUTHORS ChangeLog CONTRIBUTING.rst COPYING Makefile README.rst THANKS
+DOC_FILES = 
+
+pdf:
+	latexmk -pdf ${MASTER_FILE}
+
+aspell: ${MASTER_FILE} ${TEX_FILES}
+	aspell -l pt-br -c ${MASTER_FILE}
+	for f in ${TEX_FILES}; do \
+	    aspell -l pt-br -c $$f; \
+	done
+
+hunspell:
+	hunspell -d pt_BR -c ${MASTER_FILE}
+	for f in ${TEX_FILES}; do \
+	    hunspell -d pt_BR $$f; \
+	done
+
+dev-all: dev-aspell aspell pdf
+
+dev-aspell: ${DEV_FILES} ${DOC_FILES}
+	for f in ${DEV_FILES}; do \
+	    aspell -l pt-br -c $$f; \
+	done
+	for f in ${DOC_FILES}; do \
+	    aspell -l pt-br -c $$f; \
+	done
+
+dev-hunspell: ${DEV_FILES} ${DOC_FILES}
+	for f in ${DEV_FILES}; do \
+	    hunspell -d pt_BR $$f; \
+	done
+	for f in ${DOC_FILES}; do \
+	    hunspell -d pt_BR $$f; \
+	done
 
 clean:
 	- rm *.acn
