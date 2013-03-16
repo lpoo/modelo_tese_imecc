@@ -25,19 +25,19 @@ Documentação
 
 LaTeX
 
-- [ ] Incluir pacote `breqn`.
+- [X] Incluir pacote `breqn`.
 - [ ] Incluir pacote `natbib`.
 
 
-, Versão 0.5.2
+2013-03-16, Versão 0.5.2
 
 Documentação
 
-- [ ] Instruções básicas.
-- [ ] Instruções para desenvolvedores e contribuidores.
-- [ ] Melhorar explicação do workflow de desenvolvimento.
+- [X] Instruções básicas.
+- [X] Instruções para desenvolvedores e contribuidores.
+- [X] Melhorar explicação do workflow de desenvolvimento.
 
-, Versão 0.5.1
+2013-03-16, Versão 0.5.1
 
 - [X] Mudar para UTF-8.
 - [X] Linhas com no máximo 80 caracteres, i.e., no Vim utilizar `set
