@@ -1,16 +1,19 @@
 % FIXME Ao final, deixe descomentada a linha correspondente ao numero de paginas
-% que a sua defesa possue.
+% que a sua defesa possui.
 \documentclass[12pt, letterpaper, oneside]{book}  % Para menos de 100 paginas.
 % \documentclass[12pt, letterpaper, twoside]{book}  % Para mais de 100 paginas.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuracao: pessoais %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pacotes %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{pacotes}  % Arquivo com os pacotes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: dados pessoais %%%%%%%%%%%%%%%%%%%%%%%%%
 % FIXME Substituir 'Nome completo do aluno' pelo seu nome.
 \newcommand{\autor}{Nome completo do aluno}
-% FIXME Se for do sexo feminino, decomente a linha a seguir.
+% FIXME Se for do sexo feminino, descomente a linha a seguir.
 % \def\femaleAuthor{}
 
-% FIXME Substituir 'Titulo da defesa' pelo t�tulo da defesa.
-\newcommand{\titulo}{T\'{i}tulo da defesa}
+% FIXME Substituir 'Título da defesa' pelo título da defesa.
+\newcommand{\titulo}{Título da defesa}
 % FIXME Se estiver no programa de mestrado, descomente a linha a seguir.
 % \def\mestrado{}
 % FIXME Deixe descomente apenas a linha referente ao departamento.
@@ -25,7 +28,7 @@
 % \def\femaleOrientador{}
 
 % FIXME Substituir 'Nome completo do coorientador' pelo nome completo do seu
-% coorientador. Caso n�o tenha coorientador, comente a linha a seguir.
+% coorientador. Caso não tenha coorientador, comente a linha a seguir.
 \newcommand{\coorientador}{Nome completo do coorientador}
 % FIXME Se for coorientado por uma mulher, descomente a linha a seguir.
 % \def\femaleCoorientador{}
@@ -33,82 +36,82 @@
 % FIXME Substituir 'Ano' pelo ano em que ocorreu sua defesa.
 \newcommand{\ano}{Ano}
 
-%%%%%%%%%%%%%%%%%%%%%%%%% Configuracao: comportamento %%%%%%%%%%%%%%%%%%%%%%%%%
-\input{pacotes}  % Arquivo com os pacotes.
-\input{configuracao}  % Arquivo com algumas configuracoes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: definições %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{configuracao}  % Arquivo com algumas configurações.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Inicio do texto da defesa %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Início do texto da defesa %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-% WARNING Todas as paginas deverao ser numeradas.
+% WARNING Todas as paginas deverão ser numeradas.
 %
-% As paginas iniciais sao numeradas com algorimos romanos em sua forma
+% As paginas iniciais são numeradas com algoritmos romanos em sua forma
 % minuscula.
 \frontmatter
 %
-\input{capa}  % Nao edite esse arquivo.
+\input{capa}  % Não edite esse arquivo.
 \newpage\mbox{}\thispagestyle{plain}\newpage  % Pagina em branco.
 %
 % WARNING A folha de rosto precisa ser assinada pelos orientadores.
 % FIXME Substitua arquivo folha-de-rosto.pdf por uma copia escaneada, comente
-% esta linha e descomente a proxima.
+% esta linha e descomente a próxima.
 \input{folha-de-rosto}
 % \includepdf{folha-de-rosto.pdf}
 %
-% WARNING A ficha catalografica deve estar no verso da folha de rosto.
-% FIXME O arquivo ficha-catalografica.pdf deve ser sobrescrito com uma c�pia
-% do arquivo pdf que a bibliotaca lhe enviar.
+% WARNING A ficha catalográfica deve estar no verso da folha de rosto.
+% FIXME O arquivo ficha-catalografica.pdf deve ser sobrescrito com uma cópia
+% do arquivo pdf que a biblioteca lhe enviar.
 \includepdf{ficha-catalografica}
 %
-% WARNING A folha de aprovacao deve ser assinada pelos membros da banca apos a
+% WARNING A folha de aprovação deve ser assinada pelos membros da banca apos a
 % defesa.
 % FIXME Substitua o arquivo folha-de-aprovacao.pdf por uma copia escaneada.
 \includepdf{folha-de-aprovacao}
 %
-% FIXME Se n�o for incluir a dedicat�ria, comentar a linha abaixo.
+% FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \input{dedicatoria}
 %
-% FIXME Se n�o for incluir a epigrafe, comentar a linha abaixo.
+% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
 \input{epigrafe}
 %
-% FIXME Se n�o for incluir os agradecimentos, comentar a linha abaixo.
+% FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \input{agradecimentos}
 %
 \input{resumo}
+\input{abstract}
 %
 \tableofcontents
-% FIXME Comentar as linhas abaixo de n�o desejar listar as figuras
+% FIXME Comentar as linhas abaixo de não desejar listar as figuras
 % apresentadas.
 \listoffigures
 \addcontentsline{toc}{chapter}{Lista de Figuras}
 %
-% FIXME Comentar as linhas abaixo de n�o desejar listar as tabelas
+% FIXME Comentar as linhas abaixo de não desejar listar as tabelas
 % apresentadas.
 \listoftables
 \addcontentsline{toc}{chapter}{Lista de Tabelas}
 %
-% FIXME Comentar as linhas abaixo de n�o desejar listar os
+% FIXME Comentar as linhas abaixo de não desejar listar os
 % algoritmos apresentados.
 \listofalgorithms
 \addcontentsline{toc}{chapter}{Lista de Algoritmos}
 %
-% FIXME Comentar as linhas abaixo de n�o desejar listar os trechos de c�digo
+% FIXME Comentar as linhas abaixo de não desejar listar os trechos de código
 % apresentados.
 \lstlistoflistings
-\addcontentsline{toc}{chapter}{Lista de C\'{o}digos}
+\addcontentsline{toc}{chapter}{Lista de Códigos}
 %
-% FIXME Comentar a linha abaixo de n�o for apresentar as
-% abrevia��es utilizadas.
+% FIXME Comentar a linha abaixo de não for apresentar as
+% abreviações utilizadas.
 \input{abreviacoes}
 %
-% FIXME Comentar a linha abaixo de n�o for apresentar os
-% s�mbolos utilizados.
+% FIXME Comentar a linha abaixo de não for apresentar os
+% símbolos utilizados.
 \input{simbolos}
 %
-% FIXME Comentar a linha abaixo de n�o for apresentar o
-% glossario.
+% FIXME Comentar a linha abaixo de não for apresentar o
+% glossário.
 \input{glossario}
 %
-% As paginas com o conteudo da tese sao numeradas com algorimos arabicos.
+% As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
 %
 % FIXME Remover as 3 linhas abaixo.
@@ -117,12 +120,12 @@
 \input{cap3}
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
-% FIXME Se nao for utilizar apendices ou anexos, comentar a linha abaixo.
+% FIXME Se não for utilizar apêndices ou anexos, comentar a linha abaixo.
 \appendix
 % FIXME Remover as 2 linhas abaixo.
 \input{ape1}
 \input{anexos}
-% TODO Inserir os arquivos referentes aos apendices e anexos.
+% TODO Inserir os arquivos referentes aos apêndices e anexos.
 %
 \backmatter
 % FIXME Remover a linha abaixo.
@@ -132,9 +135,9 @@
 % FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
 % tese.bib.
 \bibliography{tese}
-\addcontentsline{toc}{chapter}{Refer\^{e}ncia Bibliogr\'{a}fica}
+\addcontentsline{toc}{chapter}{Referência Bibliográfica}
 %
 \clearpage
-\addcontentsline{toc}{chapter}{\'{I}ndice Remissivo}
+\addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
 \end{document}
