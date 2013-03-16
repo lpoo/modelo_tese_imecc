@@ -1,46 +1,28 @@
-| Copyright (c) 2012 Tiago Macedo <ra025318@ime.unicamp.br>
-| Copyright (c) 2012 Júnior Soares <juniorcasoares@hotmail.com>
-| Copyright (c) 2012 Raniere Silva <ra092767@ime.unicamp.br>
+Modelo de Dissertação/Tese do Instituto de Matemática, Estatística e Computação
+Científica (IMECC) da Universidade Estadual de Campinas (UNICAMP)
 
 Licença
 =======
 
-É garantida a permissão, livre de cobrança, a qualquer pessoa que obtver cópia
-deste modelo para utilizá-lo sem qualquer restrição.
+Veja o arquivo ``COPYING`` para a licença deste modelo.
 
-Este modelo é distribuído na expectativa de que seja útil, porém, SEM NENHUMA
-GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU ADEQUAÇÃO A UMA
-FINALIDADE ESPECÍFICA.
 
 Notas
 =====
 
-Se você for utilizar este modelo, tome o cuidado de alterar a licença.
-
-Para a construção deste modelo utilizou-se das seguintes teses:
-
-* Francisco Nogueira Calmon Sobral. Otimização sem derivadas em conjuntos
-  magros. Disponível em
-  http://www.bibliotecadigital.unicamp.br/document/?code=000854936.
-* Marcela Reinecke Bonin. Modelos matemáticos de emergência na organização
-  social para ação coletiva : forrageamento de formigas. Disponível em
-  http://www.bibliotecadigital.unicamp.br/document/?code=000866056.
-
-e as informações presentes na página da secretaria de pós-graduação:
-
-* Regulamentação referente ao formato e impressão:
-  http://www.ime.unicamp.br/~posgrad/formulario/regulamento_formato.pdf
-* Modelo de capa: http://www.ime.unicamp.br/posgrad/modelos-de-capa
-* Modelo de folha de rosto:
-  http://www.ime.unicamp.br/posgrad/p%C3%A1gina-de-rosto
+Se você for utilizar este modelo, tome o cuidado de alterar o arquivo ``COPYING``. Muito
+provavelmente, apenas remover o arquivo deve ser suficiente para o seu caso.
 
 Orientações para usuários
 =========================
 
-A documentação do modelo encontra-se na pasta ``doc``.
+A documentação encontra-se na pasta ``doc`` e inicia-se no arquivo
+``index.html``.
 
 Orientações para desenvolvedores
 ================================
+
+Se deseja contribuir, leia o arquivo ``CONTRIBUTING.rst``.
 
 O modelo oficial (em português) corresponde ao branch ``master`` e o
 desenvolvimento do mesmo ocorre no branch ``dev``.
