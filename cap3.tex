@@ -1,49 +1,49 @@
-\chapter{T\'itulo 3}
-Esse \'e o terceiro cap\'itulo da sua tese.
+\chapter{Título 3}
+Esse é o terceiro capítulo da sua tese.
 
-\section{Se\c c\~ao 3.1}
-Para facilitar a leitura, \'e bom incluir o algoritmo de forma adequada e n\~ao
+\section{Seção 3.1}
+Para facilitar a leitura, é bom incluir o algoritmo de forma adequada e não
 como uma lista.
 \begin{algorithmic}[2]
-    \STATE $i \leftarrow 0$
-    \STATE $y \leftarrow 0$
-    \FOR{$i \leq 10$}
-        \STATE $y \leftarrow y + i$
-        \STATE $i \leftarrow i + 1$
-    \ENDFOR
+  \STATE $i \leftarrow 0$
+  \STATE $y \leftarrow 0$
+  \FOR{$i \leq 10$}
+    \STATE $y \leftarrow y + i$
+    \STATE $i \leftarrow i + 1$
+  \ENDFOR
 \end{algorithmic}
 
-\'E poss\'ivel nomear os algoritmos\index{algoritmo}.
+É possível nomear os algoritmos\index{algoritmo}.
 \begin{algorithm}
-    \caption{Loop infinito.}
-    \label{alg:loop_inf}
-    \begin{algorithmic}
-        \REQUIRE $n \geq 0$
-        \ENSURE $y = 1 + 2 + \ldots + n$
-        \STATE $y \leftarrow 0$
-        \STATE $i \leftarrow 0$
-        \IF{$n < 0$}
-            \PRINT Entrada inadequada.
-        \ELSE
-            \WHILE{$i \neq n$}
-                \STATE $y \leftarrow y + i$
-            \ENDWHILE
-        \ENDIF
-    \end{algorithmic}
+  \caption{Loop infinito.}
+  \label{alg:loop_inf}
+  \begin{algorithmic}
+    \REQUIRE $n \geq 0$
+    \ENSURE $y = 1 + 2 + \ldots + n$
+    \STATE $y \leftarrow 0$
+    \STATE $i \leftarrow 0$
+    \IF{$n < 0$}
+      \PRINT Entrada inadequada.
+    \ELSE
+      \WHILE{$i \neq n$}
+        \STATE $y \leftarrow y + i$
+      \ENDWHILE
+    \ENDIF
+  \end{algorithmic}
 \end{algorithm}
 
 Para algoritmos, recomenda-se utilizar o pacote
 \emph{algorithmic}\index{algoritmo!algorithmic@\emph{algorithmic}} pois este
-permite a tradu\c{c}\~ao dos ``comandos''.
+permite a traduçãoo dos ``comandos''.
 
 Em alguns casos, recomenda-se incluir um trecho de
-c\'odigo\index{codigo@c\'{o}digo}.
+código\index{codigo@código}.
 \lstinputlisting[firstline=5, lastline=5, nolol=true]{src/exem.c}
 
-Assim como os algoritmos tamb\'em \'e poss\'ivel nomear os c\'odigos.
+Assim como os algoritmos também é possível nomear os códigos.
 \lstinputlisting[firstline=10, lastline=12, caption=Loop em C,
 language=C,  frame=single]{src/exem.c}
 
-Para trecho de c\'odigos,  recomenda-se utilizar o pacote
-\emph{listings}\index{codigo@c\'{o}digo!listings@\emph{listings}} pois
-este possue v\'arias op\c{c}\~oes.
+Para trecho de códigos,  recomenda-se utilizar o pacote
+\emph{listings}\index{codigo@código!listings@\emph{listings}} pois
+este possui várias opções.

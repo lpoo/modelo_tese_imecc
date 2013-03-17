@@ -1,0 +1,44 @@
+, Version 1.0.0
+
+Esta corresponde a primeira versão oficial do modelo.
+
+LaTeX
+
+- [X] Seguir padrões da UNICAMP e IMECC.
+- [X] Incluir sumário e listas.
+- [X] Incluir resumo e capítulos.
+- [X] Incluir apêndices.
+- [ ] Incluir licença CC.
+- [X] Incluir indice remissivo.
+
+Makefile
+
+- [X] Compilar utilizando `latexmk`.
+- [X] Limpar arquivos temporários.
+- [ ] Realizar verificação ortográfica com o `hunspell`.
+
+Documentação
+
+- [ ] Documentação avançada (em html).
+
+, Versão 0.6.0
+
+LaTeX
+
+- [X] Incluir pacote `breqn`.
+- [ ] Incluir pacote `natbib`.
+
+
+2013-03-16, Versão 0.5.2
+
+Documentação
+
+- [X] Instruções básicas.
+- [X] Instruções para desenvolvedores e contribuidores.
+- [X] Melhorar explicação do workflow de desenvolvimento.
+
+2013-03-16, Versão 0.5.1
+
+- [X] Mudar para UTF-8.
+- [X] Linhas com no máximo 80 caracteres, i.e., no Vim utilizar `set
+      textwidth=80`.
