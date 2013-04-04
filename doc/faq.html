@@ -20,12 +20,67 @@
           aplicada a defesa e por este motivo deve ser alterada (recomenda-se
           remover todas as linhas a partir do arquivo <kbd>README.rst</kbd> até o final
           da licença).</p></li>
+          <li><span>Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
+            estranhos como os apresentados abaixo:</span>
+          <iframe src="wrong_encoding.html" width=100% height=36em></iframe>
+          <p>Muito provavelmente você não configurou corretamente o seu
+          editor ou está utilizando um editor que não é suportado. Procure seu
+          editor <a href='index.html'>aqui</a> e veja como configurá-lo.</p></li>
           <li><span>Não modifiquei nenhum arquivo e não estou conseguindo gerar
             o pdf. O que eu faço?</span>
           <p>Envie o arquivo <kbd>tese.log</kbd> (como anexo) por email para um dos
           mantenedores.</p>
           <p>Se o arquivo <kbd>tese.log</kbd> não existir, certifique-se que o LaTeX
           esteja instalado na sua máquina e devidamente configurado.</p></li>
+          <li><span>Estou tendo problemas com imagens e por causa delas não
+            consigo compilar.</span>
+          <p>O modelo foi planejado para ser compilado com o <kbd>pdflatex</kbd>
+          utilizando o comando:</p>
+          <code>
+            $ pdflatex tese.tex
+          </code>
+          <p>Se você estiver utilizando outro compilador, tente utilizar o
+          <kbd>pdflatex</kbd>.
+          </li>
+          <li><span>Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
+            compilar.</span>
+          <p>O modelo foi planejado para não suportar figuras no formato
+          <kbd>.eps</kbd> pelo simples motivo dele ter sido "substituido" pelo
+          formato <kbd>.pdf</kbd> como verificado abaixo:
+          <blockquote>
+            The moral to this story is that PDF can be used as a replacement
+            file format for EPS, and that PDF can be used as a delivery format
+            for sending complete publications to press. (Retirado de <a
+              href=http://www.adobe.com/print/features/psvspdf/">http://www.adobe.com/print/features/psvspdf/</a>.)
+          </blockquote></p>
+          <p>Se você tiver gerado as figuras a partir de algum software, muito
+          provavelmente, consiguirá gerá-las no formato <kbd>.pdf</kbd>. No caso
+          de você não conseguir gerá-las no novo formato, utilize o
+          <kbd>epstopdf</kbd> para criar um <kbd>.pdf</kbd> a partir do
+          <kbd>.eps</kbd>.</p></li>
+          <li><span>Ao compilar as referências bibliográficas não
+            aparecem.</span>
+          <p>Você muito provavelmente está esquendo esquecendo de utilizar o
+          <kbd>bibtex</kbd> ou equivalentes, e.g., <kbd>bibtex8</kbd> e
+          <kbd>bibter</kbd>.</p>
+          <p>Em resumo, o processo de compilação do modelo consiste nos
+          comandos:</p>
+          <code>
+            $ pdflatex tese.tex</br>
+            $ bibtex tese.aux</br>
+            $ makeindex -s tese.ist tese.idx</br>
+            $ pdflatex tese.tex</br>
+            $ pdflatex tese.tex
+          </code>
+          <p>Recomenda-se utilizar o <kbd>Makefile</kbd> presente no modelo ou
+          compilar utilizando o <kbd>latexmk</kbd> com o seguinte comando:</p>
+          <code>
+            $ latexmk -pdf tese
+          </code>
+          <p>O <kbd>latexmk</kbd> roda em todas as plataformas e é incluído na
+          maioria das distribuições de LaTeX. Infelizmente, a grande maioria dos
+          editores não estão configurados para utilizá-lo.</p>
+          </li>
           <li><span>Pelas normas da ABNT os apêndices e anexos devem aparecer
             depois das referências bibliográficas mas no modelo isso não é
             seguido.</span>
