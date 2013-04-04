@@ -1,33 +1,59 @@
 \chapter{Título 2}
 Esse é o segundo capítulo da sua defesa.
 
-\section{Seção 2.1}
-Essa é uma seção da sua defesa.
-
-É possível inserir figuras na sua defesa. \\
+\section{Figuras}
+É possível inserir figuras na sua defesa utilizando o comando
+\lstinline+\includegraphics{caminho_figura}+. \\
 \includegraphics{figuras/unicamp-logo.jpg}
 
-É recomendado deixar as figuras\index{figura} como objetos flutuantes.
+É recomendado deixar as figuras\index{figura} como objetos flutuantes, para isso
+utiliza-se o ambiente \lstinline+figure+.
 \begin{figure}[!htb]
   \center
-  \includegraphics[width=4cm]{figuras/unicamp-logo.jpg}
+  \includegraphics[width=1cm]{figuras/unicamp-logo.jpg}
   \caption{Logo da UNICAMP.}
   \label{fig:log_unicamp}
 \end{figure}
 
 Além de inserir figuras é possível ``desenhar''\index{figura!desenhar} figuras
-utilizando o pacote TikZ\index{figura!TikZ}, como na Figura~\ref{fig:exem_tikz}.
+utilizando o pacote TikZ\index{figura!TikZ}, como na
+Figura~\ref{fig:exem_tikz1}~e~\ref{fig:exem_tikz2}.
 \begin{figure}[!htb]
   \centering
   \begin{tikzpicture}
     \draw (0,0) -- (0,2) -- (2,2) -- (2,0) -- (0,0);
+    \fill (5,0) circle (1);
   \end{tikzpicture}
   \caption{Exemplo do uso do TikZ.}
-  \label{fig:exem_tikz}
+  \label{fig:exem_tikz1}
+\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \begin{tikzpicture}
+    \node[draw] (A) at (0,1) {$A$};
+    \node[draw,circle] (B) at (0,-1) {$B$};
+    \node (C) at (1,0) {$C$};
+    \node[fill=red,text=black] (D) at (3,0) {$D$};
+    \node[draw,rectangle,fit=(A) (B) (C)] {};
+
+    \draw[->] (A) -- (D);
+    \draw[->] (B) -- (D);
+    \draw[->] (C) -- (D);
+
+    \coordinate (a) at (5,1);
+    \coordinate (b) at (5,-1);
+
+    \draw[dashed] (D) -- (a);
+    \draw[dotted] (D) -- (b);
+    \draw[<->] (a) -- (b);
+  \end{tikzpicture}
+  \caption{Outro exemplo do uso do TikZ.}
+  \label{fig:exem_tikz2}
 \end{figure}
 
-\section{Seção 2.2}
-Além de figuras também é possível inserir tabelas. \\
+\section{Tabelas}
+Além de figuras também é possível inserir tabelas utilizando o ambiente
+\lstinline+tabular+. \\
 \begin{tabular}{cc}
   \toprule
   Tabela & Tabela \\
@@ -37,7 +63,7 @@ Além de figuras também é possível inserir tabelas. \\
 \end{tabular}
 
 Assim como as figuras, é recomendado que as tabelas sejam incluídas como
-objetos flutuantes.
+objetos flutuantes, para isso utiliza-se o ambiente \lstinline+table+.
 \begin{table}[!htb]
   \caption{Exemplo de Tabela.}
   \label{tab:exem}

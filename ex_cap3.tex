@@ -1,9 +1,10 @@
 \chapter{Título 3}
 Esse é o terceiro capítulo da sua tese.
 
-\section{Seção 3.1}
-Para facilitar a leitura, é bom incluir o algoritmo de forma adequada e não
-como uma lista.
+\section{Algoritmos}
+Para facilitar a leitura, é bom incluir o algoritmo\index{algoritmo} de forma
+adequada e não como uma lista, para isso utilize o ambiente
+\lstinline+algorithmic+.
 \begin{algorithmic}[2]
   \STATE $i \leftarrow 0$
   \STATE $y \leftarrow 0$
@@ -13,7 +14,8 @@ como uma lista.
   \ENDFOR
 \end{algorithmic}
 
-É possível nomear os algoritmos\index{algoritmo}.
+É possível nomear os algoritmos\index{algoritmo} ao utilizar o ambiente
+\lstinline+algorithm+.
 \begin{algorithm}
   \caption{Loop infinito.}
   \label{alg:loop_inf}
@@ -32,18 +34,15 @@ como uma lista.
   \end{algorithmic}
 \end{algorithm}
 
-Para algoritmos, recomenda-se utilizar o pacote
-\emph{algorithmic}\index{algoritmo!algorithmic@\emph{algorithmic}} pois este
-permite a traduçãoo dos ``comandos''.
+Recomenda-se traduzir as instruções utilizadas no algoritmo. Para isso, é
+preciso dar uma olhada na documentação do pacote \lstinline+algorithmic+.
 
+\section{Códigos}
 Em alguns casos, recomenda-se incluir um trecho de
-código\index{codigo@código}.
+código\index{codigo@código} e para isso utiliza-se o comando
+\lstinline+\lstinputlisting{codigo}+.
 \lstinputlisting[firstline=5, lastline=5, nolol=true]{src/exem.c}
 
 Assim como os algoritmos também é possível nomear os códigos.
 \lstinputlisting[firstline=10, lastline=12, caption=Loop em C,
 language=C,  frame=single]{src/exem.c}
-
-Para trecho de códigos,  recomenda-se utilizar o pacote
-\emph{listings}\index{codigo@código!listings@\emph{listings}} pois
-este possui várias opções.
