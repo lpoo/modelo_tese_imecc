@@ -118,6 +118,7 @@
 \input{ex_cap1}
 \input{ex_cap2}
 \input{ex_cap3}
+\input{ex_cap4}
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
 % FIXME Se não for utilizar apêndices, comentar a linha abaixo.
@@ -135,16 +136,9 @@
 % TODO Inserir os arquivos referentes aos apêndices e anexos.
 %
 \backmatter
-% FIXME Remover a linha abaixo.
-\nocite{*}
-% FIXME Mudar o estilo para o de sua preferencia.
-\bibliographystyle{amsplain}
-% FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
-% tese.bib.
-\bibliography{tese}
+\printbibliography
 \addcontentsline{toc}{chapter}{Referência Bibliográfica}
-%
 \clearpage
-\addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
+\addcontentsline{toc}{chapter}{Índice Remissivo}
 \end{document}
