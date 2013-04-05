@@ -5,17 +5,18 @@
 % caixa colorida não eh impressa mas pode atrapalhar a leitura para alguns. Se
 % desejar removê-las descomente a linha abaixo.
 % hidelinks,
+hypertexnames=false,
 pdftitle={\titulo},  % Não modifique esta linha.
 pdfauthor={\autor}  % Não modifique esta linha.
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: numeração %%%%%%%%%%%%%%%%%%%%%%%%%%
 \numberwithin{equation}{section}
 \numberwithin{section}{chapter}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \theoremstyle{definition}
 \newtheorem{thm}{Teorema}[section]
 \newtheorem{con}[thm]{Conjectura}
@@ -25,6 +26,17 @@ pdfauthor={\autor}  % Não modifique esta linha.
 \newtheorem{lem}[thm]{Lema}
 \newtheorem{obs}[thm]{Observação}
 \newtheorem{pps}[thm]{Proposição}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: anexo %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\annexname}{Anexo}
+\makeatletter
+\newcommand\annex{\par
+\setcounter{chapter}{0}%
+\setcounter{section}{0}%
+\gdef\@chapapp{\annexname}%
+\gdef\thechapter{\@Roman\c@chapter}}
+\makeatother
 
 
 % TODO Inserir configurações adicionais aqui.
