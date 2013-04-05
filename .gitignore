@@ -35,3 +35,8 @@
 *.vrb
 *.xdy
 *.tdo
+
+#Vim
+*.swp
+*.swo
+*~
