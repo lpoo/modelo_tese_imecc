@@ -44,10 +44,12 @@ clean:
 	- rm *.acr
 	- rm *.alg
 	- rm *.aux
+	- rm *.bcf
 	- rm *.bbl
 	- rm *.blg
 	- rm *.dvi
 	- rm *.fdb_latexmk
+	- rm *.fls
 	- rm *.glg
 	- rm *.glo
 	- rm *.gls
@@ -70,6 +72,7 @@ clean:
 	# - rm *.pdf
 	- rm *.pdfsync
 	- rm *.ps
+	- rm *.run.xml
 	- rm *.snm
 	- rm *.synctex.gz
 	- rm *.toc
