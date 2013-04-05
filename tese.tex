@@ -69,47 +69,40 @@
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \input{dedicatoria}
 %
-% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
-\input{epigrafe}
-%
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \input{agradecimentos}
+%
+% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
+\input{epigrafe}
 %
 \input{resumo}
 \input{abstract}
 %
-\tableofcontents
-% FIXME Comentar as linhas abaixo de não desejar listar as figuras
+% FIXME Comentar a linha abaixo se não desejar listar as figuras
 % apresentadas.
 \listoffigures
-\addcontentsline{toc}{chapter}{Lista de Figuras}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar as tabelas
+% FIXME Comentar a linha abaixo se não desejar listar as tabelas
 % apresentadas.
 \listoftables
-\addcontentsline{toc}{chapter}{Lista de Tabelas}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar os
-% algoritmos apresentados.
+% FIXME Comentar a linha abaixo se não desejar listar os algoritmos
+% apresentados.
 \listofalgorithms
-\addcontentsline{toc}{chapter}{Lista de Algoritmos}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar os trechos de código
+% FIXME Comentar a linha abaixo se não desejar listar os trechos de código
 % apresentados.
 \lstlistoflistings
-\addcontentsline{toc}{chapter}{Lista de Códigos}
+%
+% FIXME Comentar a linha abaixo se não for apresentar os
+% símbolos utilizados.
+\input{simbolos}
 %
 % FIXME Comentar a linha abaixo de não for apresentar as
 % abreviações utilizadas.
 \input{abreviacoes}
 %
-% FIXME Comentar a linha abaixo de não for apresentar os
-% símbolos utilizados.
-\input{simbolos}
-%
-% FIXME Comentar a linha abaixo de não for apresentar o
-% glossário.
-\input{glossario}
+\tableofcontents
 %
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
@@ -120,6 +113,13 @@
 \input{ex_cap3}
 \input{ex_cap4}
 % TODO Inserir os arquivos referentes ao corpo da tese.
+%
+%
+\printbibliography
+\addcontentsline{toc}{chapter}{Referência Bibliográfica}
+%
+% FIXME Comentar a linha abaixo se não for apresentar o glossário.
+\input{glossario}
 %
 % FIXME Se não for utilizar apêndices, comentar a linha abaixo.
 \appendix
@@ -134,10 +134,7 @@
 \input{ex_ane1}
 % TODO Inserir os arquivos referentes aos apêndices e anexos.
 %
-\backmatter
-\printbibliography
-\addcontentsline{toc}{chapter}{Referência Bibliográfica}
-\clearpage
+\cleardoublepage
 \printindex
 \addcontentsline{toc}{chapter}{Índice Remissivo}
 \end{document}
