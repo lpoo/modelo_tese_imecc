@@ -28,6 +28,19 @@ pdfauthor={\autor}  % Não modifique esta linha.
 \newtheorem{pps}[thm]{Proposição}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: códigos %%%%%%%%%%%%%%%%%%%%%%%% 
+\lstset{
+basicstyle=\ttfamily,
+keywordstyle=\bfseries\color{green!40!black},
+commentstyle=\color{gray},
+stringstyle=\color{Maroon},
+identifierstyle=\color{Blue},
+numbers=left,
+numberstyle=\tiny,
+breaklines=false
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: anexo %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\annexname}{Anexo}
 \makeatletter
@@ -37,6 +50,7 @@ pdfauthor={\autor}  % Não modifique esta linha.
 \gdef\@chapapp{\annexname}%
 \gdef\thechapter{\@Roman\c@chapter}}
 \makeatother
+
 
 
 % TODO Inserir configurações adicionais aqui.
