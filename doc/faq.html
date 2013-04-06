@@ -8,35 +8,56 @@
         dissertação/tese do IMECC</h1>
       <div class='content'>
         <ol>
-          <li><span>Porque existe um arquivo <kbd>COPYING</kbd>?</span>
+          <li><a href="#1">Porque existe um arquivo <kbd>COPYING</kbd>?</a></li>
+          <li><a href="#2">Porque é recomendado remover/modificar o arquivo
+            <kbd>COPYING</kbd>?</a></li>
+          <li><a href="#3">Não modifiquei nenhum arquivo e não estou conseguindo gerar
+            o PDF. O que eu faço?</a></li>
+          <li><a href="#4">Estou tendo problemas com imagens e por causa delas não
+            consigo compilar.</a></li>
+          <li><a href="#5">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
+            compilar.</a></li>
+          <li><a href="#6">Ao compilar as referências bibliográficas não
+            aparecem.</a></li>
+          <li><a href="#7">Pelas normas da ABNT os apêndices e anexos devem aparecer
+            depois das referências bibliográficas mas no modelo isso não é
+            seguido.</a></li>
+          <li><a href="#8">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
+            código os sinais de menos, <kbd>-</kbd>, não aparecem.</a></li>
+        </ol>
+
+        <hr>
+
+        <ol>
+          <li><a name="1">Porque existe um arquivo <kbd>COPYING</kbd>?</a>
           <p>O arquivo <kbd>COPYING</kbd> informa a licença de uso do modelo.
           Esse arquivo é importante pois garante que nenhum
           dos autores e colaboradores irá processar judicialmente algum aluno
           que utilizar o modelo. Também é importante porque protege os autores e
           colaboradores contra qualquer possível dano que este modelo possa
           causar a algum de seus usuários.</p></li>
-          <li><span>Porque é recomendado remover/modificar o arquivo
-            <kbd>COPYING</kbd>?</span>
+          <li><a name="2">Porque é recomendado remover/modificar o arquivo
+            <kbd>COPYING</kbd>?</a>
           <p>A licença no arquivo <kbd>COPYING</kbd> é muito liberal (ao estilo BSD,
           MIT) para poder cobrir os desejos de todos os alunos. Infelizmente se
           esta licença for mantida ao escrever sua defesa esta é automaticamente
           aplicada a defesa e por este motivo deve ser alterada (recomenda-se
           remover o arquivo <kbd>COPYING</kbd> pois assim todos os direitos
           ficam reservados ao autor o que é muito provavelmente o que deseja).</p></li>
-          <li><span>Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
-            estranhos como os apresentados abaixo:</span>
+          <li><a name="2">Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
+            estranhos como os apresentados abaixo:</a>
           <iframe src="wrong_encoding.html" width=100% height=36em></iframe>
           <p>Muito provavelmente você não configurou corretamente o seu
           editor ou está utilizando um editor que não é suportado. Procure seu
           editor <a href='index.html'>aqui</a> e veja como configurá-lo.</p></li>
-          <li><span>Não modifiquei nenhum arquivo e não estou conseguindo gerar
-            o PDF. O que eu faço?</span>
+          <li><a name="3">Não modifiquei nenhum arquivo e não estou conseguindo gerar
+            o PDF. O que eu faço?</a>
           <p>Envie o arquivo <kbd>tese.log</kbd> (como anexo) por e-mail para um dos
           mantenedores.</p>
           <p>Se o arquivo <kbd>tese.log</kbd> não existir, certifique-se que o LaTeX
           esteja instalado na sua máquina e devidamente configurado.</p></li>
-          <li><span>Estou tendo problemas com imagens e por causa delas não
-            consigo compilar.</span>
+          <li><a name="4">Estou tendo problemas com imagens e por causa delas não
+            consigo compilar.</a>
           <p>O modelo foi planejado para ser compilado com o <kbd>pdflatex</kbd>
           utilizando o comando:</p>
           <code>
@@ -45,8 +66,8 @@
           <p>Se você estiver utilizando outro compilador, tente utilizar o
           <kbd>pdflatex</kbd>.
           </li>
-          <li><span>Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
-            compilar.</span>
+          <li><a name="5">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
+            compilar.</a>
           <p>O modelo foi planejado para não suportar figuras no formato
           <kbd>.eps</kbd> pelo simples motivo dele ter sido "substituído" pelo
           formato <kbd>.pdf</kbd> como verificado abaixo:
@@ -61,8 +82,8 @@
           de você não conseguir gerá-las no novo formato, utilize o
           <kbd>epstopdf</kbd> para criar um <kbd>.pdf</kbd> a partir do
           <kbd>.eps</kbd>.</p></li>
-          <li><span>Ao compilar as referências bibliográficas não
-            aparecem.</span>
+          <li><a name="6">Ao compilar as referências bibliográficas não
+            aparecem.</a>
           <p>Você muito provavelmente está esquecendo de utilizar o
           <kbd>bibtex</kbd> ou equivalentes, e.g., <kbd>bibtex8</kbd> e
           <kbd>biber</kbd>.</p>
@@ -84,9 +105,9 @@
           maioria das distribuições de LaTeX. Infelizmente, a grande maioria dos
           editores não estão configurados para utilizá-lo.</p>
           </li>
-          <li><span>Pelas normas da ABNT os apêndices e anexos devem aparecer
+          <li><a name="7">Pelas normas da ABNT os apêndices e anexos devem aparecer
             depois das referências bibliográficas mas no modelo isso não é
-            seguido.</span>
+            seguido.</a>
           <p>As dissertações e teses defendidas na UNICAMP não são obrigadas a
           seguir a risca as normas da ABNT e em várias convenções, e.g,
           Chicago, Hart e Butcher, as referências bibliográficas aparecem depois
@@ -94,8 +115,8 @@
           <kbd>\annex</kbd> que precede os apêndices e anexos, respectivamente
           deve preceder o comando <kbd>\backmatter</kbd>, que por sua vez precede
           a referência bibliográfica.</p></li>
-          <li><span>Ao utilizar o pacote <kbd>listings</kbd> para incluir um
-            código os sinais de menos, <kbd>-</kbd>, não aparecem.</span>
+          <li><a name="8">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
+            código os sinais de menos, <kbd>-</kbd>, não aparecem.</a>
           <p>Esse é um bug conhecido ao utilizar os pacotes <kbd>breqn</kbd> e
           <kbd>listings</kbd> em conjunto. Não existe previsão dele ser resolvido
           mas algumas soluções paliativas são descritas em <a
