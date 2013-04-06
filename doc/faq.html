@@ -9,8 +9,8 @@
       <div class='content'>
         <ol>
           <li><span>Porque existe um arquivo <kbd>COPYING</kbd>?</span>
-          <p>O arquivo <kbd>COPYING</kbd> infoma a licença de uso do modelo.
-          Esse arquivo é umportante pois garante que nenhum
+          <p>O arquivo <kbd>COPYING</kbd> informa a licença de uso do modelo.
+          Esse arquivo é importante pois garante que nenhum
           dos autores e colaboradores irá processar judicialmente algum aluno
           que utilizar o modelo. Também é importante porque protege os autores e
           colaboradores contra qualquer possível dano que este modelo possa
@@ -30,8 +30,8 @@
           editor ou está utilizando um editor que não é suportado. Procure seu
           editor <a href='index.html'>aqui</a> e veja como configurá-lo.</p></li>
           <li><span>Não modifiquei nenhum arquivo e não estou conseguindo gerar
-            o pdf. O que eu faço?</span>
-          <p>Envie o arquivo <kbd>tese.log</kbd> (como anexo) por email para um dos
+            o PDF. O que eu faço?</span>
+          <p>Envie o arquivo <kbd>tese.log</kbd> (como anexo) por e-mail para um dos
           mantenedores.</p>
           <p>Se o arquivo <kbd>tese.log</kbd> não existir, certifique-se que o LaTeX
           esteja instalado na sua máquina e devidamente configurado.</p></li>
@@ -48,7 +48,7 @@
           <li><span>Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
             compilar.</span>
           <p>O modelo foi planejado para não suportar figuras no formato
-          <kbd>.eps</kbd> pelo simples motivo dele ter sido "substituido" pelo
+          <kbd>.eps</kbd> pelo simples motivo dele ter sido "substituído" pelo
           formato <kbd>.pdf</kbd> como verificado abaixo:
           <blockquote>
             The moral to this story is that PDF can be used as a replacement
@@ -57,15 +57,15 @@
               href=http://www.adobe.com/print/features/psvspdf/">http://www.adobe.com/print/features/psvspdf/</a>.)
           </blockquote></p>
           <p>Se você tiver gerado as figuras a partir de algum software, muito
-          provavelmente, consiguirá gerá-las no formato <kbd>.pdf</kbd>. No caso
+          provavelmente, conseguirá gerá-las no formato <kbd>.pdf</kbd>. No caso
           de você não conseguir gerá-las no novo formato, utilize o
           <kbd>epstopdf</kbd> para criar um <kbd>.pdf</kbd> a partir do
           <kbd>.eps</kbd>.</p></li>
           <li><span>Ao compilar as referências bibliográficas não
             aparecem.</span>
-          <p>Você muito provavelmente está esquendo esquecendo de utilizar o
+          <p>Você muito provavelmente está esquecendo de utilizar o
           <kbd>bibtex</kbd> ou equivalentes, e.g., <kbd>bibtex8</kbd> e
-          <kbd>bibter</kbd>.</p>
+          <kbd>biber</kbd>.</p>
           <p>Em resumo, o processo de compilação do modelo consiste nos
           comandos:</p>
           <code>
@@ -90,15 +90,15 @@
           <p>As dissertações e teses defendidas na UNICAMP não são obrigadas a
           seguir a risca as normas da ABNT e em várias convenções, e.g,
           Chicago, Hart e Butcher, as referências bibliográficas aparecem depois
-          dos apêndices e anexos. Além disso, o comando <kbd>\appendix</kbd>
-          que precede os apêndices e anexos deve preceder o comando
-          <kbd>\backmatter</kbd> que precede a referência
-          bibliográfica.</p></li>
+          dos apêndices e anexos. Além disso, os comando <kbd>\appendix</kbd> e
+          <kbd>\annex</kbd> que precede os apêndices e anexos, respectivamente
+          deve preceder o comando <kbd>\backmatter</kbd>, que por sua vez precede
+          a referência bibliográfica.</p></li>
           <li><span>Ao utilizar o pacote <kbd>listings</kbd> para incluir um
             código os sinais de menos, <kbd>-</kbd>, não aparecem.</span>
           <p>Esse é um bug conhecido ao utilizar os pacotes <kbd>breqn</kbd> e
           <kbd>listings</kbd> em conjunto. Não existe previsão dele ser resolvido
-          mas algumas soluções paleativas são descritas em <a
+          mas algumas soluções paliativas são descritas em <a
             href='http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions'>http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions</a>.</p></li>
         </ol>
       </div>
