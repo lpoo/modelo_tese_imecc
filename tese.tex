@@ -115,9 +115,6 @@
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
 %
-\printbibliography
-\addcontentsline{toc}{chapter}{Referência Bibliográfica}
-%
 % FIXME Comentar a linha abaixo se não for apresentar o glossário.
 \input{glossario}
 %
@@ -135,6 +132,10 @@
 % TODO Inserir os arquivos referentes aos apêndices e anexos.
 %
 \backmatter
+\printbibliography
+\addcontentsline{toc}{chapter}{Referência Bibliográfica}
+%
+\clearpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
