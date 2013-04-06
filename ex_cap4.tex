@@ -47,86 +47,87 @@ BibTeX para a referência desejada.
 
 O comando \lstinline+\cite{id}+ insere o número da referência entre colchetes,
 como mostrado abaixo:
-\begin{center}
+\begin{table}[!h]
   \centering
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\cite{Swa82}+ & \cite{Swa82} \\ \hline
-    \lstinline+\cite{Bailey}+ & \cite{Bailey} \\ \hline
-    \lstinline+\cite{Ta}+ & \cite{Ta} \\ \hline
-    \lstinline+\cite{Hale}+ & \cite{Hale} \\ \hline
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\cite{Swa82}+ & \cite{Swa82} \\
+    \lstinline+\cite{Bailey}+ & \cite{Bailey} \\
+    \lstinline+\cite{Ta}+ & \cite{Ta} \\
+    \lstinline+\cite{Hale}+ & \cite{Hale} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Para inserir o nome dos autores e o número da referência entre colchetes,
 utiliza-se o comando \lstinline+\textcite{id}+, como mostrado abaixo:
-\begin{center}
+\begin{table}[!h]
   \centering
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\textcite{Swa82}+ & \textcite{Swa82} \\ \hline
-    \lstinline+\textcite{Bailey}+ & \textcite{Bailey} \\ \hline
-    \lstinline+\textcite{Ta}+ & \textcite{Ta} \\ \hline
-    \lstinline+\textcite{Hale}+ & \textcite{Hale} \\ \hline
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\textcite{Swa82}+ & \textcite{Swa82} \\
+    \lstinline+\textcite{Bailey}+ & \textcite{Bailey} \\
+    \lstinline+\textcite{Ta}+ & \textcite{Ta} \\
+    \lstinline+\textcite{Hale}+ & \textcite{Hale} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Para inserir apenas o nome dos autores utiliza-se o comando
 \lstinline+\citeauthor{id}+, como mostrado abaixo:
-\begin{center}
+\begin{table}[!h]
   \centering
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\citeauthor{Swa82}+ & \citeauthor{Swa82} \\ \hline
-    \lstinline+\citeauthor{Bailey}+ & \citeauthor{Bailey} \\ \hline
-    \lstinline+\citeauthor{Ta}+ & \citeauthor{Ta} \\ \hline
-    \lstinline+\citeauthor{Hale}+ & \citeauthor{Hale} \\ \hline
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citeauthor{Swa82}+ & \citeauthor{Swa82} \\
+    \lstinline+\citeauthor{Bailey}+ & \citeauthor{Bailey} \\
+    \lstinline+\citeauthor{Ta}+ & \citeauthor{Ta} \\
+    \lstinline+\citeauthor{Hale}+ & \citeauthor{Hale} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Para inserir apenas o título da referência utiliza-se o comando
 \lstinline+\citetitle{id}+, como mostrado abaixo:
-\begin{center}
+\begin{table}[!h]
   \centering
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\citetitle{Swa82}+ & \citetitle{Swa82} \\ \hline
-    \lstinline+\citetitle{Bailey}+ & \citetitle{Bailey} \\ \hline
-    \lstinline+\citetitle{Ta}+ & \citetitle{Ta} \\ \hline
-    \lstinline+\citetitle{Hale}+ & \citetitle{Hale} \\ \hline
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citetitle{Swa82}+ & \citetitle{Swa82} \\
+    \lstinline+\citetitle{Bailey}+ & \citetitle{Bailey} \\
+    \lstinline+\citetitle{Ta}+ & \citetitle{Ta} \\
+    \lstinline+\citetitle{Hale}+ & \citetitle{Hale} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Para inserir apenas o ano de publicação da referência utiliza-se o comando
 \lstinline+\citeyear{id}+, como mostrado abaixo:
-\begin{center}
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\citeyear{Swa82}+ & \citeyear{Swa82} \\ \hline
-    \lstinline+\citeyear{Bailey}+ & \citeyear{Bailey} \\ \hline
-    \lstinline+\citeyear{Ta}+ & \citeyear{Ta} \\ \hline
-    \lstinline+\citeyear{Hale}+ & \citeyear{Hale} \\ \hline
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citeyear{Swa82}+ & \citeyear{Swa82} \\
+    \lstinline+\citeyear{Bailey}+ & \citeyear{Bailey} \\
+    \lstinline+\citeyear{Ta}+ & \citeyear{Ta} \\
+    \lstinline+\citeyear{Hale}+ & \citeyear{Hale} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Para citações múltiplas, utiliza-se os comandos \lstinline+\cites{id1,id2,id3}+
 ou \lstinline+\textcites{id1,id2,id3}+, como mostrado abaixo:
-\begin{center}
+\begin{table}[!h]
   \centering
-  \begin{tabular}{|l|c|}
-    \hline
-    Comando & Resultado \\ \hline
-    \lstinline+\cites{Bailey,Swa82}+ & \cites{Bailey,Swa82} \\ \hline
-    \lstinline+\cites{Hale,Ta}+ & \cites{Hale,Ta} \\ \hline
-    \lstinline+\textcites{Bailey,Swa82}+ & \textcites{Bailey,Swa82} \\ \hline
-    \lstinline+\textcites{Hale,Ta}+ & \textcites{Hale,Ta} \\ \hline
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\cites{Bailey,Swa82}+ & \cites{Bailey,Swa82} \\
+    \lstinline+\cites{Hale,Ta}+ & \cites{Hale,Ta} \\
+    \lstinline+\textcites{Bailey,Swa82}+ & \textcites{Bailey,Swa82} \\
+    \lstinline+\textcites{Hale,Ta}+ & \textcites{Hale,Ta} \\ \bottomrule
   \end{tabular}
-\end{center}
+\end{table}
 
 Por último, caso deseje incluir uma referência na referência bibliográfica mas
 suprimí-la ao longo do texto você deve utilizar o comando
