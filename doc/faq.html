@@ -11,19 +11,23 @@
           <li><a href="#1">Porque existe um arquivo <kbd>COPYING</kbd>?</a></li>
           <li><a href="#2">Porque é recomendado remover/modificar o arquivo
             <kbd>COPYING</kbd>?</a></li>
-          <li><a href="#3">Não modifiquei nenhum arquivo e não estou conseguindo gerar
+          <li><a href="#3">Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
+            estranhos como os apresentados abaixo:</a>
+          <li><a href="#4">Não modifiquei nenhum arquivo e não estou conseguindo gerar
             o PDF. O que eu faço?</a></li>
-          <li><a href="#4">Estou tendo problemas com imagens e por causa delas não
+          <li><a href="#5">Estou tendo problemas com imagens e por causa delas não
             consigo compilar.</a></li>
-          <li><a href="#5">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
+          <li><a href="#6">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
             compilar.</a></li>
-          <li><a href="#6">Ao compilar as referências bibliográficas não
+          <li><a href="#7">Ao compilar as referências bibliográficas não
             aparecem.</a></li>
           <li><a href="#7">Pelas normas da ABNT os apêndices e anexos devem aparecer
             depois das referências bibliográficas mas no modelo isso não é
             seguido.</a></li>
           <li><a href="#8">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
             código os sinais de menos, <kbd>-</kbd>, não aparecem.</a></li>
+          <li><a href="#10">Ao tentar compilar minha distribuição de LaTeX não encontra
+              o pacote <kbd>expl3.sty</kbd>. Como devo proceder?</a>
         </ol>
 
         <hr>
@@ -36,6 +40,7 @@
           que utilizar o modelo. Também é importante porque protege os autores e
           colaboradores contra qualquer possível dano que este modelo possa
           causar a algum de seus usuários.</p></li>
+
           <li><a name="2">Porque é recomendado remover/modificar o arquivo
             <kbd>COPYING</kbd>?</a>
           <p>A licença no arquivo <kbd>COPYING</kbd> é muito liberal (ao estilo BSD,
@@ -44,19 +49,22 @@
           aplicada a defesa e por este motivo deve ser alterada (recomenda-se
           remover o arquivo <kbd>COPYING</kbd> pois assim todos os direitos
           ficam reservados ao autor o que é muito provavelmente o que deseja).</p></li>
-          <li><a name="2">Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
+
+          <li><a name="3">Ao abrir os arquivos <kbd>.tex</kbd> visualizo caracteres
             estranhos como os apresentados abaixo:</a>
           <iframe src="wrong_encoding.html" width=100% height=36em></iframe>
           <p>Muito provavelmente você não configurou corretamente o seu
           editor ou está utilizando um editor que não é suportado. Procure seu
           editor <a href='index.html'>aqui</a> e veja como configurá-lo.</p></li>
-          <li><a name="3">Não modifiquei nenhum arquivo e não estou conseguindo gerar
+
+          <li><a name="4">Não modifiquei nenhum arquivo e não estou conseguindo gerar
             o PDF. O que eu faço?</a>
           <p>Envie o arquivo <kbd>tese.log</kbd> (como anexo) por e-mail para um dos
           mantenedores.</p>
           <p>Se o arquivo <kbd>tese.log</kbd> não existir, certifique-se que o LaTeX
           esteja instalado na sua máquina e devidamente configurado.</p></li>
-          <li><a name="4">Estou tendo problemas com imagens e por causa delas não
+
+          <li><a name="5">Estou tendo problemas com imagens e por causa delas não
             consigo compilar.</a>
           <p>O modelo foi planejado para ser compilado com o <kbd>pdflatex</kbd>
           utilizando o comando:</p>
@@ -64,9 +72,9 @@
             $ pdflatex tese.tex
           </code>
           <p>Se você estiver utilizando outro compilador, tente utilizar o
-          <kbd>pdflatex</kbd>.
-          </li>
-          <li><a name="5">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
+          <kbd>pdflatex</kbd>.</li>
+
+          <li><a name="6">Tenho figuras <kbd>.eps</kbd> e por causa delas não consigo
             compilar.</a>
           <p>O modelo foi planejado para não suportar figuras no formato
           <kbd>.eps</kbd> pelo simples motivo dele ter sido "substituído" pelo
@@ -82,7 +90,8 @@
           de você não conseguir gerá-las no novo formato, utilize o
           <kbd>epstopdf</kbd> para criar um <kbd>.pdf</kbd> a partir do
           <kbd>.eps</kbd>.</p></li>
-          <li><a name="6">Ao compilar as referências bibliográficas não
+
+          <li><a name="7">Ao compilar as referências bibliográficas não
             aparecem.</a>
           <p>Você muito provavelmente está esquecendo de utilizar o
           <kbd>bibtex</kbd> ou equivalentes, e.g., <kbd>bibtex8</kbd> e
@@ -103,9 +112,9 @@
           </code>
           <p>O <kbd>latexmk</kbd> roda em todas as plataformas e é incluído na
           maioria das distribuições de LaTeX. Infelizmente, a grande maioria dos
-          editores não estão configurados para utilizá-lo.</p>
-          </li>
-          <li><a name="7">Pelas normas da ABNT os apêndices e anexos devem aparecer
+          editores não estão configurados para utilizá-lo.</p></li>
+
+          <li><a name="8">Pelas normas da ABNT os apêndices e anexos devem aparecer
             depois das referências bibliográficas mas no modelo isso não é
             seguido.</a>
           <p>As dissertações e teses defendidas na UNICAMP não são obrigadas a
@@ -115,12 +124,25 @@
           <kbd>\annex</kbd> que precede os apêndices e anexos, respectivamente
           deve preceder o comando <kbd>\backmatter</kbd>, que por sua vez precede
           a referência bibliográfica.</p></li>
-          <li><a name="8">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
+
+          <li><a name="9">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
             código os sinais de menos, <kbd>-</kbd>, não aparecem.</a>
           <p>Esse é um bug conhecido ao utilizar os pacotes <kbd>breqn</kbd> e
           <kbd>listings</kbd> em conjunto. Não existe previsão dele ser resolvido
           mas algumas soluções paliativas são descritas em <a
             href='http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions'>http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions</a>.</p></li>
+
+          <li><a name="10">Ao tentar compilar minha distribuição de LaTeX não encontra
+              o pacote <kbd>expl3.sty</kbd>. Como devo proceder?</a>
+          <p>O pacote <kbd>expl3.sty</kbd> é um primeiro passo em direção ao
+          LaTeX3. Esse pacote foi renomeado para <kbd>l3kernels.sty</kbd> e
+          <kbd>l3packages</kbd> (<a
+              href="http://sourceforge.net/p/miktex/discussion/33790/thread/fbc850e8">http://sourceforge.net/p/miktex/discussion/33790/thread/fbc850e8</a>).</p>
+          <p><a href="https://plus.google.com/101241134130767376580">Pascal
+              Gaggero</a> escreveu um <a
+              href="http://gaggerostechnicalnotes.blogspot.ca/2011/08/expl3sty-not-found-when-using-siunitx.html?showComment=1337018886147#c4201851636980046365">tutorial</a>
+          explicando como resolver esse problema se você estiver utilizando o
+          MikTeX.</p></li>
         </ol>
       </div>
     </div>
