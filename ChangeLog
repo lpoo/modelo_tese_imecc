@@ -1,3 +1,28 @@
+, Version 2.0.0
+
+Esta corresponde a primeira versão com uma boa documentação de uso.
+
+Documentação
+
+- [ ] Documentação avançada (em html).
+- [ ] Documentação avançada (em pdf).
+
+, Version 1.2.0
+
+Esta corresponde a primeira versão com instruções de uso de alguma licença CC.
+
+LaTeX
+
+- [ ] Incluir licença CC.
+
+, Version 1.1.0
+
+Esta corresponde a uma melhoria quanto ao uso do verificador ortográfico.
+
+LaTeX
+
+- [ ] Realizar verificação ortográfica com o `hunspell`.
+
 , Version 1.0.0
 
 Esta corresponde a primeira versão oficial do modelo.
@@ -8,25 +33,24 @@ LaTeX
 - [X] Incluir sumário e listas.
 - [X] Incluir resumo e capítulos.
 - [X] Incluir apêndices.
-- [ ] Incluir licença CC.
 - [X] Incluir indice remissivo.
 
 Makefile
 
 - [X] Compilar utilizando `latexmk`.
 - [X] Limpar arquivos temporários.
-- [ ] Realizar verificação ortográfica com o `hunspell`.
 
 Documentação
 
-- [ ] Documentação avançada (em html).
+- [X] Documentação minimalista (em html).
+- [X] Documentação básica (em pdf).
 
-, Versão 0.6.0
+2013-04-04, Versão 0.6.0
 
 LaTeX
 
 - [X] Incluir pacote `breqn`.
-- [ ] Incluir pacote `natbib`.
+- [X] Incluir pacote `biblatex`.
 
 
 2013-03-16, Versão 0.5.2
