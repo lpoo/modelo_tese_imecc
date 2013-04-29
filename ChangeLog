@@ -45,6 +45,20 @@ Documentação
 - [X] Documentação minimalista (em html).
 - [X] Documentação básica (em pdf).
 
+, Versão 0.7.0
+
+LaTeX
+
+- [ ] Corrigir capa e folha de rosto em relação ao "Warning: Font shape
+      `T1/lmr/bx/sc' undefined"
+
+2013-04-29, Versão 0.6.1
+
+Documentação
+
+- [X] Adicionado informações sobre o modelo em inglês.
+- [X] Aprimorado informações para contribuições.
+
 2013-04-04, Versão 0.6.0
 
 LaTeX
