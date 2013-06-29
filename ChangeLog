@@ -1,4 +1,4 @@
-, Version 2.0.0
+, Versão 2.0.0
 
 Esta corresponde a primeira versão com uma boa documentação de uso.
 
@@ -7,7 +7,7 @@ Documentação
 - [ ] Documentação avançada (em html).
 - [ ] Documentação avançada (em pdf).
 
-, Version 1.2.0
+, Versão 1.2.0
 
 Esta corresponde a primeira versão com instruções de uso de alguma licença CC.
 
@@ -15,15 +15,17 @@ LaTeX
 
 - [ ] Incluir licença CC.
 
-, Version 1.1.0
+, Versão 1.1.0
 
 Esta corresponde a uma melhoria quanto ao uso do verificador ortográfico.
 
 LaTeX
 
+- [ ] Corrigir capa e folha de rosto em relação ao "Warning: Font shape
+      `T1/lmr/bx/sc' undefined"
 - [ ] Realizar verificação ortográfica com o `hunspell`.
 
-, Version 1.0.0
+2013-06-29, Versão 1.0.0
 
 Esta corresponde a primeira versão oficial do modelo.
 
@@ -44,13 +46,6 @@ Documentação
 
 - [X] Documentação minimalista (em html).
 - [X] Documentação básica (em pdf).
-
-, Versão 0.7.0
-
-LaTeX
-
-- [ ] Corrigir capa e folha de rosto em relação ao "Warning: Font shape
-      `T1/lmr/bx/sc' undefined"
 
 2013-04-29, Versão 0.6.1
 
