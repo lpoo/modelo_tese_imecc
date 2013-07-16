@@ -28,6 +28,9 @@
             código os sinais de menos, <kbd>-</kbd>, não aparecem.</a></li>
           <li><a href="#10">Ao tentar compilar minha distribuição de LaTeX não encontra
               o pacote <kbd>expl3.sty</kbd>. Como devo proceder?</a>
+          <li><a href="#11">Não consigo compilar a bibliografia porque o
+              <kbd>biber</kbd> não funciona. Ele informa <kbd>data source not
+                  found in</kbd>.  Como faço ele funcionar?</a>
         </ol>
 
         <hr>
@@ -67,10 +70,10 @@
           <li><a name="5">Estou tendo problemas com imagens e por causa delas não
             consigo compilar.</a>
           <p>O modelo foi planejado para ser compilado com o <kbd>pdflatex</kbd>
-          utilizando o comando:</p>
+          utilizando o comando:</br>
           <code>
             $ pdflatex tese.tex
-          </code>
+          </code></p>
           <p>Se você estiver utilizando outro compilador, tente utilizar o
           <kbd>pdflatex</kbd>.</li>
 
@@ -97,19 +100,19 @@
           <kbd>bibtex</kbd> ou equivalentes, e.g., <kbd>bibtex8</kbd> e
           <kbd>biber</kbd>.</p>
           <p>Em resumo, o processo de compilação do modelo consiste nos
-          comandos:</p>
+          comandos:</br>
           <code>
             $ pdflatex tese.tex</br>
             $ bibtex tese.aux</br>
             $ makeindex -s tese.ist tese.idx</br>
             $ pdflatex tese.tex</br>
             $ pdflatex tese.tex
-          </code>
+          </code></p>
           <p>Recomenda-se utilizar o <kbd>Makefile</kbd> presente no modelo ou
-          compilar utilizando o <kbd>latexmk</kbd> com o seguinte comando:</p>
+          compilar utilizando o <kbd>latexmk</kbd> com o seguinte comando:</br>
           <code>
             $ latexmk -pdf tese
-          </code>
+          </code></p>
           <p>O <kbd>latexmk</kbd> roda em todas as plataformas e é incluído na
           maioria das distribuições de LaTeX. Infelizmente, a grande maioria dos
           editores não estão configurados para utilizá-lo.</p></li>
@@ -143,6 +146,21 @@
               href="http://gaggerostechnicalnotes.blogspot.ca/2011/08/expl3sty-not-found-when-using-siunitx.html?showComment=1337018886147#c4201851636980046365">tutorial</a>
           explicando como resolver esse problema se você estiver utilizando o
           MikTeX.</p></li>
+
+          <li><a name="11">Não consigo compilar a bibliografia porque o
+              <kbd>biber</kbd> não funciona. Ele informa <kbd>data source not
+                  found in</kbd>.  Como faço ele funcionar?</a>
+          <p>Como Andrew Goldstone reportou <a
+              href="http://humtex.wordpress.com/2011/11/29/biber-first-aid-for-data-source-not-found/">
+              em seu blog</a> o <kbd>biber</kbd> parece possuir um bug que algumas vezes
+          ele perde o arquivo temporário.</p>
+          <p>Considerando que o erro abaixo tenha sido informado:</br>
+          <code>
+              data source /tmp/par-72616e69657265/cache-371b0cf3aa3eec4dfb0c82647515336d327c4e62//inc/lib/Biber/LaTeX/recode_data.xml not found in .
+          </code></br>
+          para fazer o <kbd>biber</kbd> voltar a funcionar você deve remover os
+          arquivos presentes na pasta <kbd>/tmp</kbd>.
+          </p></li>
         </ol>
       </div>
     </div>
