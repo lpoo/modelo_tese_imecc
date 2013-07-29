@@ -9,14 +9,6 @@ Documentação
 
 , Versão 1.2.0
 
-Esta corresponde a primeira versão com instruções de uso de alguma licença CC.
-
-LaTeX
-
-- [ ] Incluir licença CC.
-
-, Versão 1.1.0
-
 Esta corresponde a uma melhoria quanto ao uso do verificador ortográfico.
 
 LaTeX
@@ -24,6 +16,24 @@ LaTeX
 - [ ] Corrigir capa e folha de rosto em relação ao "Warning: Font shape
       `T1/lmr/bx/sc' undefined"
 - [ ] Realizar verificação ortográfica com o `hunspell`.
+
+2013-07-29, Versão 1.1.0
+
+Esta corresponde a primeira versão com um modelo de poster.
+
+LaTeX
+
+- [X] Adição de modelo para poster.
+- [X] Inclusão da licença CC-BY.
+- [X] Inclusão da licença CC-BY-SA.
+
+Makefile
+
+- [X] Inclusão de instruções para o poster.
+
+Documentação
+
+- [X] Reestruturação das informações.
 
 2013-06-29, Versão 1.0.0
 
