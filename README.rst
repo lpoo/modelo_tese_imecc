@@ -19,7 +19,8 @@ este modelo, encontra-se na pasta ``doc`` e inicia-se no arquivo
 ``index.html``.
 
 A maior e mais importante parte da documentação encontra-se nos arquivos
-``.tex`` do modelo cujo arquivo principal é ``tese.tex``.
+``.tex`` do modelo cujo arquivo principal para dissertações e teses é
+``tese.tex`` e para posters é ``poster.tex``
 
 Orientações para desenvolvedores
 ================================
