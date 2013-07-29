@@ -1,10 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: básicos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: básicos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage{cmap}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+\usepackage[english,portuguese]{babel}
 \usepackage{indentfirst}
-\usepackage[top=3cm,bottom=3cm,right=2cm,left=2cm]{geometry}
+\usepackage{beamerposter}
+\usepackage{geometry}
 \usepackage{biblatex}
 \addbibresource{tese.bib}
 
@@ -18,7 +19,7 @@
 \usepackage{showkeys}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: ams %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -33,11 +34,11 @@
 \usepackage{booktabs}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: cores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: cores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -45,28 +46,27 @@
 \usepackage{wrapfig}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{algorithmic}
-\usepackage[chapter]{algorithm}
+\usepackage{algorithm}
 \floatname{algorithm}{Algoritmo}
 \renewcommand{\listalgorithmname}{Lista de Algoritmos}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: códigos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{textcomp}
 \usepackage{listings}
 \renewcommand\lstlistingname{Código}
 \renewcommand\lstlistlistingname{Lista de Códigos}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{makeidx}
 \makeindex
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: fontes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{lmodern} \normalfont
-\DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: fontes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lmodern}
 \usepackage{mathrsfs}
 
 
