@@ -1,0 +1,267 @@
+\documentclass[]{beamer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pacotes %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{poster-pacotes}  % Arquivo com os pacotes.
+\geometry{paperwidth=90cm,paperheight=100cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: definições %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{poster-configuracao}  % Arquivo com algumas configurações.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Início do poster %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}[t,fragile]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Título do poster %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Com base em http://www.prp.unicamp.br/pibic/congresso_formatacaopaineis.php
+  \begin{center}
+    \begin{huge}
+      % FIXME Substituir 'Título da defesa' pelo título da defesa.
+      Título da defesa
+
+      \vspace{20pt}
+      Instituto de Matemática, Estatística e Computação Científica
+    \end{huge}
+
+    \vspace{20pt}
+    \begin{Large}
+      \begin{tabular}[]{c}
+        % FIXME Substituir 'Nome completo do aluno' pelo seu nome.
+        Nome completo do aluno \\
+        % FIXME Substituir 'email_aluno@ime.unicamp.br' pelo seu email.
+        \url{email_aluno@ime.unicamp.br}
+      \end{tabular} \hspace{5cm}
+      \begin{tabular}[]{c}
+        % FIXME Substituir 'Nome completo do orientador' pelo nome completo do seu
+        % orientador.
+        Nome completo do orientador \\
+        % FIXME Substituir 'email_orientador@ime.unicamp.br' pelo email do seu
+        % orientador.
+        \url{email_orientador@ime.unicamp.br}
+      \end{tabular}
+      % FIXME Remover as 9 linhas abaixo se não tiver um coorientador.
+      \hspace{5cm}
+      \begin{tabular}[]{c}
+        % FIXME Substituir 'Nome completo do coorientador' pelo nome completo do seu
+        % coorientador.
+        Nome completo do coorientador \\
+        % FIXME Substituir 'email_coorientador@ime.unicamp.br' pelo email do seu
+        % coorientador.
+        \url{email_coorientador@ime.unicamp.br}
+      \end{tabular}
+    \end{Large}
+  \end{center}
+  \vspace{20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Corpo do poster %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% O ambiente columns é definido na classe beamer.
+  \begin{columns}[t]
+    \begin{column}{0.4\textwidth}
+      O pacote \lstinline+beamerposter+ altera o tamanho das fontes de acordo com
+      a classe \lstinline+a0poster+:
+      \begin{center}
+        \begin{tabular}[]{|l|r|r|}
+          \hline
+          Fonte & Tamanho (pt) & Tamanho (mm) \\ \hline
+          \lstinline+\tiny+         & 12pt    & 4.2mm \\ \hline
+          \lstinline+\scriptsize+   & 14.4pt  & 5.0mm \\ \hline
+          \lstinline+\footnotesize+ & 17.28pt & 6.1mm \\ \hline
+          \lstinline+\small+        & 20.74pt & 7.3mm \\ \hline
+          \lstinline+\normalsize+   & 24.88pt & 8.7mm \\ \hline
+          \lstinline+\large+        & 29.86pt & 10.5mm \\ \hline
+          \lstinline+\Large+        & 35.83pt & 11.9mm \\ \hline
+          \lstinline+\LARGE+        & 43pt    & 15.1mm \\ \hline
+          \lstinline+\huge+         & 51.6pt  & 18.2mm \\ \hline
+          \lstinline+\Huge+         & 61.92pt & 21.8mm \\ \hline
+          \lstinline+\veryHuge+     & 74.3pt  & 26.2mm \\ \hline
+          \lstinline+\VeryHuge+     & 89.16pt & 31.4mm \\ \hline
+          \lstinline+\VERYHuge+     & 107pt   & 37.7mm \\ \hline
+        \end{tabular}
+      \end{center}
+      Abaixo você encontra uma ilustração do tamanho das fontes acima descritas:
+      \begin{center}
+        {\tiny tiny}\par
+        {\scriptsize scriptsize}\par
+        {\footnotesize footnotesize}\par
+        {\normalsize normalsize}\par
+        {\large large}\par
+        {\Large Large}\par
+        {\LARGE LARGE}\par
+        {\veryHuge
+        veryHuge}\par
+        {\VeryHuge
+        VeryHuge}\par
+        {\VERYHuge
+        VERYHuge}\par
+      \end{center}
+
+      Para equações matemáticas está sendo utilizado os seguintes pacotes:
+      \begin{itemize}
+        \item amsmath,
+        \item amsfonts,
+        \item amssymb,
+        \item amsthm,
+        \item breqn.
+      \end{itemize}
+
+      Um exemplo de equação na mesma linha:
+      $ 1 + 1 + 1 + 1 + 1 + 1 = 6$,
+      que é trivial\index{trivial} de ser verificada.
+
+      Equações na mesma linha são quebradas automaticamente:
+      $ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 12$.
+
+      Além de equações na mesma linha, também é possível utilizar equações em
+      destaque:
+      \begin{dmath}
+        1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+        + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 30
+      \end{dmath}
+
+      No caso do desenvolvimento/simplificação de uma expressão
+      matemática também é recomendado utilizar os ambientes
+      disponibilizados pelo pacote breqn.
+      \begin{dmath}
+        f(x) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 +
+        1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+        = 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 2
+        = 4 + 4 + 4 + 4 + 4 + 4 + 4 + 2
+        = 8 + 8 + 8 + 6
+        = 16 + 14
+        = 30
+      \end{dmath}
+
+      Uma das vantagens de utilizar a classe \lstinline+beamer+ para o poster é
+      que caixas de texto, como a ilustrada abaixo, já estão definidas.
+
+      \begin{block}{Exemplo de caixa de texto}
+        Exemplo de texto dentro de uma caixa. Essa é uma das vantagens de
+        utilizar a classe \lstinline+beamer+.
+      \end{block}
+
+      As caixas de texto também são utilizadas para alguns ambientes
+      matemáticos.
+
+      \begin{thm}
+        Teorema, Teorema, Teorema, Teorema.
+      \end{thm}
+
+      \begin{con}
+        Conjectura, Conjecture, Conjectura, Conjectura.
+      \end{con}
+
+      \begin{cor}
+        Corolário, Corolário, Corolário, Corolário.
+      \end{cor}
+
+      \begin{dfn}
+        Definição, Definição, Definição.
+      \end{dfn}
+
+      É possível inserir figuras. Recomenda-o não fazer como objetos flutuantes
+      para evitar problemas.
+      \begin{center}
+        \includegraphics[width=0.1\textwidth]{figuras/unicamp-logo}
+      \end{center}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      Além de inserir figuras é possível ``desenhar'' figuras
+      utilizando o pacote TikZ\index{figura!TikZ}.
+      \begin{center}
+        \begin{tikzpicture}
+          \node[draw] (A) at (0,1) {$A$};
+          \node[draw,circle] (B) at (0,-1) {$B$};
+          \node (C) at (1,0) {$C$};
+          \node[fill=red,text=black] (D) at (3,0) {$D$};
+          \node[draw,rectangle,fit=(A) (B) (C)] {};
+
+          \draw[->] (A) -- (D);
+          \draw[->] (B) -- (D);
+          \draw[->] (C) -- (D);
+
+          \coordinate (a) at (5,1);
+          \coordinate (b) at (5,-1);
+
+          \draw[dashed] (D) -- (a);
+          \draw[dotted] (D) -- (b);
+          \draw[<->] (a) -- (b);
+        \end{tikzpicture}
+      \end{center}
+
+      Assim como as figuras, recomenda-se não inserir tabelas como objetos
+      flutuantes.
+
+      Também é possível incluir algoritmos que para facilitar a leitura é bom
+      ser incluidor de forma adequada e não como uma lista. Para isso utilize o
+      ambiente \lstinline+algorithmic+.
+      \begin{algorithmic}[2]
+        \STATE $i \leftarrow 0$
+        \STATE $y \leftarrow 0$
+        \FOR{$i \leq 10$}
+        \STATE $y \leftarrow y + i$
+        \STATE $i \leftarrow i + 1$
+        \ENDFOR
+      \end{algorithmic}
+
+      Além de algoritmos também é possível inserir trechos de códigos de
+      computador. Ao fazer isso recomenda-se utilizar o comando
+      \lstinline+\lstinputlisting{codigo}+.
+      \lstinputlisting[firstline=5, lastline=5, nolol=true]{src/exem.c}
+
+      Se possível, também é interessante colocar algumas poucas referências
+      bibliográficas, apenas as mais relevantes. Para citar uma das referências
+      utiliza-se o comando \lstinline+\cite{label}+, como por exemplo:
+      \cite{Bailey},~\cite{Bay1}.
+
+      \textbf{Referências bibliográficas:}
+
+      \printbibliography
+
+      \textbf{Adicionando cores}
+
+      Este modelo não utiliza nenhum esquema de cores ou tema. Para selecionar
+      um esquema de cores utiliza-se o comando \lstinline+\usecolortheme{tema}+
+      que deve ser adicionado no final do arquivo
+      \lstinline+poster-configuracao.tex+. Alguns temas de cores são:
+      \begin{lstlisting}
+\usecolortheme{albatross}
+\usecolortheme{crane}
+\usecolortheme{wolverine}
+\usecolortheme{orchid}
+      \end{lstlisting}
+      E para selecionar o tema utiliza-se o comando
+      \lstinline+\usetheme{tema}+ que também deve ser adicionado no final do
+      arquivo \lstinline+poster-configuracao.tex+. Alguns temas são:
+      \begin{lstlisting}
+\usetheme{Bergen}
+\usetheme{Madrid}
+\usetheme{AnnArbor}
+\usetheme{CambridgeUS}
+      \end{lstlisting}
+      Ao escolher um tema deve-se tomar cuidado pois muitos deles possuem
+      configurações para cabeçalho e rodapé que são indesejados em um poster.
+
+      Se desejar personalizar a sua maneira o poster, recomenda-se dar uma lida no
+      manual da classe \lstinline+beamer+.
+    \end{column}
+  \end{columns}
+  \vfill
+  % FIXME Remova as 7 linhas a seguir se não desejar licenciar o poster sob
+  % CC-BY.
+  \begin{center}
+    \begin{tabular}[]{cc}
+      \multirow{2}{*}{\includegraphics[height=60pt]{figuras/cc-by}} &
+      \Large{Exceto indicado o contrário, este trabalho é licenciado sob}\\
+      & \Large{\url{http://creativecommons.org/licenses/by/3.0/}.}
+    \end{tabular}
+  \end{center}
+  % FIXME Descomente as 7 linhas a seguir se não desejar licenciar o poster sob
+  % CC-BY-SA.
+% \begin{center}
+%   \begin{tabular}[]{cc}
+%     \multirow{2}{*}{\includegraphics[height=60pt]{figuras/cc-by-sa}} &
+%     \Large{Exceto indicado o contrário, este trabalho é licenciado sob}\\
+%     & \Large{\url{http://creativecommons.org/licenses/by-sa/3.0/}.}
+%   \end{tabular}
+% \end{center}
+\end{frame}
+\end{document}
+\end{frame}
+\end{document}

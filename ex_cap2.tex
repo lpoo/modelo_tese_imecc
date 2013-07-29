@@ -1,0 +1,83 @@
+\chapter{Título 2}
+Esse é o segundo capítulo da sua defesa.
+
+\section{Figuras}
+É possível inserir figuras na sua defesa utilizando o comando
+\lstinline+\includegraphics{caminho_figura}+. \\
+\includegraphics[width=0.1\textwidth]{figuras/unicamp-logo}
+
+É recomendado deixar as figuras\index{figura} como objetos flutuantes, para isso
+utiliza-se o ambiente \lstinline+figure+.
+\begin{figure}[!htb]
+  \center
+  \includegraphics[width=0.1\textwidth]{figuras/unicamp-logo}
+  \caption{Logo da UNICAMP.}
+  \label{fig:log_unicamp}
+\end{figure}
+
+Além de inserir figuras é possível ``desenhar''\index{figura!desenhar} figuras
+utilizando o pacote TikZ\index{figura!TikZ}, como na
+Figura~\ref{fig:exem_tikz1}~e~\ref{fig:exem_tikz2}.
+\begin{figure}[!htb]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) -- (0,2) -- (2,2) -- (2,0) -- (0,0);
+    \fill (5,0) circle (1);
+  \end{tikzpicture}
+  \caption{Exemplo do uso do TikZ.}
+  \label{fig:exem_tikz1}
+\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \begin{tikzpicture}
+    \node[draw] (A) at (0,1) {$A$};
+    \node[draw,circle] (B) at (0,-1) {$B$};
+    \node (C) at (1,0) {$C$};
+    \node[fill=red,text=black] (D) at (3,0) {$D$};
+    \node[draw,rectangle,fit=(A) (B) (C)] {};
+
+    \draw[->] (A) -- (D);
+    \draw[->] (B) -- (D);
+    \draw[->] (C) -- (D);
+
+    \coordinate (a) at (5,1);
+    \coordinate (b) at (5,-1);
+
+    \draw[dashed] (D) -- (a);
+    \draw[dotted] (D) -- (b);
+    \draw[<->] (a) -- (b);
+  \end{tikzpicture}
+  \caption{Outro exemplo do uso do TikZ.}
+  \label{fig:exem_tikz2}
+\end{figure}
+
+\section{Tabelas}
+Além de figuras também é possível inserir tabelas utilizando o ambiente
+\lstinline+tabular+. \\
+\begin{tabular}{cc}
+  \toprule
+  Tabela & Tabela \\
+  \midrule
+  Tabela & Tabela \\
+  \bottomrule
+\end{tabular}
+
+Assim como as figuras, é recomendado que as tabelas sejam incluídas como
+objetos flutuantes, para isso utiliza-se o ambiente \lstinline+table+.
+\begin{table}[!htb]
+  \caption{Exemplo de Tabela.}
+  \label{tab:exem}
+  \centering
+  \begin{tabular}{cc}
+    \toprule
+    Tabela & Tabela \\
+    \midrule
+    Tabela & Tabela \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Além de inserir tabelas manualmente, como na Tabela~\ref{tab:exem}, também é
+possível utilizar arquivos \emph{.csv} para criar tabelas. Neste caso, é
+necessário incluir o pacote \texttt{csvsimple} que não foi incluído por questão
+de compatibilidade com distribuições do \LaTeX \ anteriores a 2009.

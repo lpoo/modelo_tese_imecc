@@ -69,75 +69,88 @@
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \input{dedicatoria}
 %
-% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
-\input{epigrafe}
-%
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \input{agradecimentos}
+%
+% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
+\input{epigrafe}
 %
 \input{resumo}
 \input{abstract}
 %
+<<<<<<< HEAD
 \tableofcontents
 % FIXME Comentar as linhas abaixo de não desejar listar as figuras
+=======
+% FIXME Comentar a linha abaixo se não desejar listar as figuras
+>>>>>>> ms-geo-dev
 % apresentadas.
 \listoffigures
-\addcontentsline{toc}{chapter}{Lista de Figuras}
 %
+<<<<<<< HEAD
 % FIXME Comentar as linhas abaixo de não desejar listar as tabelas
+=======
+% FIXME Comentar a linha abaixo se não desejar listar as tabelas
+>>>>>>> ms-geo-dev
 % apresentadas.
 \listoftables
-\addcontentsline{toc}{chapter}{Lista de Tabelas}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar os
-% algoritmos apresentados.
+% FIXME Comentar a linha abaixo se não desejar listar os algoritmos
+% apresentados.
 \listofalgorithms
-\addcontentsline{toc}{chapter}{Lista de Algoritmos}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar os trechos de código
+% FIXME Comentar a linha abaixo se não desejar listar os trechos de código
 % apresentados.
 \lstlistoflistings
-\addcontentsline{toc}{chapter}{Lista de Códigos}
+%
+% FIXME Comentar a linha abaixo se não for apresentar os
+% símbolos utilizados.
+\input{simbolos}
 %
 % FIXME Comentar a linha abaixo de não for apresentar as
 % abreviações utilizadas.
 \input{abreviacoes}
 %
-% FIXME Comentar a linha abaixo de não for apresentar os
-% símbolos utilizados.
-\input{simbolos}
-%
-% FIXME Comentar a linha abaixo de não for apresentar o
-% glossário.
-\input{glossario}
+\tableofcontents
 %
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
 %
 % FIXME Remover as 3 linhas abaixo.
-\input{cap1}
-\input{cap2}
-\input{cap3}
+\input{ex_cap1}
+\input{ex_cap2}
+\input{ex_cap3}
+\input{ex_cap4}
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
-% FIXME Se não for utilizar apêndices ou anexos, comentar a linha abaixo.
+% FIXME Comentar a linha abaixo se não for apresentar o glossário.
+\input{glossario}
+%
+% FIXME Se não for utilizar apêndices, comentar a linha abaixo.
 \appendix
-% FIXME Remover as 2 linhas abaixo.
-\input{ape1}
-\input{anexos}
-% TODO Inserir os arquivos referentes aos apêndices e anexos.
+% FIXME Remover a linha abaixo.
+\input{ex_ape1}
+\input{ex_ape2}
+\input{ex_ape3}
+% TODO Inserir os arquivos referentes aos apêndices.
+%
+% TODO Se não for utilizar anexos nem uma licença Creative Commons, comentar a linha abaixo.
+\annex
+% FIXME Remover a linha abaixo.
+\input{ex_ane1}
+% TODO Inserir os arquivos referentes aos anexos.
+%
+% FIXME Escolher, opcionalmente, uma das licença Creative Commons abaixo.
+% Para isso remova a linha correspondente a licença não desejada.
+\input{cc-by}  % Creative Commons Atribuição 3.0 Não Adaptada
+\input{cc-by-sa}  % Creative Commons AtribuiçãoCompartilhaIgual 3.0 Não Adaptada
 %
 \backmatter
-% FIXME Remover a linha abaixo.
-\nocite{*}
-% FIXME Mudar o estilo para o de sua preferencia.
-\bibliographystyle{amsplain}
-% FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
-% tese.bib.
-\bibliography{tese}
+\printbibliography
 \addcontentsline{toc}{chapter}{Referência Bibliográfica}
 %
 \clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
 \end{document}
