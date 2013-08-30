@@ -9,24 +9,63 @@ keepaspectratio=true]{figuras/unicamp-logo}
   Instituto de Matemática, Estatística \\
   e Computação Científica}
 \end{center}
-\vspace{.7cm}
+\vfill
 \begin{center}
   {\large \scshape \bfseries \autor}
 \end{center}
-\vspace{.7cm}
+\vfill
 \begin{center}
   {\Large \scshape \bfseries \titulo}
 \end{center}
-\vspace{.8cm}
+\vfill
+
+\begin{flushright}
+  \begin{minipage}[c]{.5\textwidth}
+    \ifx\mestrado\undefined
+    Tese
+    \else
+    Dissertação
+    \fi
+    apresentada ao Instituto de Matemática,
+    Estatística e Computação Científica da Universiddade
+    Estadual de Campinas como parte dos requisitos exigidos
+    para obtenção do título de
+    \ifx\mestrado\undefined
+    \ifx\femaleAuthor\undefined
+    Doutor
+    \else
+    Doutora
+    \fi
+    \else
+    \ifx\femaleAuthor\undefined
+    Mestre
+    \else
+    Mestra
+    \fi
+    \fi
+    em
+    \ifx\matematica\undefined
+    \else
+    matemática.
+    \fi
+    \ifx\aplicada\undefined
+    \else
+    matemática aplicada.
+    \fi
+    \ifx\estatistica\undefined
+    \else
+    estatística.
+    \fi
+  \end{minipage}
+\end{flushright}
+\vspace{.5cm}
+
+\noindent
 {\bfseries
 \noindent
 Orientador\ifx\femaleOrientador\undefined
 \else
-a\fi: Prof\ifx\femaleOrientador\undefined
-\else
-a\fi. Dr\ifx\femaleOrientador\undefined
-\else
-a\fi. \orientador
+a\fi: \orientador
 \vspace{.25cm}
 
 \ifx\coorientador\undefined
@@ -34,79 +73,37 @@ a\fi. \orientador
 \noindent
 Coorientador\ifx\femaleCoorientador\undefined
 \else
-a\fi: Prof\ifx\femaleCoorientador\undefined
-\else
-a\fi. Dr\ifx\femaleCoorientador\undefined
-\else
-a\fi. \coorientador
+a\fi: \coorientador
 \fi
 }
+\vspace{.5cm}
 
-\vspace{.5cm}
-\begin{flushright}
-  \begin{minipage}[c]{.8\textwidth}
-    \begin{flushright}
-      \ifx\mestrado\undefined
-      Tese de doutorado
-      \else
-      Dissertação de mestrado
-      \fi
-      apresentada ao Instituto de \\ Matemática,
-      Estatística e Computação Científica
-      da Unicamp para \\ obtenção do título de
-      \ifx\mestrado\undefined
-      \ifx\femaleAuthor\undefined
-      Doutor
-      \else
-      Doutora
-      \fi
-      \else
-      \ifx\femaleAuthor\undefined
-      Mestre
-      \else
-      Mestra
-      \fi
-      \fi
-      em
-      \ifx\matematica\undefined
-      \else
-      matemática.
-      \fi
-      \ifx\aplicada\undefined
-      \else
-      matemática aplicada.
-      \fi
-      \ifx\estatistica\undefined
-      \else
-      estatística.
-      \fi
-    \end{flushright}
-  \end{minipage}
-\end{flushright}
-\vspace{.5cm}
 \noindent
-{\footnotesize \scshape
-Este exemplar corresponde à versão final da 
-\ifx\mestrado\undefined
-tese
-\else
-dissertação
-\fi \\
-defendida 
-\ifx\femaleAuthor\undefined
-pelo aluno
-\else
-pela aluna
-\fi
-\autor,\\
-e orientada pel\ifx\femaleOrientador\undefined
-o\else
-a\fi{} Prof\ifx\femaleOrientador\undefined
-\else
-a\fi. Dr\ifx\femaleOrientador\undefined
-\else
-a\fi. \orientador.
-}
+\begin{minipage}[c]{.5\textwidth}
+  \noindent
+  {\footnotesize \scshape
+  Este exemplar corresponde à versão final da
+  \ifx\mestrado\undefined
+  tese
+  \else
+  dissertação
+  \fi
+  defendida
+  \ifx\femaleAuthor\undefined
+  pelo aluno
+  \else
+  pela aluna
+  \fi
+  \autor,
+  e orientada pel\ifx\femaleOrientador\undefined
+  o\else
+  a\fi{} Prof\ifx\femaleOrientador\undefined
+  \else
+  a\fi. Dr\ifx\femaleOrientador\undefined
+  \else
+  a\fi. \orientador.
+  }
+\end{minipage}
 \vspace{1cm}
 
 \noindent
@@ -119,7 +116,7 @@ do Orientador
 da Orientadora
 \fi
 
-\vspace{.7cm}
+\vspace{.5cm}
 \noindent
 \rule[1pt]{7cm}{.5pt}  % Linha para assinatura do orientador
 }
@@ -137,7 +134,7 @@ do Coorientador
 da Coorientadora
 \fi
 
-\vspace{.7cm}
+\vspace{.5cm}
 \noindent
 \rule[1pt]{7cm}{.5pt}  % Linha para assinatura do coorientador
 }
