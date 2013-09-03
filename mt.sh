@@ -8,5 +8,5 @@ do
 	latexmk -pdf -pdflatex="pdflatex -interaction nonstopmode" tese
 	mv -f tese.pdf doc/samples/${i/origin\//}.pdf
 	latexmk -pdf -pdflatex="pdflatex -interaction nonstopmode" poster
-	mv -f poster doc/samples/poster-${i/origin\//}.pdf
+	mv -f poster.pdf doc/samples/poster-${i/origin\//}.pdf
 done

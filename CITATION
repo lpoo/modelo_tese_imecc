@@ -1,0 +1,17 @@
+To cite this work in publications, please use:
+
+R. Silva, et al. Modelo de Dissertação/Tese do Instituto de
+Matemática, Estatística e Computação Científica (IMECC) da Universidade Estadual
+de Campinas (UNICAMP). 2013
+
+A BibTeX entry for LaTeX users is
+
+@Misc{,
+    author = {Raniere Silva and Tiago Macedo and Júnior Soares and others},
+    title = {Modelo de Dissertação/Tese do Instituto de
+Matemática, Estatística e Computação Científica ({IMECC}) da Universidade Estadual
+de Campinas ({UNICAMP})},
+    year = {2013},
+    url = {https://github.com/r-gaia-cs/modelo_tese_imecc},
+}
+
