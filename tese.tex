@@ -66,9 +66,9 @@
 % FIXME Substitua o arquivo folha-de-aprovacao.pdf por uma copia escaneada.
 \includepdf{folha-de-aprovacao}
 \chapter*{}  % Capítulo vazio.
-\input{resumo}
-\vspace{.1\textheight}
 \input{abstract}
+\vspace{.1\textheight}
+\input{resumo}
 %
 \tableofcontents
 %
@@ -80,19 +80,12 @@
 %
 % FIXME Comentar a linha abaixo se não desejar listar as figuras
 % apresentadas.
+\renewcommand{\listfigurename}{Lista de Ilustrações}  % CCPG 228/2013
 \listoffigures
 %
 % FIXME Comentar a linha abaixo se não desejar listar as tabelas
 % apresentadas.
 \listoftables
-%
-% FIXME Comentar a linha abaixo se não desejar listar os algoritmos
-% apresentados.
-\listofalgorithms
-%
-% FIXME Comentar a linha abaixo se não desejar listar os trechos de código
-% apresentados.
-\lstlistoflistings
 %
 % FIXME Comentar a linha abaixo de não for apresentar as
 % abreviações e siglas utilizadas.
@@ -101,6 +94,14 @@
 % FIXME Comentar a linha abaixo se não for apresentar os
 % símbolos utilizados.
 \input{simbolos}
+%
+% FIXME Comentar a linha abaixo se não desejar listar os algoritmos
+% apresentados.
+\listofalgorithms
+%
+% FIXME Comentar a linha abaixo se não desejar listar os trechos de código
+% apresentados.
+\lstlistoflistings
 %
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
@@ -114,8 +115,8 @@
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
 % Referência bibliográfica.
-\printbibliography
-\addcontentsline{toc}{chapter}{Referência Bibliográfica}
+\printbibliography[title=Referências]
+\addcontentsline{toc}{chapter}{Referências}
 %
 % FIXME Se não for utilizar apêndices (o glossario é um apêndice), comentar a
 % linha abaixo.
@@ -125,6 +126,7 @@
 \input{ex_ape1}
 \input{ex_ape2}
 \input{ex_ape3}
+\input{ex_ape4}
 % TODO Inserir os arquivos referentes aos apêndices.
 %
 % TODO Se não for utilizar anexos nem uma licença Creative Commons, comentar a linha abaixo.
