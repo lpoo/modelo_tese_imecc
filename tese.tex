@@ -15,7 +15,7 @@
 % FIXME Substituir 'Title of work' pelo título da defesa em inglês.
 \newcommand{\titulo}{Title of work}
 % FIXME Substituir 'Título da defesa' pelo título da defesa em português.
-\newcommand{\titulopt}{Título da defesa}
+\newcommand{\titulopt}{Título do trabalho}
 % FIXME Se estiver no programa de mestrado, descomente a linha a seguir.
 % \def\mestrado{}
 % FIXME Deixe descomente apenas a linha referente ao departamento.
@@ -67,17 +67,18 @@
 % defesa.
 % FIXME Substitua o arquivo folha-de-aprovacao.pdf por uma copia escaneada.
 \includepdf{folha-de-aprovacao}
+\chapter*{}  % Capítulo vazio.
+\input{abstract}
+\vspace{.1\textheight}
+\input{resumo}
+%
+\tableofcontents
 %
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \input{dedicatoria}
 %
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \input{agradecimentos}
-%
-% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
-\input{epigrafe}
-%
-\input{abstract}
 %
 % FIXME Comentar a linha abaixo se não desejar listar as figuras
 % apresentadas.
@@ -87,6 +88,14 @@
 % apresentadas.
 \listoftables
 %
+% FIXME Comentar a linha abaixo de não for apresentar as
+% abreviações e siglas utilizadas.
+\input{abreviacoes}
+%
+% FIXME Comentar a linha abaixo se não for apresentar os
+% símbolos utilizados.
+\input{simbolos}
+%
 % FIXME Comentar a linha abaixo se não desejar listar os algoritmos
 % apresentados.
 \listofalgorithms
@@ -94,16 +103,6 @@
 % FIXME Comentar a linha abaixo se não desejar listar os trechos de código
 % apresentados.
 \lstlistoflistings
-%
-% FIXME Comentar a linha abaixo se não for apresentar os
-% símbolos utilizados.
-\input{simbolos}
-%
-% FIXME Comentar a linha abaixo de não for apresentar as
-% abreviações utilizadas.
-\input{abreviacoes}
-%
-\tableofcontents
 %
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
@@ -113,18 +112,22 @@
 \input{ex_cap2}
 \input{ex_cap3}
 \input{ex_cap4}
+%
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
+% Referência bibliográfica.
+\printbibliography[title=Referências]
+\addcontentsline{toc}{chapter}{Referências}
 %
-% FIXME Comentar a linha abaixo se não for apresentar o glossário.
-\input{glossario}
-%
-% FIXME Se não for utilizar apêndices, comentar a linha abaixo.
+% FIXME Se não for utilizar apêndices (o glossario é um apêndice), comentar a
+% linha abaixo.
 \appendix
-% FIXME Remover a linha abaixo.
+% FIXME Remover as 4 linha abaixo.
+\input{glossario}
 \input{ex_ape1}
 \input{ex_ape2}
 \input{ex_ape3}
+\input{ex_ape4}
 % TODO Inserir os arquivos referentes aos apêndices.
 %
 % TODO Se não for utilizar anexos nem uma licença Creative Commons, comentar a linha abaixo.
@@ -138,11 +141,8 @@
 \input{cc-by}  % Creative Commons Atribuição 3.0 Não Adaptada
 \input{cc-by-sa}  % Creative Commons AtribuiçãoCompartilhaIgual 3.0 Não Adaptada
 %
-\backmatter
-\printbibliography
-\addcontentsline{toc}{chapter}{Referência Bibliográfica}
-%
 \clearpage
+\backmatter
 \phantomsection
 \addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex

@@ -13,10 +13,7 @@ bibliográficas desenvolvido para ser utilizado em conjunto com o LaTeX e també
 do programa responsável por processar esse ``banco de dados''.
 
 O ``banco de dados'' corresponde a um arquivo de texto com a extensão
-\lstinline+.bib+. Por padrão este modelo utiliza o arquivo \lstinline+tese.bib+
-que já encontra-se com algumas entradas para servirem de exemplo.
-
-Cada referência no BibTeX segue a seguinte estrutura:
+\lstinline+.bib+ e cada referência no BibTeX segue a seguinte estrutura:
 \begin{lstlisting}
 @TIPO_DOCUMENTO{identificador,
 campo1 = {valor do campo 1},
@@ -26,7 +23,7 @@ campo3 = {valor do campo 3},
 }
 \end{lstlisting}
 
-Para saber quais sobre os \lstinline+TIPO_DOCUMENTO+ existentes e sobre os
+Para saber quais os \lstinline+TIPO_DOCUMENTO+ existentes e sobre os
 campos recomenda-se a documentação do BibTeX que pode ser acessada pelo comando:
 \begin{lstlisting}
 $ texdoc bibtex
@@ -36,6 +33,31 @@ Uma das grandes vantagens de se utilizar o BibTeX é que as chances de encontrar
 o BibTeX de algum material na internet é extremamente alta. Tanto o Google
 Scholar como o Google Books disponibilizam o BibTeX para todos os materiais
 indexados em suas respectivas bases de dados.
+
+Por padrão este modelo\nocite{ModeloIMECC} utiliza o arquivo
+\lstinline+tese.bib+ que inicialmente possue apenas a referência deste modelo:
+\begin{lstlisting}
+@Misc{ModeloIMECC,
+    author = {Raniere Silva and Tiago Macedo and Junior Soares
+    and others},
+    title = {Modelo de Dissertacao/Tese do Instituto de
+Matematica, Estatistica e Computacao Cientifica ({IMECC}) da
+Universidade Estadual de Campinas ({UNICAMP})},
+    year = {2013},
+    url = {https://github.com/r-gaia-cs/modelo_tese_imecc},
+}
+\end{lstlisting}
+
+Se desejar adicionar mais arquivos com a extensão \lstinline+.bib+, adicione no
+arquivo \lstinline+configuracoes.tex+ uma linha semelhante a
+\begin{lstlisting}
+\addbibresource{seu_arquivo.bib}
+\end{lstlisting}
+
+Se nunca tiver utilizado o BibTeX e desejar mais exemplos de como escrever sua
+referência no arquivo \lstinline+.bib+ pois não encontrou-a disponível na
+internet, você pode dar uma olhada no arquivo
+\lstinline+biblatex_style_samples/sample.bib+ presente neste modelo.
 
 \subsection{\lstinline+biblatex+}
 Para que uma entrada do \lstinline+tese.bib+ seja incluído na referência
@@ -132,3 +154,33 @@ ou \lstinline+\textcites{id1,id2,id3}+, como mostrado abaixo:
 Por último, caso deseje incluir uma referência na referência bibliográfica mas
 suprimí-la ao longo do texto você deve utilizar o comando
 \lstinline+\nocite{id}+.
+
+\section{Estilos}
+O pacote \lstinline+biblatex+ oferece vários estilos por padrão, sendo alguns
+deles são:
+\begin{itemize}
+  \item \lstinline+numeric+,
+  \item \lstinline+alphabetic+,
+  \item \lstinline+authoryear+,
+  \item \lstinline+authortitle+,
+  \item \lstinline+verbose+.
+\end{itemize}
+
+O estilo padrão deste modelo é o estilo padrão do \lstinline+biblatex+ que
+corresponde ao \lstinline+numeric+. Se você desejar utilizar um outro estilo
+cujo nome é \lstinline+estilo_desejado+ você precisa trocar a linha
+\begin{lstlisting}
+\usepackage{biblatex}
+\end{lstlisting}
+no arquivo \lstinline+pacotes.tex+ por
+\begin{lstlisting}
+\usepackage[style=estilo_desejado]{biblatex}
+\end{lstlisting}
+
+Para facilitar sua vida, no diretório \lstinline+biblatex_style_samples+ você
+encontrará alguns PDFs ilustrando alguns dos estilos disponibilizados pelo
+\lstinline+biblatex+. Esses arquivos PDFs encontram-se ilustrados no
+Apêndice~\ref{ape:estilo_biblatex}.
+
+Se nenhum dos estilos oferecidos lhe agradar você poderá escrever seu próprio
+estilo, mas para isso terá que ler a documentação do \lstinline+biblatex+.
