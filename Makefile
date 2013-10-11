@@ -42,6 +42,7 @@ dev-hunspell: ${DEV_FILES} ${DOC_FILES}
 .PHONY: doc clean-all clean clean-doc
 
 doc:
+	branch=$$(git branch | sed -n '/\* /s///p'); \
 	for i in $$(git branch -r | grep -v HEAD); \
 	do \
 		git checkout $$i; \
@@ -49,7 +50,8 @@ doc:
 		mv -f tese.pdf doc/samples/$${i/origin\//}.pdf; \
 		mv -f poster.pdf doc/samples/poster-$${i/origin\//}.pdf; \
 		$(MAKE) clean; \
-	done;
+	done; \
+	git checkout $${branch};
 
 clean-all: clean clean-doc
 
