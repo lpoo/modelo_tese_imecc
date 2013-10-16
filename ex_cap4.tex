@@ -1,0 +1,189 @@
+\chapter{Título 4}
+Esse é o terceiro capítulo da sua tese.
+
+\section{Referência bibliográfica}
+Para a referência bibliográfica é utilizado o BibTeX e o pacote
+\lstinline+biblatex+. Poderia ser utilizado apenas o BibTeX mas existem algumas
+funcionalidades disponibilizadas no pacote \lstinline+biblatex+ que são muito
+convenientes.
+
+\subsection{BibTeX}
+BibTeX é o nome de um formato de ``banco de dados'' para referências
+bibliográficas desenvolvido para ser utilizado em conjunto com o LaTeX e também
+do programa responsável por processar esse ``banco de dados''.
+
+O ``banco de dados'' corresponde a um arquivo de texto com a extensão
+\lstinline+.bib+ e cada referência no BibTeX segue a seguinte estrutura:
+\begin{lstlisting}
+@TIPO_DOCUMENTO{identificador,
+campo1 = {valor do campo 1},
+campo2 = {valor do campo 2},
+campo3 = {valor do campo 3},
+...
+}
+\end{lstlisting}
+
+Para saber quais os \lstinline+TIPO_DOCUMENTO+ existentes e sobre os
+campos recomenda-se a documentação do BibTeX que pode ser acessada pelo comando:
+\begin{lstlisting}
+$ texdoc bibtex
+\end{lstlisting}
+
+Uma das grandes vantagens de se utilizar o BibTeX é que as chances de encontrar
+o BibTeX de algum material na internet é extremamente alta. Tanto o Google
+Scholar como o Google Books disponibilizam o BibTeX para todos os materiais
+indexados em suas respectivas bases de dados.
+
+Por padrão este modelo\nocite{ModeloIMECC} utiliza o arquivo
+\lstinline+tese.bib+ que inicialmente possue apenas a referência deste modelo:
+\begin{lstlisting}
+@Misc{ModeloIMECC,
+    author = {Raniere Silva and Tiago Macedo and Junior Soares
+    and others},
+    title = {Modelo de Dissertacao/Tese do Instituto de
+Matematica, Estatistica e Computacao Cientifica ({IMECC}) da
+Universidade Estadual de Campinas ({UNICAMP})},
+    year = {2013},
+    url = {https://github.com/r-gaia-cs/modelo_tese_imecc},
+}
+\end{lstlisting}
+
+Se desejar adicionar mais arquivos com a extensão \lstinline+.bib+, adicione no
+arquivo \lstinline+configuracoes.tex+ uma linha semelhante a
+\begin{lstlisting}
+\addbibresource{seu_arquivo.bib}
+\end{lstlisting}
+
+Se nunca tiver utilizado o BibTeX e desejar mais exemplos de como escrever sua
+referência no arquivo \lstinline+.bib+ pois não encontrou-a disponível na
+internet, você pode dar uma olhada no arquivo
+\lstinline+biblatex_style_samples/sample.bib+ presente neste modelo.
+
+\subsection{\lstinline+biblatex+}
+Para que uma entrada do \lstinline+tese.bib+ seja incluído na referência
+bibliográfica ele precisa ser utilizado em algum dos arquivos \lstinline+.tex+
+que compõe sua dissertação/tese. Para utilizar uma referência utiliza-se uma das
+variantes do comando \lstinline+\cite{id}+, onde
+\lstinline+id+ correspode ao \lstinline+identificador+ utilizado na entrada do
+BibTeX para a referência desejada.
+
+O comando \lstinline+\cite{id}+ insere o número da referência entre colchetes,
+como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\cite{Swa82}+ & \cite{Swa82} \\
+    \lstinline+\cite{Bailey}+ & \cite{Bailey} \\
+    \lstinline+\cite{Ta}+ & \cite{Ta} \\
+    \lstinline+\cite{Hale}+ & \cite{Hale} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Para inserir o nome dos autores e o número da referência entre colchetes,
+utiliza-se o comando \lstinline+\textcite{id}+, como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\textcite{Swa82}+ & \textcite{Swa82} \\
+    \lstinline+\textcite{Bailey}+ & \textcite{Bailey} \\
+    \lstinline+\textcite{Ta}+ & \textcite{Ta} \\
+    \lstinline+\textcite{Hale}+ & \textcite{Hale} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Para inserir apenas o nome dos autores utiliza-se o comando
+\lstinline+\citeauthor{id}+, como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citeauthor{Swa82}+ & \citeauthor{Swa82} \\
+    \lstinline+\citeauthor{Bailey}+ & \citeauthor{Bailey} \\
+    \lstinline+\citeauthor{Ta}+ & \citeauthor{Ta} \\
+    \lstinline+\citeauthor{Hale}+ & \citeauthor{Hale} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Para inserir apenas o título da referência utiliza-se o comando
+\lstinline+\citetitle{id}+, como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citetitle{Swa82}+ & \citetitle{Swa82} \\
+    \lstinline+\citetitle{Bailey}+ & \citetitle{Bailey} \\
+    \lstinline+\citetitle{Ta}+ & \citetitle{Ta} \\
+    \lstinline+\citetitle{Hale}+ & \citetitle{Hale} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Para inserir apenas o ano de publicação da referência utiliza-se o comando
+\lstinline+\citeyear{id}+, como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\citeyear{Swa82}+ & \citeyear{Swa82} \\
+    \lstinline+\citeyear{Bailey}+ & \citeyear{Bailey} \\
+    \lstinline+\citeyear{Ta}+ & \citeyear{Ta} \\
+    \lstinline+\citeyear{Hale}+ & \citeyear{Hale} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Para citações múltiplas, utiliza-se os comandos \lstinline+\cites{id1,id2,id3}+
+ou \lstinline+\textcites{id1,id2,id3}+, como mostrado abaixo:
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{lc}
+    \toprule
+    Comando & Resultado \\ \midrule
+    \lstinline+\cites{Bailey,Swa82}+ & \cites{Bailey,Swa82} \\
+    \lstinline+\cites{Hale,Ta}+ & \cites{Hale,Ta} \\
+    \lstinline+\textcites{Bailey,Swa82}+ & \textcites{Bailey,Swa82} \\
+    \lstinline+\textcites{Hale,Ta}+ & \textcites{Hale,Ta} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Caso deseje incluir uma referência na referência bibliográfica mas
+suprimí-la ao longo do texto você deve utilizar o comando
+\lstinline+\nocite{id}+.
+
+Por último, caso deseje incluir todas as referências presentes no arquivo
+\lstinline+.bib+, você pode utilizar o comando \lstinline+\nocite{*}+.\nocite{*}
+
+\section{Estilos}
+O pacote \lstinline+biblatex+ oferece vários estilos por padrão, sendo alguns
+deles são:
+\begin{itemize}
+  \item \lstinline+numeric+,
+  \item \lstinline+alphabetic+,
+  \item \lstinline+authoryear+,
+  \item \lstinline+authortitle+,
+  \item \lstinline+verbose+.
+\end{itemize}
+
+O estilo padrão deste modelo é o estilo padrão do \lstinline+biblatex+ que
+corresponde ao \lstinline+numeric+. Se você desejar utilizar um outro estilo
+cujo nome é \lstinline+estilo_desejado+ você precisa trocar a linha
+\begin{lstlisting}
+\usepackage{biblatex}
+\end{lstlisting}
+no arquivo \lstinline+pacotes.tex+ por
+\begin{lstlisting}
+\usepackage[style=estilo_desejado]{biblatex}
+\end{lstlisting}
+
+Para facilitar sua vida, no diretório \lstinline+biblatex_style_samples+ você
+encontrará alguns PDFs ilustrando alguns dos estilos disponibilizados pelo
+\lstinline+biblatex+. Esses arquivos PDFs encontram-se ilustrados no
+Apêndice~\ref{ape:estilo_biblatex}.
+
+Se nenhum dos estilos oferecidos lhe agradar você poderá escrever seu próprio
+estilo, mas para isso terá que ler a documentação do \lstinline+biblatex+.

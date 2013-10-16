@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>Instruções para uso do modelo de dissertação/tese do IMECC</title>
     <meta charset="utf-8">
     <style>
       td.textCenter {
-        text-align:center;
+      text-align:center;
       }
     </style>
   </head>
@@ -12,76 +14,102 @@
       <h1 id='page-title' class='title'>Instruções para uso do modelo de
         dissertação/tese do IMECC</h1>
       <div class='content'>
-        <p>Este modelo de dissertação/tese foi produzido com base nos seguintes
-        documentos:
-        <ol>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg001_1998.pdf">CCPG/001/98</a>
-          - Formato das teses de Mestrado e Doutorado</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg002_1998.pdf">CCPG/002/98</a>
-          - Procedimentos para impressão na gráfica da UNICAMP, dos exemplares
-          de tese já homologadas.</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg001_2000.pdf">CCPG/002/00</a>
-          - Procedimentos para Impressão de Teses</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/delccpg060_2003.pdf">CCPG/060/03</a>
-          - Termo de Autorização para Fornecimento de Cópias e/ou
-          Disponibilização de Teses na Internet</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/delccpg051_2006.pdf">CCPG/051/06</a>
-          - Disponibilização de teses pela Internet - nova proposta da Comissão
-          constituída pela CCPG</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg003_2006.pdf">CCPG/003/06</a>
-          - Regras para a publicação das dissertações e teses em texto completo
-          na Biblioteca Digital da UNICAMP</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg002_2006.pdf">CCPG/002/06</a>
-          - Trata do Formato Padrão das Dissertações de Mestrado e Teses de
-          Doutorado da UNICAMP.</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/delccpg051_2008.pdf">CCPG/051/08</a>
-          - Normas sobre o formato e a impressão de dissertações e/ou Teses
-          (Informação CCPG/01/2008)</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg001_2008.pdf">CCPG/001/08</a>
-          - Regulamentação das normas sobre o formato e a impressão das
-          dissertações de mestrado e teses de doutorado</li>
-          <li><a
-            href="http://www.prpg.unicamp.br/arqpdfnormas/infccpg002_2011.pdf">CCPG/002/11</a>
-          - Trata do Formato Padrão das Dissertações de Mestrado e Teses de
-          Doutorado da UNICAMP</li>
-        </ol>
-        </p>
+        <p>Bem-vindo a página inicial sobre o modelo em LaTeX de dissertações e
+          teses do IMECC.</p>
+        <p>Caso você precise entrar em contato conosco, envie um email para <a
+                         href="mailto:modelo-latex-l@listas.unicamp.br">modelo-latex-l@listas.unicamp.br</a>
+          (uma lista de email hospedada no <a
+                href="http://www.ccuec.unicamp.br/ccuec/">CCUEC</a> na qual todos
+          são convidados a se inscrever).</p>
+  <h2>Sumário</h2>
+  <ul>
+    <li><a href="normas.html">Informações sobre as normas da UNICAMP sobre
+              dissertações e teses</a></li>
+    <li><a href="distribuicoes.html">Distribuições de LaTeX</a></li>
+    <li><a href="editores.html">Lista de editores para LaTeX</a></li>
+    <li><a href="faq.html">Lista de perguntas frequentes</a></li>
+  </ul>
+  <h2>O Modelo</h2>
         <p>Os arquivos que compõe o modelo oficial de dissertação/teses do IMECC
-        encontra-se disponíveis em <a
+          encontra-se disponíveis em <a
           href="https://github.com/r-gaia-cs/modelo_tese_imecc.git">https://github.com/r-gaia-cs/modelo_tese_imecc.git</a>
-        (<a
-          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/master.zip">download</a>).
-        Além do modelo oficial, existem algumas variantes que são listadas na
-        tabela abaixo.</p>
+          (<a
+              href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/master.zip">download</a>).
+          Além do modelo oficial, existem algumas variantes que são listadas na
+          tabela abaixo.</p>
         <table border='2'>
           <thead>
             <tr>
               <th>Departamento</th>
               <th>Grupo</th>
+              <th>Língua</th>
+              <th>Versão</th>
               <th>Mantenedores</th>
               <th>Arquivos (zip)</th>
               <th>Ilustração (pdf)</th>
+              <th>Poster (pdf)</th>
+              <th>Feed (Atom)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>IMECC</td>
-              <td>Oficial</td>
-              <td><a href="ra092767@ime.unicamp.br">Raniere Silva</a></td>
+              <td rowspan="4">IMECC</td>
+              <td rowspan="4">Oficial</td>
+              <td rowspan="2">Português</td>
+              <td>Estável</td>
+              <td rowspan="2"><a href="ra092767@ime.unicamp.br">Raniere Silva</a></td>
               <td class="textCenter"><a
-                  href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/master.zip"><img
-                  src="img/zip.png" alt="zip logo" width='24em'></a></td>
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/master.zip"><img
+                                src="img/zip.png" alt="zip logo" width='24em'></a></td>
               <td class="textCenter"><a href="samples/master.pdf"><img
+                     src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-master.pdf"><img
+                      src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/master.atom"><img
+                                 src="img/atom.svg" alt="atom logo" width='24em'></a></td>
+            </tr>
+            <tr>
+              <td>Teste</td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/dev.zip"><img
+                             src="img/zip.png" alt="zip logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/dev.pdf"><img
                   src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-dev.pdf"><img
+                   src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/dev.atom"><img
+                              src="img/atom.svg" alt="atom logo" width='24em'></a></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Inglês</td>
+              <td>Estável</td>
+              <td></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/master-en.zip"><img
+                                   src="img/zip.png" alt="zip logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/master-en.pdf"><img
+                  src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-master-en.pdf"><img
+                         src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/master-en.atom"><img
+                              src="img/atom.svg" alt="atom logo" width='24em'></a></td>
+            </tr>
+            <tr>
+              <td>Teste</td>
+              <td></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/dev-en.zip"><img
+                                src="img/zip.png" alt="zip logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/dev-en.pdf"><img
+                     src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-dev-en.pdf"><img
+                      src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/dev-en.atom"><img
+                                 src="img/atom.svg" alt="atom logo" width='24em'></a></td>
             </tr>
             <tr>
               <td>Matemática</td>
@@ -98,135 +126,68 @@
               <td class="textCenter"></td>
             </tr>
             <tr>
-              <td rowspan='2'>Matemática Aplicada</td>
-              <td>Geofísica Computacional</td>
-              <td><a href="ra115169@ime.unicamp.br">Carlos Filho</a></td>
+              <td rowspan='4'>Matemática Aplicada</td>
+              <td rowspan='2'>Geofísica Computacional</td>
+              <td rowspan='2'>Português</td>
+              <td>Estável</td>
+              <td rowspan='2'><a href="ra115169@ime.unicamp.br">Carlos Filho</a></td>
               <td class="textCenter"><a
-                  href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-geo.zip"><img
-                  src="img/zip.png" alt="zip logo" width='24em'></a></td>
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-geo.zip"><img
+                                src="img/zip.png" alt="zip logo" width='24em'></a></td>
               <td class="textCenter"><a href="samples/ms-geo.pdf"><img
-                  src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+                     src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-ms-geo.pdf"><img
+                      src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/ms-geo.atom"><img
+                                 src="img/atom.svg" alt="atom logo" width='24em'></a></td>
             </tr>
             <tr>
-              <td>Pesquisa Operacional</td>
-              <td><a href="ra092767@ime.unicamp.br">Raniere Silva</a></td>
+              <td>Teste</td>
               <td class="textCenter"><a
-                  href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-poo.zip"><img
-                  src="img/zip.png" alt="zip logo" width='24em'></a></td>
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-geo-dev.zip"><img
+                              src="img/zip.png" alt="zip logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/ms-geo-dev.pdf"><img
+                   src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-ms-geo-dev.pdf"><img
+                    src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/ms-geo-dev.atom"><img
+                               src="img/atom.svg" alt="atom logo" width='24em'></a></td>
+            </tr>
+            <tr>
+              <td rowspan='2'>Pesquisa Operacional</td>
+              <td rowspan='2'>Português</td>
+              <td>Estável</td>
+              <td rowspan='2'><a href="ra092767@ime.unicamp.br">Raniere Silva</a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-poo.zip"><img
+                                src="img/zip.png" alt="zip logo" width='24em'></a></td>
               <td class="textCenter"><a href="samples/ms-poo.pdf"><img
-                  src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Informações sobre a organização do modelo encontram-se disponíveis <a
-          href="organization.html">aqui</a>.</p>
-        <p>Para obter o PDF referente a dissertação/tese do IMECC você irá
-        precisar de um a distribuição do LaTeX. Para saber como instalar as
-        distribuições existentes, veja a lista abaixo:
-        <ul>
-          <li>TeX Live (<a href="texlive_linux.html">Linux</a>) (<a href="texlive_win7.html">Windows 7</a>)
-            (<a href="texlive_win8.html">Windows 8</a>) (<a href="texlive_mac.html">Mac OS X</a>),</li>
-          <li>MiKTeX (<a href="miktex_win7.html">Windows 7</a>)
-            (<a href="miktex_win8.html">Windows 8</a>).</li>
-        </ul></p>
-        <p>O modelo de dissertação/tese do IMECC foi feito utilizando a
-        codificação UTF-8. Entre os dias 04/03/2013 e 08/03/2013 foi feita uma
-        pesquisa entre os alunos de pós-graduação vinculados ao IMECC para saber
-        qual editor utilizavam para trabalhar com o LaTeX e o resultado desta
-        pesquisa encontra-se na tabela abaixo.</p>
-        <table border="2">
-          <thead>
-            <tr>
-              <th>Editor</th>
-              <th>Número de usuários (dentre 107 entrevistados)</th>
-              <th>Software Livre</th>
-              <th>Licença do editor</th>
-              <th>Site</th>
-              <th>Instruções para configuração</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <td colspan="6"><a id="TeXnicCenter1">(*)</a> <strong>A versão 1 não suporta a codificação
-                  UTF-8.</strong></td>
-            </tr>
-          </tfoot>
-          <tbody>
-            <tr>
-              <td>TeXnicCenter 2 (<a href="#TeXnicCenter1">*</a>)</td>
-              <td class="textCenter">30</td>
-              <td class="textCenter">Sim</td>
-              <td class="textCenter">GPL</td>
-              <td><a
-                  href="http://www.texniccenter.org/">http://www.texniccenter.org/</a></td>
-              <td class="textCenter"><a href="texniccenter-conf.html"><img src="img/gear.png"
-                      alt="gear" width='24em'></a></td>
-            </tr>
-            <tr>
-              <td>WinEdit</td>
-              <td class="textCenter">26</td>
-              <td class="textCenter">Não</td>
+                     src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-ms-poo.pdf"><img
+                      src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
               <td class="textCenter"><a
-                  href="http://www.winedt.com/registration.html">EULA</a></td>
-              <td><a
-                  href="http://www.winedt.com/">http://www.winedt.com/</a></td>
-              <td class="textCenter"><a href="winedt-conf.html"><img src="img/gear.png"
-                      alt="gear" width='24em'></a></td>
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/ms-poo.atom"><img
+                                 src="img/atom.svg" alt="atom logo" width='24em'></a></td>
             </tr>
             <tr>
-              <td>Texmaker</td>
-              <td class="textCenter">18</td>
-              <td class="textCenter">Sim</td>
-              <td class="textCenter">GPL</td>
-              <td><a
-                      href="http://www.xm1math.net/texmaker/">http://www.xm1math.net/texmaker/</a></td>
-              <td class="textCenter"><a href="texmaker-conf.html"><img src="img/gear.png"
-                      alt="gear" width='24em'></a></td>
-            </tr>
-            <tr>
-              <td>TeXworks</td>
-              <td class="textCenter">7</td>
-              <td class="textCenter">Sim</td>
-              <td class="textCenter">GPL</td>
-              <td><a
-                      href="http://www.tug.org/texworks/">http://www.tug.org/texworks/</a></td>
-              <td class="textCenter"><a href="texworks-conf.html"><img src="img/gear.png"
-                      alt="gear" width='24em'></a></td>
-            </tr>
-            <tr>
-              <td>Kile</td>
-              <td class="textCenter">6</td>
-              <td class="textCenter">Sim</td>
-              <td class="textCenter">GPL</td>
-              <td><a
-                      href="http://kile.sourceforge.net/">http://kile.sourceforge.net/</a></td>
-              <td class="textCenter"><a href="kile-conf.html"><img src="img/gear.png"
-                      alt="gear" width='24em'></a></td>
-            </tr>
-            <tr>
-              <td>Outros</td>
-              <td class="textCenter">20</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>Teste</td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/archive/ms-poo-dev.zip"><img
+                              src="img/zip.png" alt="zip logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/ms-poo-dev.pdf"><img
+                   src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a href="samples/poster-ms-poo-dev.pdf"><img
+                    src="img/pdf.png" alt="pdf logo" width='24em'></a></td>
+              <td class="textCenter"><a
+          href="https://github.com/r-gaia-cs/modelo_tese_imecc/commits/ms-poo-dev.atom"><img
+                               src="img/atom.svg" alt="atom logo" width='24em'></a></td>
             </tr>
           </tbody>
         </table>
-        <p>Alguns leitores de PDF impedem que o mesmo seja alterado por outro
-        programa enquanto o mesmo estiver sendo visualizado. Para saber como
-        configurar sue leitor de PDF e evitar isso, veja a lista abaixo:
-        <ul>
-          <li>TeXworks built-in PDF viewer (não requer nenhuma configuração),</li>
-          <li>Evince (não requer nenhuma configuração),</li>
-          <li>SumatraPDF (não requer nenhuma configuração),</li>
-          <li><a href="foxitpdfreader.html">Foxit PDF Reader</a>,</li>
-          <li><a href="adobereader.html">Adobe Reader</a>.</li>
-        </ul></p>
-        <p>Existe uma lista de perguntas frequentes <a href="faq.html">aqui</a>
-        e perguntas não existentes nessa lista (bem como dúvidas, problemas,
-        sugestões e elogios) devem ser enviados para <a
-            href="mailto:teseimecc@ime.unicamp.br">teseimecc@ime.unicamp.br</a>.</p>
+        <p>Informações sobre a organização do modelo encontram-se
+        disponíveis <a href="organization.html">aqui</a>.</p>
         <address>
           Escrito e mantido por <a href="mailto:ra092767@ime.unicamp.br">Raniere
             Silva</a>.

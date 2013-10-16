@@ -1,4 +1,57 @@
-, Version 1.0.0
+, Versão 2.0.0
+
+Esta corresponde a primeira versão com uma boa documentação de uso.
+
+Documentação
+
+- [ ] Documentação avançada (em html).
+- [ ] Documentação avançada (em pdf).
+
+, Versão 1.2.0
+
+Esta corresponde a uma melhoria quanto ao uso do verificador ortográfico.
+
+LaTeX
+
+- [ ] Corrigir capa e folha de rosto em relação ao "Warning: Font shape
+      `T1/lmr/bx/sc' undefined"
+- [ ] Realizar verificação ortográfica com o `hunspell`.
+
+2013-09-04, Versão 1.2.0
+
+Esta versão corresponde a atualização do modelo para a CCPG 228/2013.
+
+LaTeX
+
+- [X] Atualização da capa.
+- [X] Atualização da folha de rosto.
+- [X] Atualização da da ficha catalográfica.
+- [X] Melhorias na informação sobre o biblatex.
+- [X] Adição de exemplos dos estilos presentes no biblatex.
+
+Documentação
+
+- [X] Adição da CCPG 228/2013.
+
+2013-07-29, Versão 1.1.0
+
+Esta corresponde a primeira versão com um modelo de poster.
+
+LaTeX
+
+- [X] Adição de modelo para poster.
+- [X] Inclusão da licença CC-BY.
+- [X] Inclusão da licença CC-BY-SA.
+
+Makefile
+
+- [X] Inclusão de instruções para o poster.
+
+Documentação
+
+- [X] Reestruturação das informações.
+
+2013-06-29, Versão 1.0.0
 
 Esta corresponde a primeira versão oficial do modelo.
 
@@ -8,25 +61,31 @@ LaTeX
 - [X] Incluir sumário e listas.
 - [X] Incluir resumo e capítulos.
 - [X] Incluir apêndices.
-- [ ] Incluir licença CC.
 - [X] Incluir indice remissivo.
 
 Makefile
 
 - [X] Compilar utilizando `latexmk`.
 - [X] Limpar arquivos temporários.
-- [ ] Realizar verificação ortográfica com o `hunspell`.
 
 Documentação
 
-- [ ] Documentação avançada (em html).
+- [X] Documentação minimalista (em html).
+- [X] Documentação básica (em pdf).
 
-, Versão 0.6.0
+2013-04-29, Versão 0.6.1
+
+Documentação
+
+- [X] Adicionado informações sobre o modelo em inglês.
+- [X] Aprimorado informações para contribuições.
+
+2013-04-04, Versão 0.6.0
 
 LaTeX
 
 - [X] Incluir pacote `breqn`.
-- [ ] Incluir pacote `natbib`.
+- [X] Incluir pacote `biblatex`.
 
 
 2013-03-16, Versão 0.5.2

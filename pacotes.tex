@@ -2,9 +2,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cmap}
 \usepackage[T1]{fontenc}
-\usepackage[brazilian]{babel}
+\usepackage[english,brazilian]{babel}
 \usepackage{indentfirst}
 \usepackage[top=3cm,bottom=3cm,right=2cm,left=2cm]{geometry}
+\usepackage{biblatex}
+\addbibresource{biblatex_style_samples/sample.bib}
+\addbibresource{biblatex_style_samples/sample-abel.bib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: layoyt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}  % É preciso para mudar o layout do frontmatter
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: links %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,10 +38,15 @@
 \usepackage{booktabs}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: cores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: figuras %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{fit}
 \usepackage{wrapfig}
 
 
@@ -58,7 +70,8 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pacotes: fontes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\usepackage{lmodern}
+\usepackage{lmodern} \normalfont
+\DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
 \usepackage{mathrsfs}
 
 

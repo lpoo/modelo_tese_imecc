@@ -65,51 +65,43 @@
 % defesa.
 % FIXME Substitua o arquivo folha-de-aprovacao.pdf por uma copia escaneada.
 \includepdf{folha-de-aprovacao}
+\chapter*{}  % Capítulo vazio.
+\input{abstract}
+\vspace{.1\textheight}
+\input{resumo}
+%
+\tableofcontents
 %
 % FIXME Se não for incluir a dedicatória, comentar a linha abaixo.
 \input{dedicatoria}
 %
-% FIXME Se não for incluir a epigrafe, comentar a linha abaixo.
-\input{epigrafe}
-%
 % FIXME Se não for incluir os agradecimentos, comentar a linha abaixo.
 \input{agradecimentos}
 %
-\input{resumo}
-\input{abstract}
-%
-\tableofcontents
-% FIXME Comentar as linhas abaixo de não desejar listar as figuras
+% FIXME Comentar a linha abaixo se não desejar listar as figuras
 % apresentadas.
+\renewcommand{\listfigurename}{Lista de Ilustrações}  % CCPG 228/2013
 \listoffigures
-\addcontentsline{toc}{chapter}{Lista de Figuras}
 %
-% FIXME Comentar as linhas abaixo de não desejar listar as tabelas
+% FIXME Comentar a linha abaixo se não desejar listar as tabelas
 % apresentadas.
 \listoftables
-\addcontentsline{toc}{chapter}{Lista de Tabelas}
-%
-% FIXME Comentar as linhas abaixo de não desejar listar os
-% algoritmos apresentados.
-\listofalgorithms
-\addcontentsline{toc}{chapter}{Lista de Algoritmos}
-%
-% FIXME Comentar as linhas abaixo de não desejar listar os trechos de código
-% apresentados.
-\lstlistoflistings
-\addcontentsline{toc}{chapter}{Lista de Códigos}
 %
 % FIXME Comentar a linha abaixo de não for apresentar as
-% abreviações utilizadas.
+% abreviações e siglas utilizadas.
 \input{abreviacoes}
 %
-% FIXME Comentar a linha abaixo de não for apresentar os
+% FIXME Comentar a linha abaixo se não for apresentar os
 % símbolos utilizados.
 \input{simbolos}
 %
-% FIXME Comentar a linha abaixo de não for apresentar o
-% glossário.
-\input{glossario}
+% FIXME Comentar a linha abaixo se não desejar listar os algoritmos
+% apresentados.
+\listofalgorithms
+%
+% FIXME Comentar a linha abaixo se não desejar listar os trechos de código
+% apresentados.
+\lstlistoflistings
 %
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
@@ -122,19 +114,34 @@
 \input{ex_cap4_bibtex}  % Este capítulo é uma versão do arquivo ex_cap4_biblatex.
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
-% FIXME Se não for utilizar apêndices, comentar a linha abaixo.
+% Referência bibliográfica.
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referências}
+\printbibliography[title=Referências]
+%
+% FIXME Se não for utilizar apêndices (o glossario é um apêndice), comentar a
+% linha abaixo.
 \appendix
-% FIXME Remover a linha abaixo.
+% FIXME Remover as 4 linha abaixo.
+\input{glossario}
 \input{ex_ape1}
 \input{ex_ape2}
+\input{ex_ape3}
+\input{ex_ape4}
 % TODO Inserir os arquivos referentes aos apêndices.
 %
-% TODO Se não for utilizar anexos, comentar as duas linhas abaixo.
-\renewcommand{\appendixname}{Anexo}
-\appendix
+% TODO Se não for utilizar anexos nem uma licença Creative Commons, comentar a linha abaixo.
+\annex
 % FIXME Remover a linha abaixo.
 \input{ex_ane1}
-% TODO Inserir os arquivos referentes aos apêndices e anexos.
+% FIXME Escolher, opcionalmente, uma das licença Creative Commons abaixo.
+% Para isso remova a linha correspondente a licença não desejada.
+\input{cc-by}  % Creative Commons Atribuição 3.0 Não Adaptada
+\input{cc-by-sa}  % Creative Commons AtribuiçãoCompartilhaIgual 3.0 Não Adaptada
+%
+\clearpage
+% TODO Inserir os arquivos referentes aos anexos.
 %
 \backmatter
 % FIXME Mudar o estilo para o de sua preferência.
@@ -144,6 +151,8 @@
 \bibliography{tese}
 \addcontentsline{toc}{chapter}{Referência Bibliográfica}
 \clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
 \addcontentsline{toc}{chapter}{Índice Remissivo}
 \end{document}
