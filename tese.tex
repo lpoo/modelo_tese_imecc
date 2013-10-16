@@ -118,7 +118,11 @@
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Referências}
-\printbibliography[title=Referências]
+% FIXME Mudar o estilo para o de sua preferência.
+\bibliographystyle{alpha}
+% FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
+% tese.bib.
+\bibliography{tese,biblatex_style_samples/sample.bib,biblatex_style_samples/sample-abel.bib}
 %
 % FIXME Se não for utilizar apêndices (o glossario é um apêndice), comentar a
 % linha abaixo.
@@ -127,7 +131,7 @@
 \input{glossario}
 \input{ex_ape1}
 \input{ex_ape2}
-\input{ex_ape3}
+%\input{ex_ape3}  % Este apêndice lista os estilos do biblatex.
 \input{ex_ape4}
 % TODO Inserir os arquivos referentes aos apêndices.
 %
@@ -144,11 +148,6 @@
 % TODO Inserir os arquivos referentes aos anexos.
 %
 \backmatter
-% FIXME Mudar o estilo para o de sua preferência.
-\bibliographystyle{alpha}
-% FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
-% tese.bib.
-\bibliography{tese}
 \addcontentsline{toc}{chapter}{Referência Bibliográfica}
 \clearpage
 \phantomsection
