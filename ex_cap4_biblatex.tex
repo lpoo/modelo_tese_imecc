@@ -1,0 +1,133 @@
+\chapter{Título 4}
+Esse é o terceiro capítulo da sua tese.
+
+\section{Referência bibliográfica}
+Para a referência bibliográfica é utilizado o BibTeX e o pacote
+\lstinline+biblatex+. Poderia ser utilizado apenas o BibTeX mas existem algumas
+funcionalidades disponibilizadas no pacote \lstinline+biblatex+ que são muito
+convenientes.
+
+\subsection{BibTeX}
+BibTeX é o nome de um formato de ``banco de dados'' para referências
+bibliográficas desenvolvido para ser utilizado em conjunto com o LaTeX e também
+do programa responsável por processar esse ``banco de dados''.
+
+O ``banco de dados'' corresponde a um arquivo de texto com a extensão
+\lstinline+.bib+. Por padrão este modelo utiliza o arquivo \lstinline+tese.bib+
+que já encontra-se com algumas entradas para servirem de exemplo.
+
+Cada referência no BibTeX segue a seguinte estrutura:
+\begin{lstlisting}
+@TIPO_DOCUMENTO{identificador,
+campo1 = {valor do campo 1},
+campo2 = {valor do campo 2},
+campo3 = {valor do campo 3},
+...
+}
+\end{lstlisting}
+
+Para saber quais sobre os \lstinline+TIPO_DOCUMENTO+ existentes e sobre os
+campos recomenda-se a documentação do BibTeX que pode ser acessada pelo comando:
+\begin{lstlisting}
+$ texdoc bibtex
+\end{lstlisting}
+
+Uma das grandes vantagens de se utilizar o BibTeX é que as chances de encontrar
+o BibTeX de algum material na internet é extremamente alta. Tanto o Google
+Scholar como o Google Books disponibilizam o BibTeX para todos os materiais
+indexados em suas respectivas bases de dados.
+
+\subsection{\lstinline+biblatex+}
+Para que uma entrada do \lstinline+tese.bib+ seja incluído na referência
+bibliográfica ele precisa ser utilizado em algum dos arquivos \lstinline+.tex+
+que compõe sua dissertação/tese. Para utilizar uma referência utiliza-se uma das
+variantes do comando \lstinline+\cite{id}+, onde
+\lstinline+id+ correspode ao \lstinline+identificador+ utilizado na entrada do
+BibTeX para a referência desejada.
+
+O comando \lstinline+\cite{id}+ insere o número da referência entre colchetes,
+como mostrado abaixo:
+\begin{center}
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\cite{Swa82}+ & \cite{Swa82} \\ \hline
+    \lstinline+\cite{Bailey}+ & \cite{Bailey} \\ \hline
+    \lstinline+\cite{Ta}+ & \cite{Ta} \\ \hline
+    \lstinline+\cite{Hale}+ & \cite{Hale} \\ \hline
+  \end{tabular}
+\end{center}
+
+Para inserir o nome dos autores e o número da referência entre colchetes,
+utiliza-se o comando \lstinline+\textcite{id}+, como mostrado abaixo:
+\begin{center}
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\textcite{Swa82}+ & \textcite{Swa82} \\ \hline
+    \lstinline+\textcite{Bailey}+ & \textcite{Bailey} \\ \hline
+    \lstinline+\textcite{Ta}+ & \textcite{Ta} \\ \hline
+    \lstinline+\textcite{Hale}+ & \textcite{Hale} \\ \hline
+  \end{tabular}
+\end{center}
+
+Para inserir apenas o nome dos autores utiliza-se o comando
+\lstinline+\citeauthor{id}+, como mostrado abaixo:
+\begin{center}
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\citeauthor{Swa82}+ & \citeauthor{Swa82} \\ \hline
+    \lstinline+\citeauthor{Bailey}+ & \citeauthor{Bailey} \\ \hline
+    \lstinline+\citeauthor{Ta}+ & \citeauthor{Ta} \\ \hline
+    \lstinline+\citeauthor{Hale}+ & \citeauthor{Hale} \\ \hline
+  \end{tabular}
+\end{center}
+
+Para inserir apenas o título da referência utiliza-se o comando
+\lstinline+\citetitle{id}+, como mostrado abaixo:
+\begin{center}
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\citetitle{Swa82}+ & \citetitle{Swa82} \\ \hline
+    \lstinline+\citetitle{Bailey}+ & \citetitle{Bailey} \\ \hline
+    \lstinline+\citetitle{Ta}+ & \citetitle{Ta} \\ \hline
+    \lstinline+\citetitle{Hale}+ & \citetitle{Hale} \\ \hline
+  \end{tabular}
+\end{center}
+
+Para inserir apenas o ano de publicação da referência utiliza-se o comando
+\lstinline+\citeyear{id}+, como mostrado abaixo:
+\begin{center}
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\citeyear{Swa82}+ & \citeyear{Swa82} \\ \hline
+    \lstinline+\citeyear{Bailey}+ & \citeyear{Bailey} \\ \hline
+    \lstinline+\citeyear{Ta}+ & \citeyear{Ta} \\ \hline
+    \lstinline+\citeyear{Hale}+ & \citeyear{Hale} \\ \hline
+  \end{tabular}
+\end{center}
+
+Para citações múltiplas, utiliza-se os comandos \lstinline+\cites{id1,id2,id3}+
+ou \lstinline+\textcites{id1,id2,id3}+, como mostrado abaixo:
+\begin{center}
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Comando & Resultado \\ \hline
+    \lstinline+\cites{Bailey,Swa82}+ & \cites{Bailey,Swa82} \\ \hline
+    \lstinline+\cites{Hale,Ta}+ & \cites{Hale,Ta} \\ \hline
+    \lstinline+\textcites{Bailey,Swa82}+ & \textcites{Bailey,Swa82} \\ \hline
+    \lstinline+\textcites{Hale,Ta}+ & \textcites{Hale,Ta} \\ \hline
+  \end{tabular}
+\end{center}
+
+Por último, caso deseje incluir uma referência na referência bibliográfica mas
+suprimí-la ao longo do texto você deve utilizar o comando
+\lstinline+\nocite{id}+.

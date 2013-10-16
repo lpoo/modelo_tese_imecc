@@ -118,6 +118,8 @@
 \input{ex_cap1}
 \input{ex_cap2}
 \input{ex_cap3}
+% \input{ex_cap4_biblatex}  % Este capítulo depende do uso do pacote biblatex.
+\input{ex_cap4_bibtex}  % Este capítulo é uma versão do arquivo ex_cap4_biblatex.
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
 % FIXME Se não for utilizar apêndices, comentar a linha abaixo.
@@ -135,16 +137,13 @@
 % TODO Inserir os arquivos referentes aos apêndices e anexos.
 %
 \backmatter
-% FIXME Remover a linha abaixo.
-\nocite{*}
-% FIXME Mudar o estilo para o de sua preferencia.
-\bibliographystyle{amsplain}
+% FIXME Mudar o estilo para o de sua preferência.
+\bibliographystyle{alpha}
 % FIXME Adicionar os arquivos .bib que for utilizar ou editar o arquivo
 % tese.bib.
 \bibliography{tese}
 \addcontentsline{toc}{chapter}{Referência Bibliográfica}
-%
 \clearpage
-\addcontentsline{toc}{chapter}{Índice Remissivo}
 \printindex
+\addcontentsline{toc}{chapter}{Índice Remissivo}
 \end{document}
