@@ -1,13 +1,14 @@
 MASTER = tese
 POSTER = poster
+LATEXMK = latexmk -pdf -pdflatex='pdflatex -interaction nonstopmode'
 
 all: ${MASTER} ${POSTER} doc
 
 ${MASTER}:
-	latexmk -pdf ${MASTER}
+	${LATEXMK} -pdf ${MASTER}
 
 ${POSTER}:
-	latexmk -pdf ${POSTER}
+	${LATEXMK} -pdf ${POSTER}
 
 aspell: ${MASTER_FILE} ${TEX_FILES}
 	aspell -l pt-br -c ${MASTER_FILE}
