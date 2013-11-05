@@ -36,6 +36,27 @@ pdfauthor={\autor}  % Não modifique esta linha.
 \newtheorem{pps}[thm]{Proposição}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: algoritmos %%%%%%%%%%%%%%%%%%%%%%%%%%
+\algsetup{linenosize=\small}
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Saída:}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{ent\~{a}o}}
+\renewcommand{\algorithmicelse}{\textbf{caso contr\'{a}rio}}
+\renewcommand{\algorithmicendif}{\algorithmicend}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}
+\renewcommand{\algorithmicendfor}{\algorithmicend}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend}
+\renewcommand{\algorithmicrepeat}{\textbf{repita}}
+\renewcommand{\algorithmicuntil}{\textbf{at\'{e}}}
+\renewcommand{\algorithmicreturn}{\textbf{retorne}}
+\renewcommand{\algorithmiccomment}[1]{\hspace{2em}/* #1 */}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Configurações: códigos %%%%%%%%%%%%%%%%%%%%%%%% 
 \lstset{
 basicstyle=\ttfamily,
@@ -58,7 +79,6 @@ breaklines=false
 \gdef\@chapapp{\annexname}%
 \gdef\thechapter{\@Roman\c@chapter}}
 \makeatother
-
 
 
 % TODO Inserir configurações adicionais aqui.
