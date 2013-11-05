@@ -29,12 +29,10 @@
             seguido.</a></li>
           <li><a href="#10">Ao utilizar o pacote <kbd>listings</kbd> para incluir um
             código os sinais de menos, <kbd>-</kbd>, não aparecem.</a></li>
-          <li><a href="#11">Ao tentar compilar minha distribuição de LaTeX não encontra
-            o pacote <kbd>expl3.sty</kbd>. Como devo proceder?</a></li>
-          <li><a href="#12">Não consigo compilar devido ao erro <kbd>Package
+          <li><a href="#11">Não consigo compilar devido ao erro <kbd>Package
               biblatex Error: File 'tese.bbl' not created by biblatex.</kbd>.
             Como resolvo esse problema?</a></li>
-          <li><a href="#13">Não consigo compilar a bibliografia porque o
+          <li><a href="#12">Não consigo compilar a bibliografia porque o
             <kbd>biber</kbd> não funciona. Ele informa <kbd>data source not
               found in</kbd>. Como faço ele funcionar?</a></li>
         </ol>
@@ -152,26 +150,15 @@
           <kbd>listings</kbd> em conjunto. Não existe previsão dele ser resolvido
           mas algumas soluções paliativas são descritas em <a
             href='http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions'>http://tex.stackexchange.com/questions/6827/minus-signs-vanish-with-listings-and-breqn-any-solutions</a>.</p></li>
-          <li><a name="11">Ao tentar compilar minha distribuição de LaTeX não encontra
-              o pacote <kbd>expl3.sty</kbd>. Como devo proceder?</a>
-          <p>O pacote <kbd>expl3.sty</kbd> é um primeiro passo em direção ao
-          LaTeX3. Esse pacote foi renomeado para <kbd>l3kernels.sty</kbd> e
-          <kbd>l3packages</kbd> (<a
-              href="http://sourceforge.net/p/miktex/discussion/33790/thread/fbc850e8">http://sourceforge.net/p/miktex/discussion/33790/thread/fbc850e8</a>).</p>
-          <p><a href="https://plus.google.com/101241134130767376580">Pascal
-              Gaggero</a> escreveu um <a
-              href="http://gaggerostechnicalnotes.blogspot.ca/2011/08/expl3sty-not-found-when-using-siunitx.html?showComment=1337018886147#c4201851636980046365">tutorial</a>
-          explicando como resolver esse problema se você estiver utilizando o
-          MikTeX.</p></li>
 
-          <li><a name="12">Não consigo compilar devido ao erro <kbd>Package
+          <li><a name="11">Não consigo compilar devido ao erro <kbd>Package
               biblatex Error: File 'tese.bbl' not created by biblatex.</kbd>.
             Como resolvo esse problema?</a>
           <p>Talvez uma versão anterior desse arquivo já exista e esteja
           causando problemas. Procure pelo arquivo <kbd>tese.bbl</kbd> e
           remova-o.</p></li>
 
-          <li><a name="13">Não consigo compilar a bibliografia porque o
+          <li><a name="12">Não consigo compilar a bibliografia porque o
               <kbd>biber</kbd> não funciona. Ele informa <kbd>data source not
                   found in</kbd>.  Como faço ele funcionar?</a>
           <p>Como Andrew Goldstone reportou <a

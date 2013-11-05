@@ -1,7 +1,7 @@
 MASTER = tese
 POSTER = poster
 
-all: ${MASTER} ${POSTER}
+all: ${MASTER} ${POSTER} doc
 
 ${MASTER}:
 	latexmk -pdf ${MASTER}
@@ -39,5 +39,24 @@ dev-hunspell: ${DEV_FILES} ${DOC_FILES}
 	    hunspell -d pt_BR $$f; \
 	done
 
+.PHONY: doc clean-all clean clean-doc
+
+doc:
+	branch=$$(git branch | sed -n '/\* /s///p'); \
+	for i in $$(git branch -r | grep -v HEAD); \
+	do \
+		git checkout $$i; \
+		$(MAKE) tese poster; \
+		mv -f tese.pdf doc/samples/$${i/origin\//}.pdf; \
+		mv -f poster.pdf doc/samples/poster-$${i/origin\//}.pdf; \
+		$(MAKE) clean; \
+	done; \
+	git checkout $${branch};
+
+clean-all: clean clean-doc
+
 clean:
 	latexmk -c
+
+clean-doc:
+	rm -f doc/samples/*.pdf
