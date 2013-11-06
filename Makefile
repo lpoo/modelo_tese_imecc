@@ -58,6 +58,7 @@ clean-all: clean clean-doc
 
 clean:
 	latexmk -c
+	$(RM) *.bbl
 
 clean-doc:
-	rm -f doc/samples/*.pdf
+	$(RM) -f doc/samples/*.pdf
