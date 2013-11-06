@@ -47,10 +47,12 @@ doc:
 	for i in $$(git branch -r | grep -v HEAD); \
 	do \
 		git checkout $$i; \
-		$(MAKE) tese poster; \
+		$(MAKE) tese; \
+		$(MAKE) clean; \
+		$(MAKE) poster; \
+		$(MAKE) clean; \
 		mv -f tese.pdf doc/samples/$${i/origin\//}.pdf; \
 		mv -f poster.pdf doc/samples/poster-$${i/origin\//}.pdf; \
-		$(MAKE) clean; \
 	done; \
 	git checkout $${branch};
 
