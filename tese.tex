@@ -1,7 +1,6 @@
 % FIXME Ao final, deixe descomentada a linha correspondente ao numero de paginas
 % que a sua defesa possui.
-\documentclass[12pt, letterpaper, oneside]{book}  % Para menos de 100 paginas.
-% \documentclass[12pt, letterpaper, twoside]{book}  % Para mais de 100 paginas.
+\documentclass[12pt, letterpaper, twoside]{book}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Configuração: pacotes %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{pacotes}  % Arquivo com os pacotes.
@@ -103,6 +102,12 @@
 % apresentados.
 \lstlistoflistings
 %
+% FIXME Ao final, se seu trabalho tiver menos de 100 páginas descomente as
+% três linhas a seguir.
+% \makeatletter
+% \@openrightfalse
+% \makeatother
+%
 % As paginas com o conteúdo da tese são numeradas com algoritmos arábicos.
 \mainmatter
 %
@@ -115,7 +120,7 @@
 % TODO Inserir os arquivos referentes ao corpo da tese.
 %
 % Referência bibliográfica.
-\cleardoublepage
+\newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{Referências}
 \printbibliography[title=Referências]
